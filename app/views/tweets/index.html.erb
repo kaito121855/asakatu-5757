@@ -2,7 +2,7 @@
   <% @tweets.each do |tweet| %>
     <div class="content_post">
       <p><%= tweet.task_1 %></p>
-      <p><%= tweet.start_time_1.name %><%= tweet.end_time_1.name %></p>
+      <p>開始時間：<%= tweet.start_time_1.name %>時<%= tweet.start_minutes_1.name %>分　終了時間<%= tweet.end_time_1.name %>時<%= tweet.end_minutes_1.name %>分</p>
       <span class="name">
         <%= tweet.detalis_1 %>
       </span>
@@ -10,7 +10,7 @@
     </div>
     <div class="content_post">
       <p><%= tweet.task_2 %></p>
-      <p><%= tweet.start_time_2.name %><%= tweet.end_time_2.name %></p>
+      <p>開始時間：<%= tweet.start_time_2.name %>時<%= tweet.start_minutes_2.name %>分　終了時間<%= tweet.end_time_2.name %>時<%= tweet.end_minutes2.name %>分</p>
       <span class="name">
         <%= tweet.detalis_2 %>
       </span>
@@ -18,7 +18,7 @@
 
     <div class="content_post">
       <p><%= tweet.task_3 %></p>
-      <p><%= tweet.start_time_3.name %><%= tweet.end_time_3.name %></p>
+      <p>開始時間：<%= tweet.start_time_3.name %>時<%= tweet.start_minutes_3.name %>分　終了時間<%= tweet.end_time_3.name %>時<%= tweet.end_minutes_3.name %>分</p>
       <span class="name">
         <%= tweet.detalis_3 %>
       </span>
