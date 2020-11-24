@@ -1,0 +1,55 @@
+.main {
+  min-height: 100%;
+  position: relative;
+}
+
+header {
+  width: 100%;
+  border-bottom: 1px solid #D8D8D8;
+  background-color: #fff;
+  height: 70px;
+}
+
+.grid-6 {
+  height: 100%;
+  font-size: 20px;
+  float: left;
+  margin-left: 20px;
+  line-height: 55px;
+}
+
+.user_nav {
+  float: right;
+  height: 100%;
+  width: 30%;
+  margin-right: 20px;
+  display: flex;
+  justify-content: space-around;
+  line-height: 55px;
+}
+
+.post {
+  width: 40%;
+  font-size: 17px;
+  text-align: center;
+}
+
+footer {
+  width: 100%;
+  border-top: 1px solid #D8D8D8;
+  background-color: #fff;
+  height: 70px;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer_nav {
+  width: 15%;
+  font-size: 17px;
+  margin-bottom: 10px;
+  text-align: center;
+  line-height: 55px;
+  
+}
