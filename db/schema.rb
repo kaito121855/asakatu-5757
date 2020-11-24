@@ -17,14 +17,20 @@ ActiveRecord::Schema.define(version: 2020_11_24_091030) do
     t.text "detalis_1"
     t.integer "start_time_1_id"
     t.integer "end_time_1_id"
+    t.integer "start_minutes_1_id"
+    t.integer "end_minutes_1_id"
     t.string "task_2"
     t.text "detalis_2"
     t.integer "start_time_2_id"
     t.integer "end_time_2_id"
+    t.integer "start_minutes_2_id"
+    t.integer "end_minutes_2_id"
     t.string "task_3"
     t.text "detalis_3"
     t.integer "start_time_3_id"
     t.integer "end_time_3_id"
+    t.integer "start_minutes_3_id"
+    t.integer "end_minutes_3_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
