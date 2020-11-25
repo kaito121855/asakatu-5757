@@ -10,4 +10,6 @@ class Tweet < ApplicationRecord
     validates :start_minutes_1_id
     validates :end_minutes_1_id
   end
+
+  include CommonModule
 end
