@@ -16,9 +16,9 @@ ActiveRecord::Schema.define(version: 2020_11_24_091030) do
     t.string "task", null: false
     t.text "detalis"
     t.integer "start_hour_id", null: false
-    t.integer "start_minutes_id", null: false
+    t.integer "start_minute_id", null: false
     t.integer "end_hour_id", null: false
-    t.integer "end_minutes_id", null: false
+    t.integer "end_minute_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

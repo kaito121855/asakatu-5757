@@ -4,9 +4,9 @@ class CreateTweets < ActiveRecord::Migration[6.0]
       t.string  :task,             null: false
       t.text    :detalis
       t.integer :start_hour_id,    null: false
-      t.integer :start_minutes_id, null: false
+      t.integer :start_minute_id, null: false
       t.integer :end_hour_id,      null: false
-      t.integer :end_minutes_id,   null: false
+      t.integer :end_minute_id,   null: false
       t.timestamps
     end
   end
