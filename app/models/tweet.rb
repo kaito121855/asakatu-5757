@@ -5,13 +5,11 @@ class Tweet < ApplicationRecord
   belongs_to :end_hour
   belongs_to :end_minute
 
-  validates :task_1, presence: true
+  validates :task, presence: true
   with_options numericality: { other_than: 1, message: "は「---」以外のものを選択してください"}  do
     validates :start_hour_id
     validates :start_minute_id
     validates :end_hour_id
     validates :end_minute_id
   end
-
-  include CommonModule
 end
