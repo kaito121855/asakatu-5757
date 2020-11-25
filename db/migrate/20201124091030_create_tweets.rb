@@ -1,12 +1,12 @@
 class CreateTweets < ActiveRecord::Migration[6.0]
   def change
     create_table :tweets do |t|
-      t.string  :task_1
+      t.string  :task_1,             null: false
       t.text    :detalis_1
-      t.integer :start_time_1_id
-      t.integer :end_time_1_id
-      t.integer :start_minutes_1_id
-      t.integer :end_minutes_1_id
+      t.integer :start_time_1_id,    null: false
+      t.integer :end_time_1_id,      null: false
+      t.integer :start_minutes_1_id, null: false
+      t.integer :end_minutes_1_id,   null: false
       t.string  :task_2
       t.text    :detalis_2
       t.integer :start_time_2_id
