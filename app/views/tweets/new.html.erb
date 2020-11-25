@@ -4,49 +4,18 @@
     <%= form_with(model: @tweet, local: true) do |form| %>
     <div class="task-content">
       <div class="task-form">
-        <%= form.text_field :task_1, class:"task-box" %>
+        <%= form.text_field :task, class:"task-box" %>
       </div>
       <div class="time-form">
-        <%= form.collection_select(:start_time_1_id, Timetable.all, :id, :name, {}, {class:"selict-box"}) %>
-        <%= form.collection_select(:start_minutes_1_id, Minutestable.all, :id, :name, {}, {class:"selict-box"}) %>
-        <%= form.collection_select(:end_time_1_id, Timetable.all, :id, :name, {}, {class:"selict-box"}) %>
-        <%= form.collection_select(:end_minutes_1_id, Minutestable.all, :id, :name, {}, {class:"selict-box"}) %>
+        <%= form.collection_select(:start_hour_id, StartHour.all, :id, :name, {}, {class:"selict-box"}) %>
+        <%= form.collection_select(:start_minutes_id, StartMinutes.all, :id, :name, {}, {class:"selict-box"}) %>
+        <%= form.collection_select(:end_hour_id, EndHour.all, :id, :name, {}, {class:"selict-box"}) %>
+        <%= form.collection_select(:end_minutes_id, EndMinutes.all, :id, :name, {}, {class:"selict-box"}) %>
       </div>
       <div class="detalis-form">
         <%= form.text_area :detalis_1, class:"detalis_box" %>
       </div>
     </div>
-
-    <div class="task-content">
-      <div class="task-form">
-        <%= form.text_field :task_2, class:"task-box" %>
-      </div>
-      <div class="time-form">
-        <%= form.collection_select(:start_time_2_id, Timetable.all, :id, :name, {}, {class:"selict-box"}) %>
-        <%= form.collection_select(:start_minutes_2_id, Minutestable.all, :id, :name, {}, {class:"selict-box"}) %>
-        <%= form.collection_select(:end_time_2_id, Timetable.all, :id, :name, {}, {class:"selict-box"}) %>
-        <%= form.collection_select(:end_minutes_2_id, Minutestable.all, :id, :name, {}, {class:"selict-box"}) %>
-      </div>
-      <div class="detalis-form">
-        <%= form.text_area :detalis_2, class:"detalis_box" %>
-      </div>
-    </div>
-
-    <div class="task-content">
-      <div class="task-form">
-        <%= form.text_field :task_3, class:"task-box" %>
-      </div>
-      <div class="time-form">
-        <%= form.collection_select(:start_time_3_id, Timetable.all, :id, :name, {}, {class:"selict-box"}) %>
-        <%= form.collection_select(:start_minutes_3_id, Minutestable.all, :id, :name, {}, {class:"selict-box"}) %>
-        <%= form.collection_select(:end_time_3_id, Timetable.all, :id, :name, {}, {class:"selict-box"}) %>
-        <%= form.collection_select(:end_minutes_3_id, Minutestable.all, :id, :name, {}, {class:"selict-box"}) %>
-      </div>
-      <div class="detalis-form">
-        <%= form.text_area :detalis_3, class:"detalis_box" %>
-      </div>
-    </div>
-
     <div class="submit-btn">
       <%= form.submit "投稿" %>
     </div>
