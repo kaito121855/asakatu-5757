@@ -11,7 +11,7 @@ class TweetsController < ApplicationController
   def create
     @tweet = Tweet.new(tweet_params)
     if @tweet.save
-      rederect_to root_path
+      redirect_to root_path
     else
       render :new
     end
@@ -20,7 +20,6 @@ class TweetsController < ApplicationController
   private
 
   def tweet_params
-    columns = Tweet.column_symbolized_names
-    params.require(:tweet).permit(*columns)
+    params.require(:tweet).permit(:task, :detalis, :start_hour_id, :start_minute_id, :end_hour_id, :end_minute_id)
   end
 end
