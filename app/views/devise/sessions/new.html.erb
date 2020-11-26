@@ -1,27 +1,12 @@
-<div class="contents row">
+<div class="wrapper">
   <div class="container">
-    <h2>Log in</h2>
-    <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
-      <div class="field">
-        <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true %>
-      </div>
-
-      <div class="field">
-        <%= f.label :password %><br />
-        <%= f.password_field :password, autocomplete: "off" %>
-      </div>
-
-      <% if devise_mapping.rememberable? %>
-        <div class="field">
-          <%= f.label :remember_me %><br />
-          <%= f.check_box :remember_me %>
-        </div>
-      <% end -%>
-
-      <div class="actions">
-        <%= f.submit "Log in" %>
-      </div>
+    <div class='form-session'>
+    <%= form_with model: @user, url: user_session_path, local: true do |f| %>
+      <h1>ログイン</h1>
+      <%= f.email_field :email, placeholder:"メールアドレス", autofocus: true, class:"form-box" %>
+      <%= f.password_field :password, placeholder:"パスワード", autocomplete: "off", class:"form-box" %>
+      <%= f.submit "ログイン", class:"form-btn"  %>
     <% end %>
+    </div>
   </div>
 </div>
