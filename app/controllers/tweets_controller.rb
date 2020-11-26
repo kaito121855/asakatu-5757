@@ -1,5 +1,5 @@
 class TweetsController < ApplicationController
-  before_action :set_tweet, only: [:destroy, :edit]
+  before_action :set_tweet, only: [:destroy, :edit, :update]
 
   def index
     @tweets = Tweet.all
@@ -19,6 +19,12 @@ class TweetsController < ApplicationController
   end
 
   def edit
+  end
+
+  def update
+    if @tweet.update(tweet_params)
+      redirect_to root_path
+    end
   end
 
   def destroy
