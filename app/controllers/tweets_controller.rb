@@ -1,4 +1,5 @@
 class TweetsController < ApplicationController
+  before_action :set_tweet, only: [:destroy]
 
   def index
     @tweets = Tweet.all
@@ -17,9 +18,19 @@ class TweetsController < ApplicationController
     end
   end
 
+  def destroy
+    if @tweet.destroy
+      redirect_to root_path
+    end
+  end
+
   private
 
   def tweet_params
     params.require(:tweet).permit(:task, :detalis, :start_hour_id, :start_minute_id, :end_hour_id, :end_minute_id)
+  end
+
+  def set_tweet
+    @tweet = Tweet.find(params[:id])
   end
 end
