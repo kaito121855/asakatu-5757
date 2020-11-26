@@ -1,4 +1,4 @@
-<div class="contents row">
+<div class="contents-row">
   <div class="container">
     <h3>投稿</h3>
     <%= form_with(model: @tweet, local: true) do |form| %>
@@ -7,10 +7,10 @@
         <%= form.text_field :task, class:"task-box" %>
       </div>
       <div class="time-form">
-        <%= form.collection_select(:start_hour_id, StartHour.all, :id, :name, {}, {class:"selict-box"}) %>
-        <%= form.collection_select(:start_minute_id, StartMinute.all, :id, :name, {}, {class:"selict-box"}) %>
-        <%= form.collection_select(:end_hour_id, EndHour.all, :id, :name, {}, {class:"selict-box"}) %>
-        <%= form.collection_select(:end_minute_id, EndMinute.all, :id, :name, {}, {class:"selict-box"}) %>
+        <%= form.collection_select(:start_hour_id, StartHour.all, :id, :name, {}, {class:"select-box"}) %>
+        <%= form.collection_select(:start_minute_id, StartMinute.all, :id, :name, {}, {class:"select-box"}) %>
+        <%= form.collection_select(:end_hour_id, EndHour.all, :id, :name, {}, {class:"select-box"}) %>
+        <%= form.collection_select(:end_minute_id, EndMinute.all, :id, :name, {}, {class:"select-box"}) %>
       </div>
       <div class="detalis-form">
         <%= form.text_area :detalis, class:"detalis_box" %>
