@@ -1,8 +1,9 @@
 <div class="contents row">
   <% @tweets.each do |tweet| %>
     <div class="content_post">
+      <p><%= tweet.updated_at.strftime("%m 月 %d 日 %H 時 %M分") %></p>
       <p><%= tweet.task %></p>
-      <p>開始時間： <%= tweet.start_hour.name %> 時 <%= tweet.start_minute.name %> 分　終了時間：　<%= tweet.end_hour.name %> 時 <%= tweet.end_minute.name %> 分</p>
+      <p>開始時間： <%= tweet.start_hour.name %> 時 <%= tweet.start_minute.name %> 分　終了時間：　<%= tweet.end_hour.name %>時 <%= tweet.end_minute.name %> 分</p>
       <span class="name">
         <%= tweet.detalis %>
       </span>
