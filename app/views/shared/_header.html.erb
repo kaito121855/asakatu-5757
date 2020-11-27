@@ -1,16 +1,17 @@
-<header class="header">
-  <div class="header_bar">
-    <a class="grid-6" href="/">ASAKATU</a>
-      <% if user_signed_in? %>
-        <div class="user_nav">
-          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "post" %>
-          <%= link_to "投稿", new_tweet_path, class: "post" %>
-        </div>
-      <% else %>
-        <div class="user_nav">
-          <%= link_to "ログイン", new_user_session_path, class: "post" %>
-          <%= link_to "新規登録", new_user_registration_path, class: "post" %>
-        </div>
-      <% end %>
-    </div>
-  </header>
+<header>
+
+  <div class="header-title header-item">
+    <%= link_to "ASAKATU", root_path, class: "header-title-item" %>
+  </div>
+
+  <div class="header-content header-item">
+  　<% if user_signed_in? %>
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header-content-item" %>
+      <%= link_to "投稿", new_tweet_path, class: "header-content-item" %>
+    <% else %>
+      <%= link_to "ログイン", new_user_session_path, class: "header-content-item" %>
+      <%= link_to "新規登録", new_user_registration_path, class: "header-content-item" %>
+    <% end %>
+  </div>
+
+</header>
