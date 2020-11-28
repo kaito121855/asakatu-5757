@@ -1,8 +1,8 @@
 class StartMinute < ActiveHash::Base
   self.data = [
     { id: 1, name: '--' },
-    { id: 2, name: 00 },
-    { id: 3, name: 05 },
+    { id: 2, name: '00' },
+    { id: 3, name: '05' },
     { id: 4, name: 10 },
     { id: 5, name: 15 },
     { id: 6, name: 20 },
