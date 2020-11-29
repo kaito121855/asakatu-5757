@@ -1,24 +1,34 @@
-<div class="contents row">
-  <div class="container">
-    <h3>編集</h3>
-    <%= form_with(model: @tweet, local: true) do |form| %>
-    <div class="task-content">
-      <div class="task-form">
-        <%= form.text_field :task, class:"task-box" %>
-      </div>
-      <div class="time-form">
-        <%= form.collection_select(:start_hour_id, StartHour.all, :id, :name, {}, {class:"selict-box"}) %>
-        <%= form.collection_select(:start_minute_id, StartMinute.all, :id, :name, {}, {class:"selict-box"}) %>
-        <%= form.collection_select(:end_hour_id, EndHour.all, :id, :name, {}, {class:"selict-box"}) %>
-        <%= form.collection_select(:end_minute_id, EndMinute.all, :id, :name, {}, {class:"selict-box"}) %>
-      </div>
-      <div class="detalis-form">
-        <%= form.text_area :detalis, class:"detalis_box" %>
-      </div>
+<div class="container">
+
+  <h1>投稿</h1>
+
+  <%= form_with(model: @tweet, local: true) do |form| %>
+  <div class="task-item">
+    <div class="task-form">
+      <span class="task-title">タスク名</span>
+      <%= form.text_field :task, class:"task-box" %>
     </div>
-    <div class="submit-btn">
-      <%= form.submit "投稿" %>
+    <div class="time-form">
+    　<span class="time-title">開始時間</span>
+      <div class="time-box">
+        <%= form.collection_select(:start_hour_id, StartHour.all, :id, :name, {}, {class:"select-box"}) %>
+        <%= form.collection_select(:start_minute_id, StartMinute.all, :id, :name, {}, {class:"select-box"}) %>
+      </div>
+      <span class="time-title">終了時間</span>
+      <div class="time-box">
+        <%= form.collection_select(:end_hour_id, EndHour.all, :id, :name, {}, {class:"select-box"}) %>
+        <%= form.collection_select(:end_minute_id, EndMinute.all, :id, :name, {}, {class:"select-box"}) %>
+      </div>  
     </div>
-    <% end %>
+    <div class="detalis-form">
+    　<span class="detalis-title">詳細</span>
+      <%= form.text_area :detalis, class:"detalis-box" %>
+    </div>
   </div>
+
+  <div class="submit-form">
+    <%= form.submit "投 稿", class:"submit-btn" %>
+  </div>
+
+  <% end %>
 </div>
