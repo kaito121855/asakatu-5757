@@ -1,28 +1,59 @@
 <%= render "shared/header" %>
-<div class="contents-row">
+
+<div class="tweets">
   <% @tweets.each do |tweet| %>
-    <div class="content_post">
-      <div class="more">
-        <span><%= image_tag 'arrow_top.png' %></span>
-        <ul class="more_list">
-          <li>
-            <%= link_to '詳細', tweet_path(tweet.id), method: :get  %>
-          </li>
-          <li>
-            <%= link_to '編集', edit_tweet_path(tweet.id), method: :get  %>
-          </li>
-          <li>
-            <%= link_to '削除', tweet_path(tweet.id), method: :delete  %>
-          </li>
-        </ul>
+    <div class="content">
+
+      <div class="tweet-content">
+        <div class="task">
+          <%# ユーザー情報 %>
+          <div class="user-content">
+            <%= image_tag 'user.png', class:"user-image" %>
+            <span class="user-nickname"><%= '投稿者の指名' %></span>
+          </div>
+　　　　　　<%# タスク情報 %>
+        　<div class="task-content">
+            <div class="task-image">
+              <span><%= image_tag 'ranning.jpg', class:"task-content-image" %></span>
+            </div>
+            <div class="task-item">
+              <span class="task-title"><%= tweet.task %></span>
+              <div class="task-time">
+                <%= image_tag 'time.png', class:"time-image" %>
+                <span class="task-item-time"><%= tweet.start_hour.name %>:<%= tweet.start_minute.name %> 〜 <%= tweet.end_hour.name %>:<%= tweet.end_minute.name %></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="more">
+          <%# サイドバー %>
+          <div class="side-list"><%= '…' %></div>
+          <%# サイドバーリスト %>
+            <ul class="tweet-side-lists">
+              <li>
+                <%= link_to '詳細', tweet_path(tweet.id), method: :get, class:"tweet-side-list" %>
+              </li>
+              <li>
+                <%= link_to '編集', edit_tweet_path(tweet.id), method: :get, class:"tweet-side-list" %>
+              </li>
+              <li>
+                <%= link_to '削除', tweet_path(tweet.id), method: :delete, class:"tweet-side-list" %>
+              </li>
+            </ul>
+        </div>
       </div>
-      <p><%= tweet.updated_at.strftime("%m 月 %d 日 %H 時 %M分") %></p>
-      <p><%= tweet.task %></p>
-      <p>開始時間： <%= tweet.start_hour.name %> 時 <%= tweet.start_minute.name %> 分　終了時間： <%= tweet.end_hour.name %> 時 <%= tweet.end_minute.name %> 分</p>
-      <span class="name">
-        <%= tweet.detalis %>
-      </span>
+
+      <div class="datalis">
+        <span class="detalis-item"><%= tweet.detalis %></span>
+      </div>
+
+      <div class="day">
+        <span><%= tweet.updated_at.strftime("%m月%d日 %H:%M") %></span>
+      </div>
+
     </div>
   <% end %>
 </div>
+
 <%= render "shared/footer" %>
