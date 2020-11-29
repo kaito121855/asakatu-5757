@@ -1,6 +1,6 @@
 class EndMinute < ActiveHash::Base
   self.data = [
-    { id: 1, name: '--' },
+    { id: 1, name: '分' },
     { id: 2, name: '00' },
     { id: 3, name: '05' },
     { id: 4, name: 10 },
