@@ -1,14 +1,10 @@
-<div class="contents row">
-  <div class="container">
-    <div class='form-registration'>
-    <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
-      <h1>新規登録</h1>
-      <%= f.text_field :nickname, placeholder:"ニックネーム（6文字以下）", autofocus: true, class:"form-box", maxlength: "6" %>
-      <%= f.email_field :email, placeholder:"メールアドレス", class:"form-box" %>
-      <%= f.password_field :password, placeholder:"パスワード", autocomplete: "off", class:"form-box" %>
-      <%= f.password_field :password_confirmation, placeholder:"パスワード（確認用）", autocomplete: "off", class:"form-box" %>
-      <%= f.submit "登　録", class:"form-btn"  %>
-    <% end %>
-    </div>
-  </div>
+<div class='form-registration'>
+<%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+  <h1>新規登録</h1>
+  <%= f.text_field :nickname, placeholder:"ニックネーム（6文字以下）", autofocus: true, class:"form-box", maxlength: "6" %>
+  <%= f.email_field :email, placeholder:"メールアドレス", class:"form-box" %>
+  <%= f.password_field :password, placeholder:"パスワード", autocomplete: "off", class:"form-box" %>
+  <%= f.password_field :password_confirmation, placeholder:"パスワード（確認用）", autocomplete: "off", class:"form-box" %>
+  <%= f.submit "登　録", class:"form-btn"  %>
+  <% end %>
 </div>
