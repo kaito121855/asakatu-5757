@@ -1,4 +1,6 @@
 class Tweet < ApplicationRecord
+  belongs_to :user
+
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :start_hour
   belongs_to :start_minute
