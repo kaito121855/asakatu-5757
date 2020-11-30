@@ -40,7 +40,7 @@ class TweetsController < ApplicationController
   private
 
   def tweet_params
-    params.require(:tweet).permit(:task, :detalis, :start_hour_id, :start_minute_id, :end_hour_id, :end_minute_id)
+    params.require(:tweet).permit(:task, :detalis, :start_hour_id, :start_minute_id, :end_hour_id, :end_minute_id).merge(user_id: current_user.id)
   end
 
   def set_tweet
