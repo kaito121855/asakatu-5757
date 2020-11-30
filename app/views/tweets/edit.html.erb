@@ -1,7 +1,18 @@
+<header>　　
+  <div class="header-back header-item">
+    <%= link_to "＜", root_path, class: "header-back-btn" %>
+  </div>
+
+  <div class="header-title header-item">
+    <%= link_to "編集ページ", root_path, class: "header-title-item" %>
+  </div>
+
+  <div class="header-content header-item">
+  </div>
+</header>
+
 <div class="container">
-
-  <h1>投稿</h1>
-
+  <h1>投 稿</h1>
   <%= form_with(model: @tweet, local: true) do |form| %>
   <div class="task-item">
     <div class="task-form">
@@ -25,10 +36,8 @@
       <%= form.text_area :detalis, class:"detalis-box" %>
     </div>
   </div>
-
   <div class="submit-form">
-    <%= form.submit "投 稿", class:"submit-btn" %>
+    <%= form.submit "変 更", class:"submit-btn" %>
   </div>
-
   <% end %>
 </div>

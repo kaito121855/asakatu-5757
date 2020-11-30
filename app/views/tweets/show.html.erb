@@ -1,4 +1,15 @@
-<%= render "shared/header" %>
+<header>　　
+  <div class="header-back header-item">
+    <%= link_to "＜", root_path, class: "header-back-btn" %>
+  </div>
+
+  <div class="header-title header-item">
+    <%= link_to "詳細ページ", root_path, class: "header-title-item" %>
+  </div>
+
+  <div class="header-content header-item">
+  </div>
+</header>
 
 <div class="tweets">
   <div class="content">
@@ -8,7 +19,7 @@
         <%# ユーザー情報 %>
         <div class="user-content">
           <%= image_tag 'user.png', class:"user-image" %>
-          <span class="user-nickname"><%= '投稿者の指名' %></span>
+          <span class="user-nickname"><%= @tweet.user.nickname %></span>
         </div>
 　　　　　<%# タスク情報 %>
         <div class="task-content">
@@ -50,5 +61,3 @@
 
     </div>
 </div>
-
-<%= render "shared/footer" %>
