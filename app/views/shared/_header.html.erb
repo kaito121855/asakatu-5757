@@ -1,7 +1,12 @@
-<header>
+<header>　　
+  
+  <div class="header-user header-item">
+    <%= image_tag 'user.png', class:"user-image" %>
+    <%= link_to current_user.nickname, user_path(current_user.id), method: :get, class: "header-user-nickname" %>
+  </div>
 
   <div class="header-title header-item">
-    <%= link_to "ASAKATU", root_path, class: "header-title-item" %>
+    <%= link_to "ホーム", root_path, class: "header-title-item" %>
   </div>
 
   <div class="header-content header-item">
