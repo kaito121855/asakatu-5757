@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2020_11_26_032157) do
     t.integer "start_minute_id", null: false
     t.integer "end_hour_id", null: false
     t.integer "end_minute_id", null: false
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
