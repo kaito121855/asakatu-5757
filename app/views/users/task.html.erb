@@ -18,7 +18,7 @@
   </div>
 
   <div class="today-task">
-    <% @user.tweets.each do |tweet| %>
+    <% @tweet.each do |tweet| %>
     <span class="today-task-title"><%= tweet.task %></span>
     <div class="today-task-time">
       <span><%= tweet.start_hour.name %>:<%= tweet.start_minute.name %> 〜 <%= tweet.end_hour.name %>:<%= tweet.end_minute.name %></span>

@@ -7,7 +7,8 @@ class UsersController < ApplicationController
   end
 
   def task
-    @user = User.find(params[:id])
+    user = User.find(params[:id])
+    @tweet = user.tweets
     @new = Time.current
   end
 end
