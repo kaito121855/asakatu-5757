@@ -1,11 +1,11 @@
 .tweets {
   width: 100%;
   height: 743px;
-  margin-top: 80px;
+  margin-top: 30px;
   overflow: scroll;
 }
 
-.rofile-tweets {
+.profile-tweets {
   width: 100%;
   height: 743px;
   margin-top: 80px;
