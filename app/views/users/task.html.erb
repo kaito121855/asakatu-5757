@@ -1,0 +1,34 @@
+<header>　　
+  <div class="header-back header-item">
+    <%= link_to "＜", root_path, class: "header-back-btn" %>
+  </div>
+
+  <div class="header-title header-item">
+    <p class="header-title-item">朝活タスク</p>
+  </div>
+
+  <div class="header-content header-item">
+  </div>
+</header>
+
+<div class="morning-task">
+
+  <div class="today">
+    <%= @new.month %>月<%= @new.day %>日
+  </div>
+
+  <div class="today-task">
+    <% @user.tweets.each do |tweet| %>
+    <span class="today-task-title"><%= tweet.task %></span>
+    <div class="today-task-time">
+      <span><%= tweet.start_hour.name %>:<%= tweet.start_minute.name %> 〜 <%= tweet.end_hour.name %>:<%= tweet.end_minute.name %></span>
+    </div>
+    <div class="today-datalis">
+      <span><%= tweet.detalis %></span>
+    </div>
+    <% end %>
+  </div>
+
+</div>
+
+<%= render "shared/footer" %>
