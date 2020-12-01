@@ -14,11 +14,11 @@
 <div class="morning-task">
 
   <div class="today">
-    <%= @new.month %>月<%= @new.day %>日
+    <%= @month %>月<%= @day %>日
   </div>
 
   <div class="today-task">
-    <% @tweet.each do |tweet| %>
+    <% @tweets.each do |tweet| %>
     <span class="today-task-title"><%= tweet.task %></span>
     <div class="today-task-time">
       <span><%= tweet.start_hour.name %>:<%= tweet.start_minute.name %> 〜 <%= tweet.end_hour.name %>:<%= tweet.end_minute.name %></span>

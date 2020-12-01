@@ -1,14 +1,30 @@
 class UsersController < ApplicationController
+  before_action :user, only: [:show, :task]
+  before_action :tweets, only: [:show, :task]
+  before_action :today, only: [:task]
 
   def show
-    user = User.find(params[:id])
     @nickname = user.nickname
-    @tweets = user.tweets
   end
 
   def task
-    user = User.find(params[:id])
-    @tweet = user.tweets
-    @new = Time.current
   end
+
+  private
+
+  def user
+    user = User.find(params[:id])
+  end
+
+  def tweets
+    @tweets = user.tweets
+  end
+
+  def today
+    today = Time.current
+    @month = today.month
+    @day = today.day
+  end
+
+
 end
