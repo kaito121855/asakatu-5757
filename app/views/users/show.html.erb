@@ -4,7 +4,7 @@
   </div>
 
   <div class="header-title header-item">
-    <%= link_to "マイページ", root_path, class: "header-title-item" %>
+    <p class="header-title-item"><%= @nickname %>のマイページ</p>
   </div>
 
   <div class="header-content header-item">
@@ -17,7 +17,7 @@
     <%= image_tag 'user.png', class:"profile-icon-image" %>
   </div>
   <div class="profile-name">
-     <span><%= current_user.nickname %></span>
+     <span><%= @nickname %></span>
   </div>
   <div class="profile-item">
     <div class="tweets-content">
