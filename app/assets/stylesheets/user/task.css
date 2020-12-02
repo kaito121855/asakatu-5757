@@ -1,0 +1,54 @@
+.morning-task {
+  width: 650px;
+  height: 703px;
+  margin: 0 auto;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+}
+
+.today {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 25px;
+}
+
+.today-tasks {
+  width: 80%;
+  height: 200px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 0 10px;
+  border: 2px solid #cccccc;
+  border-radius: 10px;
+}
+
+.today-task {
+  width: 90%;
+  margin: 0 auto;
+  border-bottom: 2px solid #cccccc;
+}
+
+.today-task-title {
+  width: 400px;
+  font-size: 20px;
+}
+
+.today-task-time {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.today-details {
+  width: 86%;
+  height: 25%;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #eee;
+  border-radius: 10px;
+  overflow: scroll;
+}
