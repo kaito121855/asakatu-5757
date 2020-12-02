@@ -4,6 +4,11 @@ class CommentsController < ApplicationController
     comment = Comment.new(comment_params)
     if comment.save
       redirect_to tweet_path(comment.tweet.id)
+    else
+      @tweet = Tweet.find(params[:tweet_id])
+      @comment = Comment.new
+      @comments = @tweet.comments.includes(:user)
+      render template: 'tweets/show'
     end
   end
 
