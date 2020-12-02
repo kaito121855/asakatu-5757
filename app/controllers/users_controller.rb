@@ -4,7 +4,6 @@ class UsersController < ApplicationController
   before_action :today, only: [:task]
 
   def show
-    @nickname = user.nickname
   end
 
   def task
@@ -13,7 +12,7 @@ class UsersController < ApplicationController
   private
 
   def user
-    user = User.find(params[:id])
+    @user = User.find(params[:id])
   end
 
   def tweets
@@ -22,8 +21,9 @@ class UsersController < ApplicationController
 
   def today
     today = Time.current
-    @month = today.month
-    @day = today.day
+    month = today.month
+    day = today.day
+    @today = "#{month}月#{day}日"
   end
 
 
