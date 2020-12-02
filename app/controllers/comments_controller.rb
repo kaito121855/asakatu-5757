@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
   def create
     comment = Comment.new(comment_params)
     if comment.save
-      redirect_to tweet_id(comment.tweet.id)
+      redirect_to tweet_path(comment.tweet.id)
     end
   end
 
