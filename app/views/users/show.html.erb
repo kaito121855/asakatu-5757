@@ -46,7 +46,7 @@
           <div class="user-content">
           <% if user_signed_in? %>
             <%= image_tag 'user.png', class:"user-image" %>
-            <%= link_to current_user.nickname, user_path(current_user.id), method: :get, class: "user-nickname" %>
+            <%= link_to tweet.user.nickname, user_path(tweet.user_id), method: :get, class: "user-nickname" %>
           <% end %>
           </div>
 　　　　　　<%# タスク情報 %>
@@ -72,15 +72,17 @@
               <li>
                 <%= link_to '詳細', tweet_path(tweet.id), method: :get, class:"tweet-side-list" %>
               </li>
-              <li>
-                <%= link_to '編集', edit_tweet_path(tweet.id), method: :get, class:"tweet-side-list" %>
-              </li>
-              <li>
-                <%= link_to '削除', tweet_path(tweet.id), method: :delete, class:"tweet-side-list" %>
-              </li>
+              <% if user_signed_in? && current_user.id == tweet.user_id %>
+                <li>
+                  <%= link_to '編集', edit_tweet_path(tweet.id), method: :get, class:"tweet-side-list" %>
+                </li>
+                <li>
+                  <%= link_to '削除', tweet_path(tweet.id), method: :delete, class:"tweet-side-list" %>
+                </li>
+              <% end %>
             </ul>
+          </div>
         </div>
-      </div>
 
       <div class="datalis">
         <span class="detalis-item"><%= tweet.detalis %></span>
