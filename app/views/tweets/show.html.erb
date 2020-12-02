@@ -13,8 +13,8 @@
 
 <div class="tweets">
   <div class="content">
-
     <div class="tweet-content">
+
       <div class="task">
         <%# ユーザー情報 %>
         <div class="user-content">
@@ -40,6 +40,7 @@
 
       <div class="more">
         <%# サイドバー %>
+        <% if user_signed_in? && current_user.id == @tweet.user_id %>
         <div class="side-list"><%= '…' %></div>
         <%# サイドバーリスト %>
           <ul class="tweet-side-lists">
@@ -50,6 +51,7 @@
               <%= link_to '削除', tweet_path(@tweet.id), method: :delete, class:"tweet-side-list" %>
             </li>
           </ul>
+        <% end %>
         </div>
       </div>
 
@@ -62,4 +64,5 @@
       </div>
 
     </div>
+  </div>
 </div>
