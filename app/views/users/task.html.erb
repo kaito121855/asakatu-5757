@@ -14,20 +14,24 @@
 <div class="morning-task">
 
   <div class="today">
-    <%= @month %>月<%= @day %>日
+    <%= @today %>
   </div>
 
-  <div class="today-task">
-    <% @tweets.each do |tweet| %>
-    <span class="today-task-title"><%= tweet.task %></span>
-    <div class="today-task-time">
-      <span><%= tweet.start_hour.name %>:<%= tweet.start_minute.name %> 〜 <%= tweet.end_hour.name %>:<%= tweet.end_minute.name %></span>
-    </div>
-    <div class="today-datalis">
-      <span><%= tweet.detalis %></span>
-    </div>
+  <% @tweets.each do |tweet| %>
+    <% if @today == tweet.updated_at.strftime("%m月%-d日") %>
+      <div class="today-tasks">
+    　　 <div class="today-task">
+          <span class="today-task-title"><%= tweet.task %></span>
+        </div>
+        <div class="today-task-time">
+          <span><%= tweet.start_hour.name %>:<%= tweet.start_minute.name %> 〜 <%= tweet.end_hour.name %>:<%= tweet.end_minute.name %></span>
+        </div>
+        <div class="today-details">
+          <span><%= tweet.detalis %></span>
+        </div>
+      </div>
     <% end %>
-  </div>
+  <% end %>
 
 </div>
 
