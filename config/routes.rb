@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   end
   resources :users, only: :show do
     member do
-      get 'task'
+      get :task, :following, :followers
     end
   end
   resources :relationships, only: [:create, :destroy]
