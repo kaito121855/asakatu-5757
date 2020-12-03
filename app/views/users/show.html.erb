@@ -19,6 +19,9 @@
   <div class="profile-name">
      <span><%= @user.nickname %></span>
   </div>
+
+  <%= render 'relationships/follow_btn', user: @user %>
+
   <div class="profile-item">
     <div class="tweets-content">
       <span class="tweets-title"><%= "投稿数" %></span>
