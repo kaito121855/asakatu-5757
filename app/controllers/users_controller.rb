@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :user, only: [:show, :task]
+  before_action :user, only: [:show, :task, :following, :followers]
   before_action :tweets, only: [:show, :task]
   before_action :today, only: [:task]
 
@@ -7,6 +7,14 @@ class UsersController < ApplicationController
   end
 
   def task
+  end
+
+  def following
+    @users = @user.followings
+  end
+
+  def followers
+    @users = @user.followers
   end
 
   private
