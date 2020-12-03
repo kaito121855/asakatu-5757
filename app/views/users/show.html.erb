@@ -19,8 +19,10 @@
   <div class="profile-name">
      <span><%= @user.nickname %></span>
   </div>
-
-  <%= render 'relationships/follow_btn', user: @user %>
+　
+　<div class="follow-btn">
+    <%= render 'relationships/follow_btn', user: @user %>
+  </div>
 
   <div class="profile-item">
     <div class="tweets-content">
@@ -29,17 +31,17 @@
     </div>
     <div class="tweets-content">
       <span class="rollow-title"><%= "フォロー" %></span>
-      <span class="rollow-number"><%= "0" %></span>
+      <span class="rollow-number"><%= @user.followings.count %></span>
     </div>
     <div class="tweets-content">
       <span class="follower-title"><%= "フォロワー" %></span>
-      <span class="follower-number"><%= "0" %></span>
+      <span class="follower-number"><%= @user.followers.count %></span>
     </div>
   </div>
   <% end %>
 </div>
 
-<div class="rofile-tweets">
+<div class="profile-tweets">
   <% @tweets.each do |tweet| %>
     <div class="content">
 
