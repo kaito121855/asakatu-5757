@@ -30,11 +30,11 @@
       <span class="tweets-number"><%= @tweets.length %></span>
     </div>
     <div class="tweets-content">
-      <span class="rollow-title"><%= "フォロー" %></span>
+      <%= link_to "フォロー", following_user_path(@user.id), class: "frollow-title" %>
       <span class="rollow-number"><%= @user.followings.count %></span>
     </div>
     <div class="tweets-content">
-      <span class="follower-title"><%= "フォロワー" %></span>
+      <%= link_to "フォロワー", followers_user_path(@user.id), class: "frollow-title" %>
       <span class="follower-number"><%= @user.followers.count %></span>
     </div>
   </div>
