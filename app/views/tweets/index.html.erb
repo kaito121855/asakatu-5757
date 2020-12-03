@@ -8,10 +8,8 @@
         <div class="task">
           <%# ユーザー情報 %>
           <div class="user-content">
-          <% if user_signed_in? %>
             <%= image_tag 'user.png', class:"user-image" %>
             <%= link_to tweet.user.nickname, user_path(tweet.user_id), method: :get, class: "user-nickname" %>
-          <% end %>  
           </div>
 　　　　　　<%# タスク情報 %>
         　<div class="task-content">
