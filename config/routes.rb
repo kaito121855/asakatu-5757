@@ -9,4 +9,5 @@ Rails.application.routes.draw do
       get 'task'
     end
   end
+  resources :relationships, only: [:create, :destroy]
 end
