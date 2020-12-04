@@ -21,9 +21,23 @@ header {
 }
 
 .header-back-btn {
-  color: black;
+  width: 25px;
+  height: 25px;
+  padding: 10px;
+  padding-left: 13px;
+  padding-bottom: 13px;
+  color: #a4c6ff;
   font-size: 20px;
   text-decoration: none;
+  border: 1px solid #a4c6ff;
+  border-radius: 30px;
+  transition-duration: 0.5s;
+}
+
+.header-back-btn:hover {
+  color: white;
+  background-color: #a4c6ff;
+  transition-duration: 0.5s;
 }
 
 .header-user {
@@ -34,6 +48,13 @@ header {
   margin-left: 10px;
   color: black;
   text-decoration: none;
+  transition-duration: 0.5s;
+}
+
+.header-user-nickname:hover {
+  color: #a4c6ff;
+  border-bottom: 1px solid #a4c6ff;
+  transition-duration: 0.5s;
 }
 
 .header-title {
