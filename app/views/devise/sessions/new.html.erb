@@ -1,8 +1,17 @@
 <div class='form-session'>
 <%= form_with model: @user, url: user_session_path, local: true do |f| %>
   <h1>ログイン</h1>
-  <%= f.email_field :email, placeholder:"メールアドレス", autofocus: true, class:"form-box" %>
-  <%= f.password_field :password, placeholder:"パスワード", autocomplete: "off", class:"form-box" %>
+
+  <div class="field">
+    <%= f.label :email, "メールアドレス", class:"label" %><br />
+    <%= f.email_field :email, autofocus: true, class:"form-box" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password, "パスワード", class:"label" %><br />
+    <%= f.password_field :password, autocomplete: "off", class:"form-box" %>
+  </div>
+
   <%= f.submit "ログイン", class:"form-btn" %>
 <% end %>
 </div>
