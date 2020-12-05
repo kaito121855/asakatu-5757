@@ -31,13 +31,34 @@ header {
   text-decoration: none;
   border: 1px solid #a4c6ff;
   border-radius: 30px;
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
 }
 
 .header-back-btn:hover {
   color: white;
   background-color: #a4c6ff;
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
+}
+
+.header-back-btn-edit {
+  width: 25px;
+  height: 25px;
+  padding: 10px;
+  margin-left: 32px;
+  padding-left: 13px;
+  padding-bottom: 13px;
+  color: #a4c6ff;
+  font-size: 20px;
+  text-decoration: none;
+  border: 1px solid #a4c6ff;
+  border-radius: 30px;
+  transition-duration: 0.3s;
+}
+
+.header-back-btn-edit:hover {
+  color: white;
+  background-color: #a4c6ff;
+  transition-duration: 0.3s;
 }
 
 .header-user {
@@ -48,13 +69,38 @@ header {
   margin-left: 10px;
   color: black;
   text-decoration: none;
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
 }
 
 .header-user-nickname:hover {
   color: #a4c6ff;
   border-bottom: 1px solid #a4c6ff;
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
+}
+
+.user-login {
+  color: black;
+  text-decoration: none;
+  transition-duration: 0.3s;
+}
+
+.user-login:hover {
+  color: #a4c6ff;
+  border-bottom: 1px solid #a4c6ff;
+  transition-duration: 0.3s;
+}
+
+.user-create {
+  margin-left: 20px;
+  color: black;
+  text-decoration: none;
+  transition-duration: 0.3s;
+}
+
+.user-create:hover {
+  color: #a4c6ff;
+  border-bottom: 1px solid #a4c6ff;
+  transition-duration: 0.3s;
 }
 
 .header-title {
@@ -73,10 +119,42 @@ header {
   margin-right: 30px;
 }
 
-.header-content-item {
+.task-create {
   margin-left: 30px;
   padding: 5px;
   color: black;
   font-size: 17px;
   text-decoration: none;
+  transition-duration: 0.3s;
+}
+
+.task-create:hover {
+  color: #a4c6ff;
+  border-bottom: 1px solid #a4c6ff;
+  transition-duration: 0.3s;
+}
+
+.user-edit {
+  color: black;
+  text-decoration: none;
+  transition-duration: 0.3s;
+}
+
+.user-edit:hover {
+  color: #a4c6ff;
+  border-bottom: 1px solid #a4c6ff;
+  transition-duration: 0.3s;
+}
+
+.user-logout {
+  margin-left: 20px;
+  color: black;
+  text-decoration: none;
+  transition-duration: 0.3s;
+}
+
+.user-logout:hover {
+  color: #a4c6ff;
+  border-bottom: 1px solid #a4c6ff;
+  transition-duration: 0.3s;
 }

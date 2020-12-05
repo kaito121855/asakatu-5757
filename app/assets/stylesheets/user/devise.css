@@ -37,10 +37,19 @@ h1 {
   font-weight: 700;
 }
 
+.field {
+  height: 85px;
+  margin-bottom: 20px;
+}
+
+.label {
+  margin-left: 55px;
+}
+
 .form-box {
   width: 70%;
-  padding: 20px;
-  margin: 20px 55px;
+  padding: 5px;
+  margin: 5px 55px;
   background-color: #f5f5f5;
   border-radius: 6px;
   border: 1px solid #eee;
@@ -49,7 +58,7 @@ h1 {
 .form-btn {
   width: 50%;
   padding: 20px;
-  margin: 30px 120px;
+  margin: 5px 120px;
   border-radius: 6px;
   border: 0;
   background-color: #bad3ff;
