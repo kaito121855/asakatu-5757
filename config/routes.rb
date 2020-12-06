@@ -5,7 +5,6 @@ Rails.application.routes.draw do
 
   # ユーザー機能に関するルーティング
   resources :users, only: :show do
-    get :fovorites, on: :collection
     member do
       get :task, :following, :followers
     end
@@ -13,7 +12,7 @@ Rails.application.routes.draw do
 
   # 投稿機能に関するルーティング
   resources :tweets do
-    resources :favorites, only: [:create, :destroy]
+    resource :favorites, only: [:create, :destroy]
     resources :comments, only: :create
   end
 
