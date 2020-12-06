@@ -4,8 +4,6 @@ class UsersController < ApplicationController
   before_action :today, only: [:task]
 
   def show
-    favorites = Favorite.where(user_id: current_user.id).pluck(:tweet_id)
-    @favorite_list = Post.find(favorites)
   end
 
   def task
