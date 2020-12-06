@@ -50,6 +50,13 @@
         <span class="detalis-item"><%= tweet.detalis %></span>
       </div>
 
+      <% if current_user.already_favorited?(tweet) %>
+        <%= link_to 'いいねを外す', tweet_favorites_path(tweet), method: :delete %>
+      <% else %>
+        <%= link_to 'いいね', tweet_favorites_path(tweet), method: :post %>
+      <% end %>
+      <%= tweet.favorites.count %>
+
       <div class="day">
         <span><%= tweet.updated_at.strftime("%m月%-d日 %H:%M") %></span>
       </div>
