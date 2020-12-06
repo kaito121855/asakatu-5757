@@ -275,7 +275,15 @@
   border-radius: 6px;
 }
 
-.fa:before{
+.fa-heart {
+  color: #a4c6ff;
+  margin-left: 40px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.favorite-num{
+  margin-left: 5px;
   display: inline-block;
   text-decoration: none;
 }
