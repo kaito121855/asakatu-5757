@@ -29,4 +29,8 @@ class User < ApplicationRecord
     self.followings.include?(other_user)
   end
 
+  def already_favorited?(tweet)
+    self.favorites.exists?(tweet_id: tweet.id)
+  end
+
 end
