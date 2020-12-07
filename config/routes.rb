@@ -3,6 +3,11 @@ Rails.application.routes.draw do
   # ルート先の設定
   root to: 'tweets#index'
 
+  # ログイン機能に関するルーティング
+  devise_for :users, controllers: {
+    registrations: 'users/registrations'
+  }
+
   # ユーザー機能に関するルーティング
   resources :users, only: :show do
     member do
@@ -16,11 +21,6 @@ Rails.application.routes.draw do
     resource :achievements, only: [:create, :destroy]
     resources :comments, only: :create
   end
-
-  # ログイン機能に関するルーティング
-  devise_for :users, controllers: {
-    registrations: 'users/registrations'
-  }
 
   # フォロー機能に関するルーティング
   resources :relationships, only: [:create, :destroy]
