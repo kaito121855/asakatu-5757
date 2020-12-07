@@ -34,4 +34,8 @@ class User < ApplicationRecord
     self.favorites.exists?(tweet_id: tweet.id)
   end
 
+  def already_achieved?(tweet)
+    self.achievements.exists?(tweet_id: tweet.id)
+  end
+
 end
