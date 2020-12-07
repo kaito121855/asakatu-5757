@@ -3,12 +3,12 @@ class AchievementsController < ApplicationController
   before_action :authenticate_user!
 
   def create
-    @favorite = current_user.favorites.create(tweet_id: params[:tweet_id])
+    @achievement = current_user.favorites.create(tweet_id: params[:tweet_id])
   end
 
   def destroy
-    @favorite =current_user.favorites.find_by(tweet_id: @tweet.id)
-    @favorite.destroy
+    @achievement =current_user.favorites.find_by(tweet_id: @tweet.id)
+    @achievement.destroy
   end
 
   private
