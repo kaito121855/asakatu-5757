@@ -2,6 +2,7 @@ class Tweet < ApplicationRecord
   has_many :comments
   belongs_to :user
   has_many :favorites, dependent: :destroy
+  has_many :achievements, dependent: :destroy
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :start_hour
