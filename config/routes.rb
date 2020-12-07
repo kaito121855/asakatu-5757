@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   # 投稿機能に関するルーティング
   resources :tweets do
     resource :favorites, only: [:create, :destroy]
+    resource :achievements, only: [:create, :destroy]
     resources :comments, only: :create
   end
 
