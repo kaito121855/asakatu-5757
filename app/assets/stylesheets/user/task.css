@@ -17,7 +17,7 @@
 
 .today-tasks {
   width: 80%;
-  height: 200px;
+  height: 220px;
   margin: 0 auto;
   margin-bottom: 20px;
   padding: 0 10px;
@@ -51,4 +51,28 @@
   background-color: #eee;
   border-radius: 10px;
   overflow: scroll;
+}
+
+.not-achieved {
+  background-color: white;
+  border: 2px solid #6495ed;
+  color: #6495ed;
+  display: block;
+  text-align: center;
+  width: 20%;
+  margin: 0 auto;
+  margin-top: 8px;
+  border-radius: 10px;
+}
+
+.achieved {
+  background-color: #6495ed;
+  border: 2px solid #6495ed;
+  color: white;
+  display: block;
+  text-align: center;
+  width: 20%;
+  margin: 0 auto;
+  margin-top: 8px;
+  border-radius: 10px;
 }
