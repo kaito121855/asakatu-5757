@@ -13,7 +13,7 @@
 
 .content {
   width: 650px;
-  height: 330px;
+  height: 350px;
   margin: 0 auto;
   margin-top: 50px;
   margin-bottom: 50px;
@@ -276,14 +276,10 @@
 }
 
 .fa-heart {
-  color: #a4c6ff;
+  color: pink;
   margin-left: 40px;
-  display: inline-block;
-  text-decoration: none;
 }
 
 .favorite-num{
   margin-left: 5px;
-  display: inline-block;
-  text-decoration: none;
 }

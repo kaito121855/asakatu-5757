@@ -50,9 +50,9 @@
         <span class="detalis-item"><%= tweet.detalis %></span>
       </div>
 
-      <tr id="tweet_<%= tweet.id %>">
+      <div id="tweet_<%= tweet.id %>">
         <%= render partial: 'favorites/favorite', locals: { tweet: tweet}  %>
-      </tr>
+      </div>
 
       <div class="day">
         <span><%= tweet.updated_at.strftime("%m月%-d日 %H:%M") %></span>
