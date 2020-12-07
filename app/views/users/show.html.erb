@@ -1,6 +1,6 @@
 <header>　　
   <div class="header-back header-item">
-    <%= link_to "＜", root_path, class: "header-back-btn" %>
+    <%= link_to "＜", 'javascript:history.back()', class: "header-back-btn" %>
   </div>
 
   <div class="header-title header-item">
@@ -95,7 +95,9 @@
         <span class="detalis-item"><%= tweet.detalis %></span>
       </div>
 
-      <%= render 'favorites/favorite', tweet: tweet %>
+      <div id="tweet_<%= tweet.id %>">
+        <%= render partial: 'favorites/favorite', locals: { tweet: tweet}  %>
+      </div>
 
       <div class="day">
         <span><%= tweet.updated_at.strftime("%m月%d日 %H:%M") %></span>
