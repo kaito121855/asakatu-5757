@@ -29,6 +29,9 @@
         <div class="today-details">
           <span><%= tweet.detalis %></span>
         </div>
+        <div id="tweet_<%= tweet.id %>">
+          <%= render partial: 'achievements/achievement', locals: { tweet: tweet}  %>
+        </div>
       </div>
     <% end %>
   <% end %>
