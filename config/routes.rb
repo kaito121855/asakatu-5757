@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   # ユーザー機能に関するルーティング
   resources :users, only: :show do
     member do
-      get :task, :following, :followers
+      get :task, :record, :following, :followers
     end
   end
 
