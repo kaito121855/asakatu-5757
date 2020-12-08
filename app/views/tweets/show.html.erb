@@ -72,7 +72,7 @@
       <% if @comments %>
         <% @comments.each do |comment| %>
           <p>
-            <strong><%= link_to comment.user.nickname, tweet_comments_path(comment.user_id) %>：</strong>
+            <strong><%= link_to comment.user.nickname, user_path(comment.user_id) %>：</strong>
             <%= comment.text %>
           </p>
         <% end %>
