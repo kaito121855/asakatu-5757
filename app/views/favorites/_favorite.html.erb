@@ -1,4 +1,4 @@
-<% if current_user.already_favorited?(tweet) %>
+<% if user_signed_in? && current_user.already_favorited?(tweet) %>
   <%= link_to tweet_favorites_path(tweet), method: :delete, remote: true do %>
     <i class="fas fa-heart"> いいね
     <span class="favorite-num"><%= tweet.favorites.count %></span></i>
