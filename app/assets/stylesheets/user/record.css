@@ -1,0 +1,59 @@
+/* 記録画面 */
+.records {
+  width: 80vw;
+  height: 703px;
+  margin: 0 auto;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+}
+
+/* タスク数・達成数・達成時間計 */
+.record-contents {
+  width: 70vw;
+  height: 150px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.record-content {
+  width: 20vw;
+  height: 100px;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid #cccccc;
+  border-radius: 10px;
+}
+
+.record-content-title {
+  width: 20VW;
+  height: 40px;
+  font-size: 18px;
+  text-align: center;
+  line-height: 40px;
+  border-bottom: 2px solid #cccccc;
+}
+
+.record-content-num {
+  width: 20VW;
+  height: 60px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 60px;
+}
+
+.record-content-num > span {
+  font-size: 15px;
+  color: #cccccc;
+}
+
+.record-achivement-graph {
+  margin: 0 auto;
+  margin-top: 120px;
+}
