@@ -1,0 +1,58 @@
+<header>
+  <div class="header-back header-item">
+  </div>
+
+  <div class="header-title header-item">
+    <p class="header-title-item">記録</p>
+  </div>
+
+  <div class="header-content header-item">
+  </div>
+</header>
+
+<div class="records">
+
+  <%# タスク数・達成数・達成時間計 %>
+  <div class="record-contents">
+
+    <%# タスク数 %>
+    <div class="record-content">
+      <div class="record-content-title">
+        タスク数
+      </div>
+      <div class="record-content-num">
+        <%= @tweets.count %>
+      </div>
+    </div>
+
+    <%# 達成数 %>
+    <div class="record-content">
+      <div class="record-content-title">
+        達成数
+      </div>
+      <div class="record-content-num">
+        <%= @time_sum %>
+      </div>
+    </div>
+
+    <%# 達成時間計 %>
+    <div class="record-content">
+      <div class="record-content-title">
+        達成時間計
+      </div>
+      <div class="record-content-num">
+        <%= @user.achievements.count %><span> h</span>
+      </div>
+    </div>
+
+  </div>
+  
+  <%# 達成数のグラフ %>
+  <div class="record-achivement-graph">
+    <div class="record-achivement-graph-title">1週間の達成数</div>
+    <%= column_chart @week_achievement, width: "70vw", max: 10, discrete: true  %>
+  </div>
+
+</div>
+
+<%= render "shared/footer" %>
