@@ -1,6 +1,6 @@
-<header>　　
+<header>
   <div class="header-back header-item">
-    <%= link_to "＜", 'javascript:history.back()', class: "header-back-btn" %>
+    <%= link_to "＜", 'javascript:history.back()', class: "header-back-btn-edit" %>
   </div>
 
   <div class="header-title header-item">
@@ -22,11 +22,13 @@
   <div class="profile-name">
      <span><%= @user.nickname %></span>
   </div>
-　
-　<div class="follow-btn">
-    <% if user_signed_in? %>
-      <%= render 'relationships/follow_btn', user: @user %>
-    <% end %>
+  
+  <div class="follow-btn">
+    <div id="follow-btn_<%= @user.id %>">
+      <% if user_signed_in? %>
+        <%= render partial: 'relationships/follow_btn', locals: { user: @user } %>
+      <% end %>
+    </div>
   </div>
 
   <div class="profile-item">
@@ -36,11 +38,15 @@
     </div>
     <div class="tweets-content">
       <%= link_to "フォロー", following_user_path(@user.id), class: "frollow-title" %>
-      <span class="rollow-number"><%= @user.followings.count %></span>
+      <div id="follow-number_<%= @user.id %>">
+        <span class="follow-number"><%= @user.followings.count %></span>
+      </div>
     </div>
     <div class="tweets-content">
       <%= link_to "フォロワー", followers_user_path(@user.id), class: "frollow-title" %>
-      <span class="follower-number"><%= @user.followers.count %></span>
+      <div id="follower-number_<%= @user.id %>">
+        <span class="follower-number"><%= @user.followers.count %></span>
+      </div>
     </div>
   </div>
 </div>
@@ -56,8 +62,8 @@
             <%= image_tag 'user.png', class:"user-image" %>
             <%= link_to tweet.user.nickname, user_path(tweet.user_id), method: :get, class: "user-nickname" %>
           </div>
-　　　　　　<%# タスク情報 %>
-        　<div class="task-content">
+          <%# タスク情報 %>
+          <div class="task-content">
             <div class="task-image">
               <span><%= image_tag 'ranning.jpg', class:"task-content-image" %></span>
             </div>
@@ -96,7 +102,7 @@
       </div>
 
       <div id="tweet_<%= tweet.id %>">
-        <%= render partial: 'favorites/favorite', locals: { tweet: tweet}  %>
+        <%= render partial: 'favorites/favorite', locals: { tweet: tweet }  %>
       </div>
 
       <div class="day">
