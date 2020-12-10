@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user
   before_action :tweets, only: [:show, :task, :record]
+  before_action :set_achievements, only: [:record]
   before_action :time_sum, only: [:record]
 
   def show
@@ -14,14 +15,7 @@ class UsersController < ApplicationController
   end
 
   def record
-    @today, @today_achievement = week(0)
-    @one_days_ago, @one_day_achievement = week(1)
-    @two_days_ago, @two_day_achievement = week(2)
-    @three_days_ago, @three_day_achievement = week(3)
-    @four_days_ago, @four_day_achievement = week(4)
-    @five_days_ago, @five_day_achievement = week(5)
-    @six_days_ago, @six_day_achievement = week(6)
-    @week_achievement = { @six_days_ago => @six_day_achievement, @five_days_ago => @five_day_achievement, @four_days_ago => @four_day_achievement, @three_days_ago => @three_day_achievement, @two_days_ago => @two_day_achievement, @one_days_ago => @one_day_achievement, @today => @today_achievement, }
+    @week_achievement = { **week_achievement_num(6), **week_achievement_num(5), **week_achievement_num(4), **week_achievement_num(3), **week_achievement_num(2),  **week_achievement_num(1),  **week_achievement_num(0) }
   end
 
   def following
@@ -42,21 +36,25 @@ class UsersController < ApplicationController
     @tweets = @user.tweets.order('created_at DESC')
   end
 
-  def week(num)
+  def set_achievements
+    @achievements = Achievement.where(user_id: params[:id])
+    end
+
+  def week_achievement_num(num)
     today_info = Time.current
     achievement_day_info = today_info.ago(num.days)
     month = achievement_day_info.month
     day = achievement_day_info.day
     @month_day = "#{month}月#{day}日"
-    @achievements = Achievement.where(user_id: params[:id])
     achievements = []
     @achievements.each do |achievement|
       if @month_day == achievement.updated_at.strftime("%m月%-d日")
         achievements << achievement
       end
     end
-    @achievement_count = achievements.count
-    return @month_day, @achievement_count
+    achievement_count = achievements.count
+    @hash = { "#{@month_day}": achievement_count }
+    return @hash
   end
 
   def time_sum
