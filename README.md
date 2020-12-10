@@ -1,24 +1,34 @@
-# README
+## 🌐 App Name（アプリ名）
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* ASAKATU
 
-Things you may want to cover:
+## 🌐 App Overview（アプリの概要）
 
-* Ruby version
+* ユーザーが同士が朝に行うタスクを宣言し合い、タスクを達成率をあげるためのアプリケーションとなっている。
 
-* System dependencies
+## 🌐 App URL（アプリのURL）
 
-* Configuration
 
-* Database creation
+## 📂 Ruby version（Rubyのバージョン）
 
-* Database initialization
+* Rails 6.0.3.4
 
-* How to run the test suite
+## text account（テスト用アカウント）
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## How to Use（アプリの利用方法）
 
-* ...
+
+## Problem Solving（目指した課題解決）
+
+
+## Requirement Definition（要件定義）
+
+
+## Implementation details（実装内容）
+
+
+## Scheduled to be implemented（今後の実装予定）
+
+
+## Database（データベース設計）
