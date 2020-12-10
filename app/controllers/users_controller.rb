@@ -45,15 +45,15 @@ class UsersController < ApplicationController
     achievement_day_info = today_info.ago(num.days)
     month = achievement_day_info.month
     day = achievement_day_info.day
-    @month_day = "#{month}月#{day}日"
+    month_day = "#{month}月#{day}日"
     achievements = []
     @achievements.each do |achievement|
-      if @month_day == achievement.updated_at.strftime("%m月%-d日")
+      if month_day == achievement.updated_at.strftime("%m月%-d日")
         achievements << achievement
       end
     end
     achievement_count = achievements.count
-    @hash = { "#{@month_day}": achievement_count }
+    @hash = { "#{month_day}": achievement_count }
     return @hash
   end
 
