@@ -24,6 +24,7 @@ header {
   width: 25px;
   height: 25px;
   padding: 10px;
+  margin-left: 32px;
   padding-left: 13px;
   padding-bottom: 13px;
   color: #a4c6ff;
@@ -40,28 +41,8 @@ header {
   transition-duration: 0.3s;
 }
 
-.header-back-btn-edit {
-  width: 25px;
-  height: 25px;
-  padding: 10px;
-  margin-left: 32px;
-  padding-left: 13px;
-  padding-bottom: 13px;
-  color: #a4c6ff;
-  font-size: 20px;
-  text-decoration: none;
-  border: 1px solid #a4c6ff;
-  border-radius: 30px;
-  transition-duration: 0.3s;
-}
-
-.header-back-btn-edit:hover {
-  color: white;
-  background-color: #a4c6ff;
-  transition-duration: 0.3s;
-}
-
 .header-user {
+  padding-left: 32px;
   justify-content: flex-start;
 }
 
