@@ -57,7 +57,8 @@
   width: 500px;
   height: 100px;
   padding: 20px;
-  margin-left: 40px;
+  margin-top: 20px;
+  margin-left: 50px;
   border: 2px solid #f2f2f2;
   display: flex;
 }
@@ -104,11 +105,9 @@
 
 .more {
   cursor: pointer;
-  height: 120px;
-  width: 50px;
-  margin-left: 30px;
-  float: right;
-  text-align: right;
+  height: 130px;
+  width: 60px;
+  margin-left: 20px;
 
 }
 
@@ -116,26 +115,41 @@
   margin-right: 3px;
   color: #b3b3b3;
   font-size: 25px;
+  text-align: center;
 }
 
 .more .tweet-side-lists {
   display: none;
+  text-align: center;
 }
 
 .more:hover .tweet-side-lists {
   display: block;
+  text-align: center;
+}
+
+.tweet-side-lists > li {
+  margin-bottom: 7px;
 }
 
 .tweet-side-list {
+  padding: 5px 0;
   color: black;
   text-decoration: none;
+  transition-duration: 0.5s;
+}
+
+.tweet-side-list:hover {
+  color: #a4c6ff;
+  border-bottom: 1px solid #a4c6ff;
+  transition-duration: 0.5s;
 }
 
 .datalis {
   width: 525px;
   height: 50px;
   padding: 10px;
-  margin: 15px 0 15px 40px;
+  margin: 15px 0 15px 50px;
   background-color: lightcyan;
   border-radius: 10px;
   overflow: scroll;
@@ -277,7 +291,7 @@
 
 .fa-heart {
   color: pink;
-  margin-left: 40px;
+  margin-left: 50px;
 }
 
 .favorite-num{
