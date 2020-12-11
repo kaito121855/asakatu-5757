@@ -1,10 +1,13 @@
 class UsersController < ApplicationController
-  before_action :set_user
+  before_action :set_user, except: [:home]
   before_action :tweets, only: [:show, :task, :record]
   before_action :set_achievements, only: [:record]
   before_action :time_sum, only: [:record]
 
   def show
+  end
+
+  def home
   end
 
   def task
