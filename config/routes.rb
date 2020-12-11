@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   # ルート先の設定
-  root to: 'tweets#index'
+  root to: 'users#home'
 
   # ログイン機能に関するルーティング
   devise_for :users, controllers: {
@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   # ユーザー機能に関するルーティング
   resources :users, only: :show do
     member do
-      get :task, :record, :following, :followers
+      get :home, :task, :record, :following, :followers
     end
   end
 
