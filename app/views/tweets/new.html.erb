@@ -4,7 +4,7 @@
   </div>
 
   <div class="header-title header-item">
-    <p class="header-title-item">投稿ページ</p>
+    <p class="header-title-item"></p>
   </div>
 
   <div class="header-content header-item">
@@ -12,7 +12,7 @@
 </header>
 
 <div class="container">
-  <h1>投 稿</h1>
+  <h1>タスク作成</h1>
   <%= form_with(model: @tweet, local: true) do |form| %>
   <div class="task-item">
     <div class="task-form">
@@ -32,12 +32,12 @@
       </div>  
     </div>
     <div class="detalis-form">
-    　<span class="detalis-title">詳細</span>
+      <span class="detalis-title">詳細</span>
       <%= form.text_area :detalis, class:"detalis-box" %>
     </div>
   </div>
   <div class="submit-form">
-    <%= form.submit "投 稿", class:"submit-btn" %>
+    <%= form.submit "作 成", class:"submit-btn" %>
   </div>
   <% end %>
 </div>
