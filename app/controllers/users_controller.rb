@@ -61,7 +61,6 @@ class UsersController < ApplicationController
   end
 
   def time_sum
-    @achievements = Achievement.where(user_id: params[:id])
     hour_array = []
     minute_array = []
     @achievements.each do |achievement|
