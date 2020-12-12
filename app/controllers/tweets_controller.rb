@@ -13,7 +13,7 @@ class TweetsController < ApplicationController
   def create
     @tweet = Tweet.new(tweet_params)
     if @tweet.save
-      redirect_to root_path
+      redirect_to tweets_path
     else
       render :new
     end
@@ -29,13 +29,13 @@ class TweetsController < ApplicationController
 
   def update
     if @tweet.update(tweet_params)
-      redirect_to root_path
+      redirect_to tweets_path
     end
   end
 
   def destroy
     if @tweet.destroy
-      redirect_to root_path
+      redirect_to tweets_path
     end
   end
 
