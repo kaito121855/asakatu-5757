@@ -1,0 +1,66 @@
+<%= render "shared/header" %>
+
+<div class="top">
+
+  <div class="top1">
+    <p>ユーザー同士が朝に行うタスクを宣言し合い、</p>
+    <p>お互いのタスクを達成できるようにするためのサービスです。</p>
+    <div class="top1-images">
+      <%= image_tag("top1.jpg", class:"top1-image") %>
+    </div>
+  </div>
+
+  <div class="top2">
+    <h2>主な機能</h2>
+  </div>
+
+  <div class="top3">
+    <h1>タスク投稿機能</h1>
+    <div class="top3-explanation">
+      <p>タスクを作成することで、投稿をすることができます。</p>
+      <div class="top3-function">
+        <%= image_tag("top3-1.png", class:"top3-image") %>
+        <div>＞</div>
+        <%= image_tag("top3-2.png", class:"top3-image") %>
+      </div>
+    </div>
+  </div>
+
+  <div class="top4">
+    <h1>タスク管理機能</h1>
+    <div class="top4-explanation">
+      <p>その日作成したタスクの一覧を確認することができます。</p>
+      <div class="top4-function">
+        <%= image_tag("top4-1.png", class:"top4-image") %>
+      </div>
+    </div>
+  </div>
+
+  <div class="top5">
+    <h1>タスク記録機能</h1>
+    <div class="top5-explanation">
+      <p>タスク達成数・達成した時間などを確認することができます。</p>
+      <div class="top5-function">
+        <%= image_tag("top5-1.png", class:"top5-image") %>
+      </div>
+    </div>
+  </div>
+
+  <div class="top6">
+    <%= link_to "ログイン", new_user_session_path, class: "top-user-btn top-user-login" %>
+    <%= link_to "新規登録", new_user_registration_path, class: "top-user-btn top-user-create" %>
+  </div>
+
+</div>
+
+<div class="top7">
+  <div class="top7-content">
+    <p>利用規約</p>
+    <p>プライバシーポリシー</p>
+    <p>ヘルプ</p>
+    <p>お問い合わせ</p>
+  </div>
+  <div class="top7-content">
+    <h1>ASAKATU</h1>
+  </div>
+</div>
