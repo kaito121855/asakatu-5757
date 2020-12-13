@@ -31,7 +31,7 @@
         達成数
       </div>
       <div class="record-content-num">
-        <%= @time_sum %>
+        <%= @user.achievements.count %>
       </div>
     </div>
 
@@ -41,7 +41,7 @@
         達成時間計
       </div>
       <div class="record-content-num">
-        <%= @user.achievements.count %><span> h</span>
+        <%= @time_sum %><span> h</span>
       </div>
     </div>
 
