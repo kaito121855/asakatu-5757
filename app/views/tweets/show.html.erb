@@ -1,6 +1,6 @@
-<header>　　
+<header>
   <div class="header-back header-item">
-    <%= link_to "＜", root_path, class: "header-back-btn" %>
+    <%= link_to "＜", tweets_path, class: "header-back-btn" %>
   </div>
 
   <div class="header-title header-item">
@@ -23,7 +23,7 @@
             <%= link_to @tweet.user.nickname, user_path(current_user.id), method: :get, class: "user-nickname" %>
           <% end %>
         </div>
-　　　　　<%# タスク情報 %>
+        <%# タスク情報 %>
         <div class="task-content">
           <div class="task-image">
             <span><%= image_tag 'ranning.jpg', class:"task-content-image" %></span>

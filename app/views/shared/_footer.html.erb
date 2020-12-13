@@ -1,13 +1,13 @@
 <footer>
   <div class="footer-title">
     <% if user_signed_in? %>
-      <%= link_to "ホーム", root_path, class: "footer-title-item" %>
+      <%= link_to "ホーム", tweets_path, class: "footer-title-item" %>
       <%= link_to "朝活タスク", task_user_path(current_user.id), method: :get, class: "footer-title-item" %>
       <%= link_to "レポート", record_user_path(current_user.id), class: "footer-title-item" %>
     <% else %>
       <%= link_to "ホーム", root_path, class: "footer-title-item" %>
       <%= link_to "朝活タスク", root_path, class: "footer-title-item" %>
-      <%= link_to "レポート", root_path, class: "footer-title-item" %>
+      <%= link_to "記録", root_path, class: "footer-title-item" %>
     <% end %>
   </div>
 </footer>

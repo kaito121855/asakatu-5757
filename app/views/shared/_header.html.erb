@@ -1,22 +1,22 @@
-<header>　　
+<header>
   
   <div class="header-user header-item">
     <% if user_signed_in? %>
       <%= image_tag 'user.png', class:"user-image" %>
       <%= link_to current_user.nickname, user_path(current_user.id), method: :get, class: "header-user-nickname" %>
-    <% else %>
-      <%= link_to "ログイン", new_user_session_path, class: "user-login" %>
-      <%= link_to "新規登録", new_user_registration_path, class: "user-create" %>
     <% end %>
   </div>
 
   <div class="header-title header-item">
-    <p class="header-title-item">ホーム</p>
+    <p class="header-title-item">ASAKATU</p>
   </div>
 
   <div class="header-content header-item">
-  　<% if user_signed_in? %>
+    <% if user_signed_in? %>
       <%= link_to "タスク作成", new_tweet_path, class: "task-create" %>
+    <% else %>
+      <%= link_to "ログイン", new_user_session_path, class: "user-login" %>
+      <%= link_to "新規登録", new_user_registration_path, class: "user-create" %>
     <% end %>
   </div>
 
