@@ -1,5 +1,5 @@
 .morning-task {
-  width: 650px;
+  width: 700px;
   height: 703px;
   margin: 0 auto;
   margin-top: 100px;
@@ -15,19 +15,27 @@
   font-size: 25px;
 }
 
-.today-tasks {
-  width: 80%;
-  height: 220px;
+.tasks {
+  width: 550px;
   margin: 0 auto;
   margin-bottom: 20px;
-  padding: 0 10px;
+  display: flex;
+  justify-content: space-around;
   border: 2px solid #cccccc;
   border-radius: 10px;
+}
+
+.today-tasks {
+  width: 90%;
+  height: 220px;
+  padding: 0 10px;
 }
 
 .today-task {
   width: 90%;
   margin: 0 auto;
+  margin-top: 20px;
+  margin-left: 45px;
   border-bottom: 2px solid #cccccc;
 }
 
@@ -41,13 +49,15 @@
   margin: 0 auto;
   margin-top: 10px;
   margin-bottom: 10px;
+  margin-left: 45px;
 }
 
 .today-details {
-  width: 86%;
+  width: 87%;
   height: 25%;
   margin: 0 auto;
   padding: 10px;
+  margin-left: 43px;
   background-color: #eee;
   border-radius: 10px;
   overflow: scroll;
@@ -61,7 +71,8 @@
   text-align: center;
   width: 20%;
   margin: 0 auto;
-  margin-top: 8px;
+  margin-top: 10px;
+  margin-left: 225px;
   border-radius: 10px;
 }
 
@@ -73,6 +84,24 @@
   text-align: center;
   width: 20%;
   margin: 0 auto;
-  margin-top: 8px;
+  margin-top: 10px;
+  margin-left: 225px;
   border-radius: 10px;
+}
+
+.today-more {
+  margin-top: 10px;
+  margin-right: 10px;
+  width: 35px;
+  text-align: center;
+}
+
+.today-more .tweet-side-lists {
+  display: none;
+  text-align: center;
+}
+
+.today-more:hover .tweet-side-lists {
+  display: block;
+  text-align: center;
 }
