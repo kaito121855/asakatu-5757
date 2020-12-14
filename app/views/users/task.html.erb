@@ -18,18 +18,33 @@
 
   <% @tweets.each do |tweet| %>
     <% if @today == tweet.updated_at.strftime("%m月%-d日") %>
-      <div class="today-tasks">
-        <div class="today-task">
-          <span class="today-task-title"><%= tweet.task %></span>
+      <div class="tasks">
+        <div class="today-tasks">
+          <div class="today-task">
+            <span class="today-task-title"><%= tweet.task %></span>
+          </div>
+          <div class="today-task-time">
+            <span><%= tweet.start_hour.name %>:<%= tweet.start_minute.name %> 〜 <%= tweet.end_hour.name %>:<%= tweet.end_minute.name %></span>
+          </div>
+          <div class="today-details">
+            <span><%= tweet.detalis %></span>
+          </div>
+          <div id="tweet_<%= tweet.id %>">
+            <%= render partial: 'achievements/achievement', locals: { tweet: tweet}  %>
+          </div>
         </div>
-        <div class="today-task-time">
-          <span><%= tweet.start_hour.name %>:<%= tweet.start_minute.name %> 〜 <%= tweet.end_hour.name %>:<%= tweet.end_minute.name %></span>
-        </div>
-        <div class="today-details">
-          <span><%= tweet.detalis %></span>
-        </div>
-        <div id="tweet_<%= tweet.id %>">
-          <%= render partial: 'achievements/achievement', locals: { tweet: tweet}  %>
+        <div class="today-more">
+          <%# サイドバー %>
+          <div class="side-list"><%= '…' %></div>
+          <%# サイドバーリスト %>
+          <ul class="tweet-side-lists">
+            <li>
+              <%= link_to '編集', edit_tweet_path(tweet.id), method: :get, class:"tweet-side-list" %>
+            </li>
+            <li>
+              <%= link_to '削除', tweet_path(tweet.id), method: :delete, class:"tweet-side-list" %>
+            </li>
+          </ul>
         </div>
       </div>
     <% end %>
