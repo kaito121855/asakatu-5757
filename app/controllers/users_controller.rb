@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   before_action :tweets, only: [:show, :task, :record]
   before_action :set_achievements, only: [:record]
   before_action :time_sum, only: [:record]
+  before_action :move_to_home, only: [:home]
 
   def show
   end
@@ -74,6 +75,12 @@ class UsersController < ApplicationController
     minute_array = m_array / 60
     sum = hours_array + minute_array
     @time_sum = sum.floor
+  end
+
+  def move_to_home
+    if user_signed_in?
+      redirect_to tweets_path
+    end
   end
 
 end
