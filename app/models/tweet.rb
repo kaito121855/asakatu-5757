@@ -17,4 +17,8 @@ class Tweet < ApplicationRecord
     validates :end_hour_id
     validates :end_minute_id
   end
+
+  def already_achieved?(tweet)
+    self.achievements.exists?(tweet_id: tweet.id)
+  end
 end

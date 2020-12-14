@@ -1,6 +1,6 @@
 <header>
   <div class="header-back header-item">
-    <%= link_to "＜", 'javascript:history.back()', class: "header-back-btn" %>
+    <%= link_to "＜", tweets_path, class: "header-back-btn" %>
   </div>
 
   <div class="header-title header-item">
@@ -101,8 +101,18 @@
         <span class="detalis-item"><%= tweet.detalis %></span>
       </div>
 
-      <div id="tweet_<%= tweet.id %>">
-        <%= render partial: 'favorites/favorite', locals: { tweet: tweet }  %>
+      <div class="sub-content">
+
+        <div id="tweet_<%= tweet.id %>">
+          <%= render partial: 'favorites/favorite', locals: { tweet: tweet}  %>
+        </div>
+
+        <div class="achievement">
+          <% if tweet.user.already_achieved?(tweet) %>
+            <span class="achieved-display"><i class="fa fa-star-o"> 達成済み</i></span>
+          <% end %>
+        </div>
+
       </div>
 
       <div class="day">

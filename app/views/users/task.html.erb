@@ -1,4 +1,4 @@
-<header>　　
+<header>
   <div class="header-back header-item">
   </div>
 
@@ -19,7 +19,7 @@
   <% @tweets.each do |tweet| %>
     <% if @today == tweet.updated_at.strftime("%m月%-d日") %>
       <div class="today-tasks">
-    　　 <div class="today-task">
+        <div class="today-task">
           <span class="today-task-title"><%= tweet.task %></span>
         </div>
         <div class="today-task-time">

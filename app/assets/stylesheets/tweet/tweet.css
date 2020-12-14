@@ -234,6 +234,18 @@
   border: 1px solid #eee;
 }
 
+.sub-content {
+  width: 545px;
+  margin-left: 50px;
+  display: flex;
+}
+
+.achieved-display {
+  margin-left: 20px;
+  color: #ffd700;
+}
+
+
 .submit-form {
   height: 50px;
   margin-top: 20px;
@@ -291,7 +303,6 @@
 
 .fa-heart {
   color: pink;
-  margin-left: 50px;
 }
 
 .favorite-num{
