@@ -59,7 +59,7 @@
         <div class="task">
           <%# ユーザー情報 %>
           <div class="user-content">
-            <%= image_tag 'user.png', class:"user-image" %>
+            <div class="tweet-user-image"><%= link_to image_tag('user.png', class: "user-image"), user_path(tweet.user_id) %></div>
             <%= link_to tweet.user.nickname, user_path(tweet.user_id), method: :get, class: "user-nickname" %>
           </div>
           <%# タスク情報 %>
