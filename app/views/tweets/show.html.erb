@@ -19,8 +19,8 @@
         <%# ユーザー情報 %>
         <div class="user-content">
           <% if user_signed_in? %>
-            <%= image_tag 'user.png', class:"user-image" %>
-            <%= link_to @tweet.user.nickname, user_path(current_user.id), method: :get, class: "user-nickname" %>
+            <div class="tweet-user-image"><%= link_to image_tag('user.png', class: "user-image"), user_path(@tweet.user_id) %></div>
+            <%= link_to @tweet.user.nickname, user_path(@tweet.user_id), method: :get, class: "user-nickname" %>
           <% end %>
         </div>
         <%# タスク情報 %>
@@ -78,13 +78,19 @@
       </div>
     </div>
     <div class="comments">
-      <h4>＜コメント一覧＞</h4>
+      <h4>コメント一覧</h4>
       <% if @comments %>
         <% @comments.each do |comment| %>
-          <p>
-            <strong><%= link_to comment.user.nickname, user_path(comment.user_id) %>：</strong>
-            <%= comment.text %>
-          </p>
+          <div class="comment-content">
+            <div class="comment-user-image"><%= link_to image_tag('user.png', class: "user-image"), user_path(comment.user_id) %></div>
+            <div class="comment-user-content">
+              <%= link_to comment.user.nickname, user_path(comment.user_id), class: "comment-user-name" %>
+              <div class="comment-user-text">
+                <div><%= comment.text %></div>
+                <div class="comment-user-text-time"><%= comment.updated_at.strftime("%m月%d日 %H:%M") %></div>
+              </div>
+            </div>
+          </div>
         <% end %>
       <% end %>
     </div>
