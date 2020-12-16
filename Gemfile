@@ -57,3 +57,4 @@ gem 'pry-rails'
 gem 'active_hash'
 gem 'devise'
 gem "chartkick"
+gem 'rails-i18n'
