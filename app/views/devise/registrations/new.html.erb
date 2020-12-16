@@ -1,26 +1,89 @@
-<div class='form-registration'>
-<%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
-  <h1>アカウント作成</h1>
+<div class='form-devise form-registration'>
+  <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+    <% if @user.errors.any? %>
+    <% end %>
 
-  <div class="field">
-    <%= f.label :nickname, "ニックネーム（6文字以下）", class:"label" %><br />
-    <%= f.text_field :nickname, autofocus: true, class:"form-box", maxlength: "6" %>
-  </div>
+    <%# タイトル %>
+    <h1 class="registration-title">
+      アカウント作成
+    </h1>
 
-  <div class="field">
-    <%= f.label :email, "メールアドレス", class:"label" %><br />
-    <%= f.email_field :email, class:"form-box" %>
-  </div>
+    <%# ニックネーム %>
+    <div class="field">
+      <%# ラベル %>
+      <div class="field-label">
+        <%= f.label :nickname, "ニックネーム（6文字以下）", class:"label" %>
+      </div>
+      <%# フォーム %>
+      <div class="field-form-box">
+        <%= f.text_field :nickname, autofocus: true, class:"form-box", maxlength: "6" %>
+      </div>
+      <%# エラーメッセージ %>
+      <% if @user.errors.include?(:nickname) %>
+        <div class="field-errors">
+          <%= @user.errors.full_messages_for(:nickname).first %>
+        </div>
+      <% end %>
+    </div>
 
-  <div class="field">
-    <%= f.label :password, "パスワード", class:"label" %><br />
-    <%= f.password_field :password, autocomplete: "off", class:"form-box" %>
-  </div>
+    <%# メールアドレス %>
+    <div class="field">
+      <%# ラベル %>
+      <div class="field-label">
+        <%= f.label :email, "メールアドレス", class:"label" %>
+      </div>
+      <%# フォーム %>
+      <div class="field-form-box">
+        <%= f.email_field :email, class:"form-box" %>
+      </div>
+      <%# エラーメッセージ %>
+      <% if @user.errors.include?(:email) %>
+        <div class="field-errors">
+          <%= @user.errors.full_messages_for(:email).first %>
+        </div>
+      <% end %>
+    </div>
+    
+    <%# パスワード %>
+    <div class="field">
+      <%# ラベル %>
+      <div class="field-label">
+        <%= f.label :password, "パスワード", class:"label" %>
+      </div>
+      <%# フォーム %>
+      <div class="field-form-box">
+        <%= f.password_field :password, autocomplete: "off", class:"form-box" %>
+      </div>
+      <%# エラーメッセージ %>
+      <% if @user.errors.include?(:password) %>
+        <div class="field-errors">
+          <%= @user.errors.full_messages_for(:password).first %>
+        </div>
+      <% end %>
+    </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation, "パスワード（確認用）", class:"label" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off", class:"form-box" %>
-  </div>
-  <%= f.submit "登　録", class:"form-btn"  %>
+    <%# パスワード（確認用） %>
+    <div class="field">
+      <%# ラベル %>
+      <div class="field-label">
+        <%= f.label :password_confirmation, "パスワード（確認用）", class:"label" %>
+      </div>
+      <%# フォーム %>
+      <div class="field-form-box">
+        <%= f.password_field :password_confirmation, autocomplete: "off", class:"form-box" %>
+      </div>
+      <%# エラーメッセージ %>
+      <% if @user.errors.include?(:password_confirmation) %>
+        <div class="field-errors">
+          <%= @user.errors.full_messages_for(:password_confirmation).first %>
+        </div>
+      <% end %>
+    </div>
+
+    <%# 送信ボタン %>
+    <div class="field-form-btn">
+      <%= f.submit "作成", class:"form-btn registration-btn"  %>
+    </div>
+
   <% end %>
 </div>
