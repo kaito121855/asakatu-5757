@@ -1,17 +1,45 @@
-<div class='form-session'>
-<%= form_with model: @user, url: user_session_path, local: true do |f| %>
-  <h1>ログイン</h1>
+<div class='form-devise form-session'>
+  <%= form_with model: @user, url: user_session_path, local: true do |f| %>
 
-  <div class="field">
-    <%= f.label :email, "メールアドレス", class:"label" %><br />
-    <%= f.email_field :email, autofocus: true, class:"form-box" %>
-  </div>
+    <%# タイトル %>
+    <h1 class="login-title">
+      ログイン
+    </h1>
 
-  <div class="field">
-    <%= f.label :password, "パスワード", class:"label" %><br />
-    <%= f.password_field :password, autocomplete: "off", class:"form-box" %>
-  </div>
+    <%# エラーメッセージ %>
+    <div class="session-errors">
+      <%= flash[:notice] %>
+      <%= flash[:alert] %>
+    </div>
 
-  <%= f.submit "ログイン", class:"form-btn" %>
-<% end %>
+    <%# メールアドレス %>
+    <div class="field">
+      <%# ラベル %>
+      <div class="field-label">
+        <%= f.label :email, "メールアドレス", class:"label" %>
+      </div>
+      <%# フォーム %>
+      <div class="field-form-box">
+        <%= f.email_field :email, autofocus: true, class:"form-box" %>
+      </div>
+    </div>
+
+    <%# パスワード %>
+    <div class="field">
+      <%# ラベル %>
+      <div class="field-label">
+        <%= f.label :password, "パスワード", class:"label" %>
+      </div>
+      <%# フォーム %>
+      <div class="field-form-box">
+        <%= f.password_field :password, autocomplete: "off", class:"form-box" %>
+      </div>
+    </div>
+
+    <%# 送信ボタン %>
+    <div class="field-form-btn">
+      <%= f.submit "ログイン", class:"form-btn session-btn" %>
+    </div>
+
+  <% end %>
 </div>
