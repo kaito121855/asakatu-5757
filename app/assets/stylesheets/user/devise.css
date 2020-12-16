@@ -3,13 +3,12 @@ body {
   height: 100%;
 }
 
-.form-session {
+/* アカウント作成・ログインのフォーム全体 */
+.form-devise {
   position: absolute;
   bottom: 50%;
   right: 50%;
   transform: translate(50%, 50%);
-  width: 500px;
-  height: 400px;
   padding: 20px;
   background-color: #fff;
   border-radius: 6px;
@@ -17,59 +16,119 @@ body {
 }
 
 .form-registration {
-  position: absolute;
-  bottom: 50%;
-  right: 50%;
-  transform: translate(50%, 50%);
   width: 500px;
-  height: 600px;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 6px;
-  box-shadow: 0px 0px 30px rgba(0,0,0,.2);
+  height: 670px;
 }
 
+.form-session {
+  width: 500px;
+  height: 450px;
+}
+
+
+/* アカウント作成・ログインのタイトル */
 h1 {
-  margin: 20px 0;
   text-align: center;
   color: black;
   font-size: 30px;
   font-weight: 700;
 }
 
+.registration-title {
+  margin: 15px 0 45px 0;
+}
+
+.login-title {
+  margin: 15px 0 10px 0;
+}
+
+
+/* アカウント作成・ログインの入力欄全体 */
 .field {
-  height: 85px;
-  margin-bottom: 20px;
+  height: 105px;
+  width: 500px;
+  margin-bottom: 10px;
+}
+
+
+/* アカウント作成・ログインの各ラベル */
+.field-label {
+  width: 500px;
 }
 
 .label {
-  margin-left: 55px;
+  display: block;
+  width: 77%;
+  margin: 0 auto;
+}
+
+
+/* アカウント作成・ログインの各入力欄 */
+.field-form-box {
+  width: 500px;
 }
 
 .form-box {
-  width: 70%;
+  display: block;
+  width: 75%;
   padding: 5px;
-  margin: 5px 55px;
+  margin: 10px auto 5px;
   background-color: #f5f5f5;
   border-radius: 6px;
   border: 1px solid #eee;
 }
 
+
+/* アカウント作成・ログインのエラーメッセージ */
+.field-errors {
+  width: 77%;
+  margin: 0 auto;
+  color: red;
+}
+
+.session-errors {
+  width: 77%;
+  height: 20px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  color: red;
+  text-align: center;
+}
+
+
+/* アカウント作成・ログインの送信ボタン */
+.field-form-btn {
+  width: 500px;
+  height: 90px;
+  padding-top: 10px;
+}
+
 .form-btn {
-  width: 50%;
+  display: block;
+  width: 40%;
+  margin: 0 auto;
   padding: 20px;
-  margin: 5px 120px;
-  border-radius: 6px;
-  border: 0;
+  color: white;
   background-color: #bad3ff;
-  box-shadow: 3px 3px 0px rgba(0,0,0,.1);
-  color: #fff;
-  font-size: 15px;
-  text-shadow:1px 1px 0px rgba(0,0,0,.1);
-  transition: 0.5s;
+  box-shadow:0 4px 0 #dcdcdc;
+  border: 2px solid #bad3ff;
+  border-radius: 6px;
 }
 
 .form-btn:hover {
-  background-color: #a4c6ff;
-  transition: 0.5s;
+  position: relative;
+  top: 4px;
+  cursor: pointer;
+  box-shadow: none;
+  font-weight: bold;
 }
+
+.registration-btn {
+  letter-spacing: 2em;
+  text-indent: 2em;
+}
+
+.session-btn {
+  letter-spacing: 1em;
+  text-indent: 1em;
+} 
