@@ -2,68 +2,91 @@
 
 <div class="tweets">
   <% @tweets.each do |tweet| %>
-    <div class="content">
+    <%# 各投稿全体 %>
+    <div class="tweet">
 
+      <%# タスク全体 %>
       <div class="tweet-content">
+        <%# ユーザー情報・タスク情報 %>
         <div class="task">
           <%# ユーザー情報 %>
           <div class="user-content">
-            <div class="tweet-user-image"><%= link_to image_tag('user.png', class: "user-image"), user_path(tweet.user_id) %></div>
+            <%# ユーザー画像 %>
+            <div class="tweet-user-image">
+              <%= link_to image_tag('user.png', class: "user-image"), user_path(tweet.user_id) %>
+            </div>
+            <%# ニックネーム %>
             <%= link_to tweet.user.nickname, user_path(tweet.user_id), method: :get, class: "user-nickname" %>
+            <%# ジャンル %>
+            <div class="category-content">
+              <%= tweet.category.name %>
+            </div>
           </div>
           <%# タスク情報 %>
           <div class="task-content">
+            <%# タスク画像 %>
             <div class="task-image">
               <span><%= image_tag 'ranning.jpg', class:"task-content-image" %></span>
             </div>
+            <%# タスク名・タスク時間 %>
             <div class="task-item">
-              <span class="task-title"><%= tweet.task %></span>
+              <%# タスク名 %>
+              <div class="task-title">
+                <%= tweet.task %>
+              </div>
+              <%# タスク時間 %>
               <div class="task-time">
                 <%= image_tag 'time.png', class:"time-image" %>
-                <span class="task-item-time"><%= tweet.start_hour.name %>:<%= tweet.start_minute.name %> 〜 <%= tweet.end_hour.name %>:<%= tweet.end_minute.name %></span>
+                <div class="task-item-time">
+                  <%= tweet.start_hour.name %>:<%= tweet.start_minute.name %> 〜 <%= tweet.end_hour.name %>:<%= tweet.end_minute.name %>
+                </div>
               </div>
             </div>
           </div>
         </div>
-
+        <%# サイドメニュー情報 %>
         <div class="more">
           <%# サイドバー %>
-          <div class="side-list"><%= '…' %></div>
-          <%# サイドバーリスト %>
-            <ul class="tweet-side-lists">
-              <li>
-                <%= link_to '詳細', tweet_path(tweet.id), method: :get, class:"tweet-side-list" %>
-              </li>
-              <% if user_signed_in? && current_user.id == tweet.user_id %>
-                <li>
-                  <%= link_to '編集', edit_tweet_path(tweet.id), method: :get, class:"tweet-side-list" %>
-                </li>
-                <li>
-                  <%= link_to '削除', tweet_path(tweet.id), method: :delete, class:"tweet-side-list" %>
-                </li>
-              <% end %>
-            </ul>
+          <div class="side-list">
+            <%= '…' %>
           </div>
+          <%# サイドバーリスト %>
+          <ul class="tweet-side-lists">
+            <li>
+              <%= link_to '詳細', tweet_path(tweet.id), method: :get, class:"tweet-side-list" %>
+            </li>
+            <% if user_signed_in? && current_user.id == tweet.user_id %>
+              <li>
+                <%= link_to '編集', edit_tweet_path(tweet.id), method: :get, class:"tweet-side-list" %>
+              </li>
+              <li>
+                <%= link_to '削除', tweet_path(tweet.id), method: :delete, class:"tweet-side-list" %>
+              </li>
+            <% end %>
+          </ul>
         </div>
+      </div>
 
+      <%# 詳細情報 %>
       <div class="datalis">
         <span class="detalis-item"><%= tweet.detalis %></span>
       </div>
 
+      <%# いいね情報・達成情報 %>
       <div class="sub-content">
-
+        <%# いいね情報 %>
         <div id="tweet_<%= tweet.id %>">
           <%= render partial: 'favorites/favorite', locals: { tweet: tweet}  %>
         </div>
-
+        <%# 達成情報 %>
         <div class="achievement">
           <% if tweet.user.already_achieved?(tweet) %>
             <span class="achieved-display"><i class="fa fa-star-o"> 達成済み</i></span>
           <% end %>
         </div>
-
       </div>
 
+      <%# 投稿時間情報 %>
       <div class="day">
         <span><%= tweet.updated_at.strftime("%m月%-d日 %H:%M") %></span>
       </div>
