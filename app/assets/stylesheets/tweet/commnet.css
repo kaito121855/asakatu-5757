@@ -1,0 +1,107 @@
+/* コメント全体 */
+.comments {
+  width: 640px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.52);
+}
+
+
+/* コメントタイトル */
+.comments > h4 {
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid #cccccc;
+}
+
+
+/* コメント情報 */
+.comment-content {
+  margin-bottom: 20px;
+  display: flex;
+}
+
+
+/* ユーザー情報 */
+.comment-user-content {
+  width: 560px;
+  margin-left: 15px;
+}
+
+
+/* ニックネーム */
+.comment-user-name {
+  margin-bottom: 10px;
+  padding-bottom: 2px;
+  color: black;
+  text-decoration: none;
+  transition-duration: 0.5s;
+}
+
+.comment-user-name:hover {
+  color: #a4c6ff;
+  border-bottom: 1px solid #a4c6ff;
+  transition-duration: 0.5s;
+}
+
+
+/* 各コメント */
+.comment-user-text {
+  background-color: #eef0f4;
+  margin-top: 5px;
+  padding: 15px;
+  padding-bottom: 40px;
+  border-radius: 10px;
+}
+
+
+/* コメント時間 */
+.comment-user-text-time {
+  width: 150px;
+  height: 20px;
+  margin-top: 10px;
+  float: right;
+  color: #b3b3b3;
+  text-align: right;
+}
+
+
+/* コメントフォーム情報 */
+.comment-form {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translate(50%, 0);
+  width: 100%;
+  height: 80px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.52);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+
+/* コメントフォーム */
+.comment-text {
+  width: 600px;
+  height: 35px;
+  line-height: 35px;
+  margin-right: 20px;
+  border-radius: 6px;
+}
+
+
+/* コメント送信ボタン */
+.comment-btn {
+  width: 70px;
+  height: 35px;
+  cursor: pointer;
+}
+
