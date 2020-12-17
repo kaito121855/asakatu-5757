@@ -5,6 +5,7 @@ class Tweet < ApplicationRecord
   has_many :achievements, dependent: :destroy
 
   extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to :category
   belongs_to :start_hour
   belongs_to :start_minute
   belongs_to :end_hour
