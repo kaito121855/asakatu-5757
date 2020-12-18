@@ -1,0 +1,115 @@
+/* フォーム全体 */
+.form-task {
+  margin: 140px auto 60px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0px 0px 30px rgba(0,0,0,.2);
+  width: 500px;
+  height: 900px;
+}
+
+
+/* タイトル */
+.task-create-title {
+  margin: 15px 0 30px 0;
+}
+
+
+/* 入力欄全体（タスク名・ジャンル） */
+.field-task {
+  height: 105px;
+  width: 500px;
+  margin-bottom: 10px;
+}
+
+
+/* 入力欄全体（開始時間・終了時間） */
+.field-time-task {
+  height: 130px;
+  width: 500px;
+  margin-bottom: 10px;
+}
+
+
+/* 入力欄全体（詳細） */
+.field-details-task {
+  height: 220px;
+  width: 500px;
+}
+
+
+/* 各ラベル */
+.field-task-label {
+  width: 500px;
+}
+
+.task-label {
+  display: block;
+  width: 77%;
+  margin: 0 auto;
+}
+
+
+/* 各入力欄（タスク名・ジャンル） */
+.field-task-form-box {
+  width: 385px;
+  margin: 10px 0 5px 57px;
+}
+
+
+/* 各入力欄（開始時間・終了時間） */
+.field-time-form-box {
+  width: 385px;
+  margin: 10px 0 5px 57px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* 各入力欄（タスク名） */
+.task-form-box {
+  display: block;
+  width: 375px;
+  padding: 5px;
+  background-color: #f5f5f5;
+  border-radius: 6px;
+  border: 1px solid #eee;
+}
+
+
+/* 各入力欄（ジャンル・開始時間・終了時間） */
+.task-select-box {
+  display: block;
+  width: 175px;
+  height: 40px;
+  padding: 5px;
+  background-color: #f5f5f5;
+  border-radius: 6px;
+  border: 1px solid #eee;
+}
+
+
+/* 各入力欄（詳細） */
+.field-task-details-form-box {
+  width: 385px;
+  margin: 10px 0 5px 57px;
+}
+
+
+/* 各入力欄（詳細） */
+.task-details-form-box {
+  width: 375px;
+  height: 140px;
+  padding: 5px;
+  background-color: #f5f5f5;
+  border-radius: 6px;
+  border: 1px solid #eee;
+}
+
+
+/* 送信ボタン */
+.task-btn {
+  letter-spacing: 2em;
+  text-indent: 2em;
+}

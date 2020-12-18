@@ -15,9 +15,20 @@ body {
   box-shadow: 0px 0px 30px rgba(0,0,0,.2);
 }
 
-.form-registration {
+.form-new-registration {
   width: 500px;
   height: 670px;
+}
+
+.form-edit-registration {
+  width: 500px;
+  height: 770px;
+  margin: 0 auto;
+  margin-top: 90px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0px 0px 30px rgba(0,0,0,.2);
 }
 
 .form-session {
@@ -44,7 +55,7 @@ h1 {
 
 
 /* 入力欄全体 */
-.field {
+.field-devise {
   height: 105px;
   width: 500px;
   margin-bottom: 10px;
@@ -52,11 +63,11 @@ h1 {
 
 
 /* 各ラベル */
-.field-label {
+.field-devise-label {
   width: 500px;
 }
 
-.label {
+.devise-label {
   display: block;
   width: 77%;
   margin: 0 auto;
@@ -64,11 +75,11 @@ h1 {
 
 
 /* 各入力欄 */
-.field-form-box {
+.field-devise-form-box {
   width: 500px;
 }
 
-.form-box {
+.devise-form-box {
   display: block;
   width: 75%;
   padding: 5px;
@@ -99,7 +110,7 @@ h1 {
 
 
 /* 送信ボタン */
-.field-form-btn {
+.field-devise-form-btn {
   width: 500px;
   height: 90px;
   padding-top: 10px;

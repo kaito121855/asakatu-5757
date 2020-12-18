@@ -1,43 +1,115 @@
-<header>
-  <div class="header-back header-item">
-    <%= link_to "＜", tweets_path, class: "header-back-btn" %>
-  </div>
+<%= render "shared/header1" %>
 
-  <div class="header-title header-item">
-    <p class="header-title-item">編集ページ</p>
-  </div>
+<div class="form-task">
+  <%= form_with(model: @tweet, local: true) do |f| %>
+    <% if @tweet.errors.any? %>
+    <% end %>
 
-  <div class="header-content header-item">
-  </div>
-</header>
+    <%# タイトル %>
+    <h1 class="task-create-title">
+      タスク編集
+    </h1>
 
-<div class="container">
-  <h1>投 稿</h1>
-  <%= form_with(model: @tweet, local: true) do |form| %>
-  <div class="task-item">
-    <div class="task-form">
-      <span class="task-title">タスク名</span>
-      <%= form.text_field :task, class:"task-box" %>
-    </div>
-    <div class="time-form">
-    　<span class="time-title">開始時間</span>
-      <div class="time-box">
-        <%= form.collection_select(:start_hour_id, StartHour.all, :id, :name, {}, {class:"select-box"}) %>
-        <%= form.collection_select(:start_minute_id, StartMinute.all, :id, :name, {}, {class:"select-box"}) %>
+    <%# タスク名 %>
+    <div class="field-task">
+      <%# ラベル %>
+      <div class="field-task-label">
+        <%= f.label :task, "タスク名", class:"task-label" %>
       </div>
-      <span class="time-title">終了時間</span>
-      <div class="time-box">
-        <%= form.collection_select(:end_hour_id, EndHour.all, :id, :name, {}, {class:"select-box"}) %>
-        <%= form.collection_select(:end_minute_id, EndMinute.all, :id, :name, {}, {class:"select-box"}) %>
-      </div>  
+      <%# フォーム %>
+      <div class="field-task-form-box">
+        <%= f.text_field :task, class:"task-form-box" %>
+      </div>
+      <%# エラーメッセージ %>
+      <% if @tweet.errors.include?(:task) %>
+        <div class="field-errors">
+          <%= @tweet.errors.full_messages_for(:task).first %>
+        </div>
+      <% end %>
     </div>
-    <div class="detalis-form">
-    　<span class="detalis-title">詳細</span>
-      <%= form.text_area :detalis, class:"detalis-box" %>
+
+    <%# ジャンル %>
+    <div class="field-task">
+      <%# ラベル %>
+      <div class="field-task-label">
+        <%= f.label :category_id, "ジャンル", class:"task-label" %>
+      </div>
+      <%# セレクトボックス %>
+      <div class="field-task-form-box">
+        <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"task-select-box"}) %>
+      </div>
+      <%# エラーメッセージ %>
+      <% if @tweet.errors.include?(:category_id) %>
+        <div class="field-errors">
+          <%= @tweet.errors.full_messages_for(:category_id).first %>
+        </div>
+      <% end %>
     </div>
-  </div>
-  <div class="submit-form">
-    <%= form.submit "変 更", class:"submit-btn" %>
-  </div>
+
+    <%# 開始時間 %>
+    <div class="field-time-task">
+      <%# ラベル %>
+      <div class="field-task-label">
+        <%= f.label :start_hour_id, "開始時間", class:"task-label" %>
+      </div>
+      <%# セレクトボックス %>
+      <div class="field-time-form-box">
+        <%= f.collection_select(:start_hour_id, StartHour.all, :id, :name, {}, {class:"task-select-box "}) %>
+        <%= f.collection_select(:start_minute_id, StartMinute.all, :id, :name, {}, {class:"task-select-box"}) %>
+      </div>
+      <%# エラーメッセージ %>
+      <% if @tweet.errors.include?(:start_hour_id) %>
+        <div class="field-errors">
+          <%= @tweet.errors.full_messages_for(:start_hour_id).first %>
+        </div>
+      <% end %>
+      <% if @tweet.errors.include?(:start_minute_id) %>
+        <div class="field-errors">
+          <%= @tweet.errors.full_messages_for(:start_minute_id).first %>
+        </div>
+      <% end %>
+    </div>
+
+    <%# 終了時間 %>
+    <div class="field-time-task">
+      <%# ラベル %>
+      <div class="field-task-label">
+        <%= f.label :end_hour_id, "開始時間", class:"task-label" %>
+      </div>
+      <%# セレクトボックス %>
+      <div class="field-time-form-box">
+        <%= f.collection_select(:end_hour_id, EndHour.all, :id, :name, {}, {class:"task-select-box"}) %>
+        <%= f.collection_select(:end_minute_id, EndMinute.all, :id, :name, {}, {class:"task-select-box"}) %>
+      </div>
+      <%# エラーメッセージ %>
+      <% if @tweet.errors.include?(:end_hour_id) %>
+        <div class="field-errors">
+          <%= @tweet.errors.full_messages_for(:end_hour_id).first %>
+        </div>
+      <% end %>
+      <% if @tweet.errors.include?(:end_minute_id) %>
+        <div class="field-errors">
+          <%= @tweet.errors.full_messages_for(:end_minute_id).first %>
+        </div>
+      <% end %>
+    </div>
+
+    <%# 詳細 %>
+    <div class="field-details-task">
+      <%# ラベル %>
+      <div class="field-task-label">
+        <%= f.label :detalis, "詳細", class:"task-label" %>
+      </div>
+      <%# フォーム %>
+      <div class="field-task-details-form-box">
+        <%= f.text_area :detalis, class:"task-details-form-box" %>
+      </div>
+    </div>
+
+    <%# 送信ボタン %>
+    <div class="field-task-form-btn">
+      <%= f.submit "変更", class:"form-btn task-btn"  %>
+    </div>
+
   <% end %>
 </div>

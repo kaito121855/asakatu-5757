@@ -1,102 +1,165 @@
 <header>
-  <div class="header-back header-item">
+  <%# 戻るボタン %>
+  <div class="header-item">
     <%= link_to "＜", tweets_path, class: "header-back-btn" %>
   </div>
-
-  <div class="header-title header-item">
-    <p class="header-title-item">詳細ページ</p>
+  <%# ヘッダータイトル %>
+  <div class="header-item">
+    <div class="header-title-item">
+      詳細ページ
+    </div>
   </div>
-
-  <div class="header-content header-item">
+  <%# 空欄 %>
+  <div class="header-item">
   </div>
 </header>
 
 <div class="tweets">
-  <div class="content">
-    <div class="tweet-content">
+  <%# 投稿情報 %>
+  <div class="tweet">
 
+    <%# タスク全体 %>
+    <div class="tweet-content">
+      <%# ユーザー情報・タスク情報 %>
       <div class="task">
         <%# ユーザー情報 %>
         <div class="user-content">
-          <% if user_signed_in? %>
-            <div class="tweet-user-image"><%= link_to image_tag('user.png', class: "user-image"), user_path(@tweet.user_id) %></div>
-            <%= link_to @tweet.user.nickname, user_path(@tweet.user_id), method: :get, class: "user-nickname" %>
-          <% end %>
+          <%# ユーザー画像 %>
+          <div class="tweet-user-image">
+            <%= link_to image_tag('user.png', class: "user-image"), user_path(@tweet.user_id) %>
+          </div>
+          <%# ニックネーム %>
+          <%= link_to @tweet.user.nickname, user_path(@tweet.user_id), method: :get, class: "user-nickname" %>
+          <%# ジャンル %>
+          <div class="category-content">
+            <%= @tweet.category.name %>
+          </div>
         </div>
         <%# タスク情報 %>
         <div class="task-content">
+          <%# タスク画像 %>
           <div class="task-image">
-            <span><%= image_tag 'ranning.jpg', class:"task-content-image" %></span>
+            <% if @tweet.category_id == 2 %>
+              <div>
+                <%= image_tag 'training.png', class:"task-content-image" %>
+              </div>
+            <% elsif @tweet.category_id == 3 %>
+              <div>
+                <%= image_tag 'running.png', class:"task-content-image" %>
+              </div>
+            <% elsif @tweet.category_id == 4 %>
+              <div>
+                <%= image_tag 'study.png', class:"task-content-image" %>
+              </div>
+            <% elsif @tweet.category_id == 5 %>
+              <div>
+                <%= image_tag 'kenkou.png', class:"task-content-image" %>
+              </div>
+            <% else %>
+              <div>
+                <%= image_tag 'businessman.gif', class:"task-content-image" %>
+              </div>
+            <% end %>
           </div>
+          <%# タスク名・タスク時間 %>
           <div class="task-item">
-            <span class="task-title"><%= @tweet.task %></span>
+            <%# タスク名 %>
+            <div class="task-title">
+              <%= @tweet.task %>
+            </div>
+            <%# タスク時間 %>
             <div class="task-time">
               <%= image_tag 'time.png', class:"time-image" %>
-              <span class="task-item-time"><%= @tweet.start_hour.name %>:<%= @tweet.start_minute.name %> 〜 <%= @tweet.end_hour.name %>:<%= @tweet.end_minute.name %></span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="more">
-        <%# サイドバー %>
-        <% if user_signed_in? && current_user.id == @tweet.user_id %>
-        <div class="side-list"><%= '…' %></div>
-        <%# サイドバーリスト %>
-          <ul class="tweet-side-lists">
-            <li>
-              <%= link_to '編集', edit_tweet_path(@tweet.id), method: :get, class:"tweet-side-list" %>
-            </li>
-            <li>
-              <%= link_to '削除', tweet_path(@tweet.id), method: :delete, class:"tweet-side-list" %>
-            </li>
-          </ul>
-        <% end %>
-        </div>
-      </div>
-
-      <div class="datalis">
-        <span class="detalis-item"><%= @tweet.detalis %></span>
-      </div>
-
-      <div class="sub-content">
-
-        <div id="tweet_<%= @tweet.id %>">
-          <%= render partial: 'favorites/favorite', locals: { tweet: @tweet}  %>
-        </div>
-
-        <div class="achievement">
-          <% if @tweet.user.already_achieved?(@tweet) %>
-            <span class="achieved-display"><i class="fa fa-star-o"> 達成済み</i></span>
-          <% end %>
-        </div>
-
-      </div>
-
-      <div class="day">
-        <span><%= @tweet.updated_at.strftime("%m月%d日 %H:%M") %></span>
-      </div>
-    </div>
-    <div class="comments">
-      <h4>コメント一覧</h4>
-      <% if @comments %>
-        <% @comments.each do |comment| %>
-          <div class="comment-content">
-            <div class="comment-user-image"><%= link_to image_tag('user.png', class: "user-image"), user_path(comment.user_id) %></div>
-            <div class="comment-user-content">
-              <%= link_to comment.user.nickname, user_path(comment.user_id), class: "comment-user-name" %>
-              <div class="comment-user-text">
-                <div><%= comment.text %></div>
-                <div class="comment-user-text-time"><%= comment.updated_at.strftime("%m月%d日 %H:%M") %></div>
+              <div class="task-item-time">
+                <%= @tweet.start_hour.name %>:<%= @tweet.start_minute.name %> 〜 <%= @tweet.end_hour.name %>:<%= @tweet.end_minute.name %>
               </div>
             </div>
           </div>
-        <% end %>
-      <% end %>
+        </div>
+      </div>
+      <%# サイドメニュー情報 %>
+      <div class="more">
+        <%# サイドバー %>
+        <div class="side-list">
+          <%= '…' %>
+        </div>
+        <%# サイドバーリスト %>
+        <ul class="tweet-side-lists">
+          <li>
+            <%= link_to '編集', edit_tweet_path(@tweet.id), method: :get, class:"tweet-side-list" %>
+          </li>
+          <li>
+            <%= link_to '削除', tweet_path(@tweet.id), method: :delete, class:"tweet-side-list" %>
+          </li>
+        </ul>
+      </div>
     </div>
+
+    <%# 詳細情報 %>
+    <div class="datalis">
+      <span class="detalis-item"><%= @tweet.detalis %></span>
+    </div>
+
+    <%# いいね情報・達成情報 %>
+    <div class="sub-content">
+      <%# いいね情報 %>
+      <div id="tweet_<%= @tweet.id %>">
+        <%= render partial: 'favorites/favorite', locals: { tweet: @tweet}  %>
+      </div>
+      <%# 達成情報 %>
+      <div class="achievement">
+        <% if @tweet.user.already_achieved?(@tweet) %>
+          <span class="achieved-display"><i class="fa fa-star-o"> 達成済み</i></span>
+        <% end %>
+      </div>
+    </div>
+
+    <%# 投稿時間情報 %>
+    <div class="day">
+      <span><%= @tweet.updated_at.strftime("%m月%-d日 %H:%M") %></span>
+    </div>
+
   </div>
+
+  <%# コメント全体 %>
+  <div class="comments">
+    <%# コメントタイトル %>
+    <h4>
+      コメント一覧
+    </h4>
+    <%# コメント一覧 %>
+    <% if @comments %>
+      <% @comments.each do |comment| %>
+        <%# コメント情報 %>
+        <div class="comment-content">
+          <%# ユーザー画像 %>
+          <div class="comment-user-image">
+            <%= link_to image_tag('user.png', class: "user-image"), user_path(comment.user_id) %>
+          </div>
+          <%# 各コメント %>
+          <div class="comment-user-content">
+            <%# ニックネーム %>
+            <%= link_to comment.user.nickname, user_path(comment.user_id), class: "comment-user-name" %>
+            <%# コメント内容・時間 %>
+            <div class="comment-user-text">
+              <%# コメント内容 %>
+              <div>
+                <%= comment.text %>
+              </div>
+              <%# コメント時間 %>
+              <div class="comment-user-text-time">
+                <%= comment.updated_at.strftime("%m月%d日 %H:%M") %>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
 </div>
 
+<%# コメントフォーム情報 %>
 <%= form_with(model: [@tweet, @comment], local: true) do |form| %>
   <div class="comment-form">
     <% if user_signed_in? %>
