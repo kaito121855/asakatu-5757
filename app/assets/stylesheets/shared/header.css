@@ -1,3 +1,4 @@
+/* ヘッダー情報 */
 header {
   position: absolute;
   top: 0;
@@ -7,19 +8,41 @@ header {
   height: 80px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.52);
   display: flex;
+  justify-content: space-between;
 }
 
+
+/* 各ヘッダーアイテム・ */
 .header-item {
-  height: 100%;
+  height: 80px;
   width: 33%;
   display: flex;
   align-items: center;
 }
 
-.header-back {
-  justify-content: flex-start;
+
+/* ユーザー情報（アイコン） */
+.header-user-image {
+  margin-left: 32px;
 }
 
+
+/* ユーザー情報（ニックネーム） */
+.header-user-nickname {
+  margin-left: 10px;
+  color: black;
+  text-decoration: none;
+  transition-duration: 0.3s;
+}
+
+.header-user-nickname:hover {
+  color: #a4c6ff;
+  border-bottom: 1px solid #a4c6ff;
+  transition-duration: 0.3s;
+}
+
+
+/* 戻るボタン */
 .header-back-btn {
   width: 25px;
   height: 25px;
@@ -41,25 +64,26 @@ header {
   transition-duration: 0.3s;
 }
 
-.header-user {
-  padding-left: 32px;
-  justify-content: flex-start;
+
+/* ヘッダータイトル */
+.header-title-item {
+  margin: 0 auto;
+  font-size: 20px;
+  font-weight: 700;
 }
 
-.header-user-nickname {
-  margin-left: 10px;
-  color: black;
-  text-decoration: none;
-  transition-duration: 0.3s;
+
+/* ログイン・新規作成・タスク作成・ユーザー編集・ログアウト */
+.header-right {
+  width: 100%;
+  margin-right: 32px;
+  text-align: end;
 }
 
-.header-user-nickname:hover {
-  color: #a4c6ff;
-  border-bottom: 1px solid #a4c6ff;
-  transition-duration: 0.3s;
-}
 
+/* ログイン */
 .user-login {
+  padding: 5px 0;
   color: black;
   text-decoration: none;
   transition-duration: 0.3s;
@@ -71,8 +95,10 @@ header {
   transition-duration: 0.3s;
 }
 
+/* 新規登録 */
 .user-create {
   margin-left: 20px;
+  padding: 5px 0;
   color: black;
   text-decoration: none;
   transition-duration: 0.3s;
@@ -84,25 +110,10 @@ header {
   transition-duration: 0.3s;
 }
 
-.header-title {
-  justify-content: center;
-}
 
-.header-title-item {
-  color: black;
-  font-size: 20px;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.header-content {
-  justify-content: flex-end;
-  margin-right: 30px;
-}
-
+/* タスク作成 */
 .task-create {
-  margin-left: 30px;
-  padding: 5px;
+  padding: 5px 0;
   color: black;
   font-size: 17px;
   text-decoration: none;
@@ -115,7 +126,10 @@ header {
   transition-duration: 0.3s;
 }
 
+
+
 .user-edit {
+  padding: 5px 0;
   color: black;
   text-decoration: none;
   transition-duration: 0.3s;
@@ -128,6 +142,7 @@ header {
 }
 
 .user-logout {
+  padding: 5px 0;
   margin-left: 20px;
   color: black;
   text-decoration: none;

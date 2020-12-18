@@ -1,4 +1,4 @@
-<div class='form-devise form-registration'>
+<div class='form-devise form-new-registration'>
   <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
     <% if @user.errors.any? %>
     <% end %>
@@ -9,14 +9,14 @@
     </h1>
 
     <%# ニックネーム %>
-    <div class="field">
+    <div class="field-devise">
       <%# ラベル %>
-      <div class="field-label">
-        <%= f.label :nickname, "ニックネーム（6文字以下）", class:"label" %>
+      <div class="field-devise-label">
+        <%= f.label :nickname, "ニックネーム（6文字以下）", class:"devise-label" %>
       </div>
       <%# フォーム %>
-      <div class="field-form-box">
-        <%= f.text_field :nickname, autofocus: true, class:"form-box", maxlength: "6" %>
+      <div class="field-devise-form-box">
+        <%= f.text_field :nickname, autofocus: true, class:"devise-form-box", maxlength: "6" %>
       </div>
       <%# エラーメッセージ %>
       <% if @user.errors.include?(:nickname) %>
@@ -27,14 +27,14 @@
     </div>
 
     <%# メールアドレス %>
-    <div class="field">
+    <div class="field-devise">
       <%# ラベル %>
-      <div class="field-label">
-        <%= f.label :email, "メールアドレス", class:"label" %>
+      <div class="field-devise-label">
+        <%= f.label :email, "メールアドレス", class:"devise-label" %>
       </div>
       <%# フォーム %>
-      <div class="field-form-box">
-        <%= f.email_field :email, class:"form-box" %>
+      <div class="field-devise-form-box">
+        <%= f.email_field :email, class:"devise-form-box" %>
       </div>
       <%# エラーメッセージ %>
       <% if @user.errors.include?(:email) %>
@@ -45,14 +45,14 @@
     </div>
     
     <%# パスワード %>
-    <div class="field">
+    <div class="field-devise">
       <%# ラベル %>
-      <div class="field-label">
-        <%= f.label :password, "パスワード（6文字以上）", class:"label" %>
+      <div class="field-devise-label">
+        <%= f.label :password, "パスワード（6文字以上）", class:"devise-label" %>
       </div>
       <%# フォーム %>
-      <div class="field-form-box">
-        <%= f.password_field :password, autocomplete: "off", class:"form-box" %>
+      <div class="field-devise-form-box">
+        <%= f.password_field :password, autocomplete: "off", class:"devise-form-box" %>
       </div>
       <%# エラーメッセージ %>
       <% if @user.errors.include?(:password) %>
@@ -63,14 +63,14 @@
     </div>
 
     <%# パスワード（確認用） %>
-    <div class="field">
+    <div class="field-devise">
       <%# ラベル %>
-      <div class="field-label">
-        <%= f.label :password_confirmation, "パスワード（確認用）", class:"label" %>
+      <div class="field-devise-label">
+        <%= f.label :password_confirmation, "パスワード（確認用）", class:"devise-label" %>
       </div>
       <%# フォーム %>
-      <div class="field-form-box">
-        <%= f.password_field :password_confirmation, autocomplete: "off", class:"form-box" %>
+      <div class="field-devise-form-box">
+        <%= f.password_field :password_confirmation, autocomplete: "off", class:"devise-form-box" %>
       </div>
       <%# エラーメッセージ %>
       <% if @user.errors.include?(:password_confirmation) %>
@@ -81,7 +81,7 @@
     </div>
 
     <%# 送信ボタン %>
-    <div class="field-form-btn">
+    <div class="field-devise-form-btn">
       <%= f.submit "作成", class:"form-btn registration-btn"  %>
     </div>
 

@@ -1,4 +1,28 @@
-<%= render "shared/header" %>
+<header>
+  <%# ユーザー情報 %>
+  <div class="header-item">
+    <% if user_signed_in? %>
+      <div class="header-user-image">
+        <%= link_to image_tag('user.png', class: "user-image"), user_path(current_user.id) %>
+      </div>
+      <%= link_to current_user.nickname, user_path(current_user.id), method: :get, class: "header-user-nickname" %>
+    <% end %>
+  </div>
+  <%# ヘッダータイトル %>
+  <div class="header-item">
+    <div class="header-title-item">
+      ASAKATU
+    </div>
+  </div>
+  <%# タスク作成 %>
+  <div class="header-item">
+    <div class="header-right">
+      <% if user_signed_in? %>
+        <%= link_to "タスク作成", new_tweet_path, class: "task-create" %>
+      <% end %>
+    </div>
+  </div>
+</header>
 
 <div class="tweets">
   <% @tweets.each do |tweet| %>

@@ -1,15 +1,4 @@
-<header>
-  <div class="header-back header-item">
-    <%= link_to "＜", tweets_path, class: "header-back-btn" %>
-  </div>
-
-  <div class="header-title header-item">
-    <p class="header-title-item"></p>
-  </div>
-
-  <div class="header-content header-item">
-  </div>
-</header>
+<%= render "shared/header1" %>
 
 <div class="form-task">
   <%= form_with(model: @tweet, local: true) do |f| %>

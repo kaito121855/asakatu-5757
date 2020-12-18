@@ -13,31 +13,31 @@
     </div>
 
     <%# メールアドレス %>
-    <div class="field">
+    <div class="field-devise">
       <%# ラベル %>
-      <div class="field-label">
-        <%= f.label :email, "メールアドレス", class:"label" %>
+      <div class="field-devise-label">
+        <%= f.label :email, "メールアドレス", class:"devise-label" %>
       </div>
       <%# フォーム %>
-      <div class="field-form-box">
-        <%= f.email_field :email, autofocus: true, class:"form-box" %>
+      <div class="field-devise-form-box">
+        <%= f.email_field :email, autofocus: true, class:"devise-form-box" %>
       </div>
     </div>
 
     <%# パスワード %>
-    <div class="field">
+    <div class="field-devise">
       <%# ラベル %>
-      <div class="field-label">
-        <%= f.label :password, "パスワード", class:"label" %>
+      <div class="field-devise-label">
+        <%= f.label :password, "パスワード", class:"devise-label" %>
       </div>
       <%# フォーム %>
-      <div class="field-form-box">
-        <%= f.password_field :password, autocomplete: "off", class:"form-box" %>
+      <div class="field-devise-form-box">
+        <%= f.password_field :password, autocomplete: "off", class:"devise-form-box" %>
       </div>
     </div>
 
     <%# 送信ボタン %>
-    <div class="field-form-btn">
+    <div class="field-devise-form-btn">
       <%= f.submit "ログイン", class:"form-btn session-btn" %>
     </div>
 

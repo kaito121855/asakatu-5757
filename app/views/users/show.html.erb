@@ -1,17 +1,22 @@
 <header>
-  <div class="header-back header-item">
+  <%# 戻るボタン %>
+  <div class="header-item">
     <%= link_to "＜", tweets_path, class: "header-back-btn" %>
   </div>
-
-  <div class="header-title header-item">
-    <p class="header-title-item"><%= @user.nickname %>のマイページ</p>
+  <%# ヘッダータイトル %>
+  <div class="header-item">
+    <div class="header-title-item">
+      <%= @user.nickname %>のマイページ
+    </div>
   </div>
-
-  <div class="header-content header-item">
-    <% if user_signed_in? && current_user.id == @user.id %>
-      <%= link_to '編集', edit_user_registration_path(@user.id), method: :get, class: "user-edit" %>
-      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "user-logout" %>
-    <% end %>
+  <%# ユーザー編集・ログアウト %>
+  <div class="header-item">
+    <div class="header-right">
+      <% if user_signed_in? && current_user.id == @user.id %>
+        <%= link_to 'ユーザー編集', edit_user_registration_path(@user.id), method: :get, class: "user-edit" %>
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "user-logout" %>
+      <% end %>
+    </div>
   </div>
 </header>
 

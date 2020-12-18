@@ -1,4 +1,21 @@
-<%= render "shared/header" %>
+<header>
+  <%# 空欄 %>
+  <div class="header-item">
+  </div>
+  <%# ヘッダータイトル %>
+  <div class="header-item">
+    <div class="header-title-item">
+      ASAKATU
+    </div>
+  </div>
+  <%# ログイン・新規登録 %>
+  <div class="header-item">
+    <div class="header-right">
+      <%= link_to "ログイン", new_user_session_path, class: "user-login" %>
+      <%= link_to "新規登録", new_user_registration_path, class: "user-create" %>
+    </div>
+  </div>
+</header>
 
 <div class="top">
 
