@@ -39,7 +39,27 @@
         <div class="task-content">
           <%# タスク画像 %>
           <div class="task-image">
-            <span><%= image_tag 'ranning.jpg', class:"task-content-image" %></span>
+            <% if @tweet.category_id == 2 %>
+              <div>
+                <%= image_tag 'training.png', class:"task-content-image" %>
+              </div>
+            <% elsif @tweet.category_id == 3 %>
+              <div>
+                <%= image_tag 'running.png', class:"task-content-image" %>
+              </div>
+            <% elsif @tweet.category_id == 4 %>
+              <div>
+                <%= image_tag 'study.png', class:"task-content-image" %>
+              </div>
+            <% elsif @tweet.category_id == 5 %>
+              <div>
+                <%= image_tag 'kenkou.png', class:"task-content-image" %>
+              </div>
+            <% else %>
+              <div>
+                <%= image_tag 'businessman.gif', class:"task-content-image" %>
+              </div>
+            <% end %>
           </div>
           <%# タスク名・タスク時間 %>
           <div class="task-item">
