@@ -22,7 +22,7 @@
   <%= link_to '家事・仕事', housework_category_path(@tweets.ids), class:"category-item" %>
 </div>
 
-<div class="tweets">
+<div class="category-tweets">
   <% @tweets.each do |tweet| %>
     <%# 各投稿全体 %>
     <div class="tweet">

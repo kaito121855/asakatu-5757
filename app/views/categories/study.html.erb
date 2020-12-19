@@ -13,17 +13,16 @@
   </div>
 </header>
 
-<div class="tweets">
+<div class="category">
+  <%= link_to '全ジャンル', categories_path, class:"category-item" %>
+  <%= link_to 'トレーニング', training_category_path(@tweets.ids), class:"category-item" %>
+  <%= link_to 'ウォーキング', walking_category_path(@tweets.ids), class:"category-item" %>
+  <%= link_to '勉強', study_category_path(@tweets.ids), class:"category-item-current" %>
+  <%= link_to '健康・美容', health_category_path(@tweets.ids), class:"category-item" %>
+  <%= link_to '家事・仕事', housework_category_path(@tweets.ids), class:"category-item" %>
+</div>
 
-  <div class="category">
-    <%= link_to '全ジャンル', categories_path, class:"category-item" %>
-    <%= link_to 'トレーニング', training_category_path(@tweets.ids), class:"category-item" %>
-    <%= link_to 'ウォーキング', walking_category_path(@tweets.ids), class:"category-item" %>
-    <%= link_to '勉強', study_category_path(@tweets.ids), class:"category-item-current" %>
-    <%= link_to '健康・美容', health_category_path(@tweets.ids), class:"category-item" %>
-    <%= link_to '家事・仕事', housework_category_path(@tweets.ids), class:"category-item" %>
-  </div>
-  
+<div class="category-tweets">
   <% @tweets.each do |tweet| %>
     <%# 各投稿全体 %>
     <div class="tweet">
