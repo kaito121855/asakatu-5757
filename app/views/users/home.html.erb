@@ -1,3 +1,4 @@
+<%# ヘッダー %>
 <header>
   <%# 空欄 %>
   <div class="header-item">
@@ -18,7 +19,7 @@
 </header>
 
 <div class="top">
-
+  <%# サービス紹介 %>
   <div class="top1">
     <p>ユーザー同士が朝に行うタスクを宣言し合い、</p>
     <p>お互いのタスクを達成できるようにするためのサービスです。</p>
@@ -26,11 +27,11 @@
       <%= image_tag("top1.jpg", class:"top1-image") %>
     </div>
   </div>
-
+  <%# タイトル %>
   <div class="top2">
     <h2>主な機能</h2>
   </div>
-
+  <%# 機能説明（タスク投稿機能） %>
   <div class="top3">
     <h1>タスク投稿機能</h1>
     <div class="top3-explanation">
@@ -42,7 +43,7 @@
       </div>
     </div>
   </div>
-
+  <%# 機能説明（タスク管理機能） %>
   <div class="top4">
     <h1>タスク管理機能</h1>
     <div class="top4-explanation">
@@ -52,7 +53,7 @@
       </div>
     </div>
   </div>
-
+  <%# 機能説明（タスク記録機能） %>
   <div class="top5">
     <h1>タスク記録機能</h1>
     <div class="top5-explanation">
@@ -62,14 +63,14 @@
       </div>
     </div>
   </div>
-
+  <%# 機能説明（ログイン・新規登録ボタン） %>
   <div class="top6">
     <%= link_to "ログイン", new_user_session_path, class: "top-user-btn top-user-login" %>
     <%= link_to "新規登録", new_user_registration_path, class: "top-user-btn top-user-create" %>
   </div>
-
 </div>
 
+<%# フッダー %>
 <div class="top7">
   <div class="top7-content">
     <p>利用規約</p>

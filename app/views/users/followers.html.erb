@@ -1,20 +1,25 @@
+<%# ヘッダー %>
 <header>
+  <%# 戻るボタン %>
   <div class="header-back header-item">
     <%= link_to "＜", user_path(@user.id), class: "header-back-btn" %>
   </div>
-
+  <%# タイトル %>
   <div class="header-title header-item">
     <p class="header-title-item">フォロワー一覧</p>
   </div>
-
+  <%# 空欄 %>
   <div class="header-content header-item">
   </div>
 </header>
 
+<%# フォロワー一覧 %>
 <% @users.each do |user| %>
   <div class="follow-content">
     <div class="user-content">
+      <%# ユーザーアイコン %>
       <%= image_tag 'user.png', class:"user-image" %>
+      <%# ユーザー名 %>
       <%= link_to user.nickname, user_path(user.id), method: :get, class: "user-nickname" %>
     </div>
   </div>
