@@ -3,7 +3,10 @@ class TweetsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
 
   def index
-    @tweets = Tweet.includes(:user).order('created_at DESC')
+    @tweets = Tweet.includes(:user).order('tweets.created_at DESC')
+    user = User.find(current_user.id)
+    follow_users = user.followings
+    @follow_tweets = @tweets.where(user_id: follow_users).or(@tweets.where(user_id: current_user)).order('created_at DESC')
   end
 
   def new
