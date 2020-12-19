@@ -47,14 +47,14 @@
   color: white;
   background-color: #a4c6ff;
   text-decoration: none;
+  border: 1px solid #a4c6ff;
 }
 
 /* 各投稿全体 */
 .tweet {
   width: 650px;
   min-height: 350px;
-  margin: 0 auto;
-  margin-top: 50px;
+  margin: 50px auto;
   padding: 15px;
   border-top: solid 5px #5d627b;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.52);

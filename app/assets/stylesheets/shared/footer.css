@@ -13,18 +13,38 @@ footer {
 }
 
 .footer-title {
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
 .footer-title-item {
-  height: 100%;
-  width: 150px;
+  height: 50%;
+  width: 15vw;
   text-align: center;
-  line-height: 80px;
-  color: black;
+  line-height: 40px;
   font-size: 17px;
+  color: #a4c6ff;
   text-decoration: none;
+  border: 1px solid #a4c6ff;
+  transition-duration: 0.3s;
+}
+
+.footer-title-item:hover {
+  color: white;
+  background-color: #a4c6ff;
+  transition-duration: 0.3s;
+}
+
+.footer-title-item-current {
+  height: 50%;
+  width: 15vw;
+  text-align: center;
+  line-height: 40px;
+  font-size: 17px;
+  color: white;
+  background-color: #a4c6ff;
+  text-decoration: none;
+  border: 1px solid #a4c6ff;
 }
