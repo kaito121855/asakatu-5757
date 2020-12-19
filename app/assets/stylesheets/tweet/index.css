@@ -7,16 +7,31 @@
   z-index: 1;
 }
 
+.category-tweets {
+  width: 100vw;
+  height: 755px;
+  margin-top: 80px;
+  padding-top: 40px;
+  overflow: scroll;
+  z-index: 1;
+}
+
 
 /* ジャンル */
 .category {
+  position: absolute;
+  top: 75px;
+  left: 50%;
+  transform: translate(-50%, 0);
   width: 100vw;
   height: 40px;
   line-height: 20px;
-  margin-top: 20px;
+  padding: 20px 0;
+  background-color: white;
   text-align: center;
   display: flex;
   justify-content: space-around;
+  z-index: 2;
 }
 
 .category-item {
@@ -40,15 +55,14 @@
   color: white;
   background-color: #a4c6ff;
   text-decoration: none;
+  border: 1px solid #a4c6ff;
 }
 
 /* 各投稿全体 */
 .tweet {
   width: 650px;
   min-height: 350px;
-  margin: 0 auto;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin: 50px auto;
   padding: 15px;
   border-top: solid 5px #5d627b;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.52);
