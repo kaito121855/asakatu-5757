@@ -24,5 +24,12 @@ Rails.application.routes.draw do
 
   # フォロー機能に関するルーティング
   resources :relationships, only: [:create, :destroy]
-  
+
+  # カテゴリー検索機能に関するルーティング
+  resources :categories, only: [:index] do
+    member do
+      get :training, :walking, :study, :health, :housework
+    end
+  end
+
 end

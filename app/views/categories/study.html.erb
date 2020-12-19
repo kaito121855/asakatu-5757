@@ -1,31 +1,30 @@
 <header>
   <%# ユーザー情報 %>
   <div class="header-item">
-    <% if user_signed_in? %>
-      <div class="header-user-image">
-        <%= link_to image_tag('user.png', class: "user-image"), user_path(current_user.id) %>
-      </div>
-      <%= link_to current_user.nickname, user_path(current_user.id), method: :get, class: "header-user-nickname" %>
-    <% end %>
   </div>
   <%# ヘッダータイトル %>
   <div class="header-item">
     <div class="header-title-item">
-      ASAKATU
+      カテゴリー検索
     </div>
   </div>
   <%# タスク作成 %>
   <div class="header-item">
-    <div class="header-right">
-      <% if user_signed_in? %>
-        <%= link_to "タスク作成", new_tweet_path, class: "task-create" %>
-      <% end %>
-    </div>
   </div>
 </header>
 
 <div class="tweets">
-  <% @follow_tweets.each do |tweet| %>
+
+  <div class="category">
+    <%= link_to '全ジャンル', categories_path, class:"category-item" %>
+    <%= link_to 'トレーニング', training_category_path(@tweets.ids), class:"category-item" %>
+    <%= link_to 'ウォーキング', walking_category_path(@tweets.ids), class:"category-item" %>
+    <%= link_to '勉強', study_category_path(@tweets.ids), class:"category-item-current" %>
+    <%= link_to '健康・美容', health_category_path(@tweets.ids), class:"category-item" %>
+    <%= link_to '家事・仕事', housework_category_path(@tweets.ids), class:"category-item" %>
+  </div>
+  
+  <% @tweets.each do |tweet| %>
     <%# 各投稿全体 %>
     <div class="tweet">
 

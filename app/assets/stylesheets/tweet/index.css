@@ -1,10 +1,45 @@
 /* 投稿全体 */
 .tweets {
-  width: 100%;
+  width: 100vw;
   height: 755px;
   margin-top: 80px;
   overflow: scroll;
   z-index: 1;
+}
+
+
+/* ジャンル */
+.category {
+  width: 100vw;
+  height: 40px;
+  line-height: 20px;
+  margin-top: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.category-item {
+  width: 12vw;
+  padding: 10px;
+  color: #a4c6ff;
+  text-decoration: none;
+  border: 1px solid #a4c6ff;
+  transition-duration: 0.3s;
+}
+
+.category-item:hover {
+  color: white;
+  background-color: #a4c6ff;
+  transition-duration: 0.3s;
+}
+
+.category-item-current {
+  width: 12vw;
+  padding: 10px;
+  color: white;
+  background-color: #a4c6ff;
+  text-decoration: none;
 }
 
 /* 各投稿全体 */
