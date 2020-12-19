@@ -1,3 +1,4 @@
+<%# ヘッダー %>
 <header>
   <%# 戻るボタン %>
   <div class="header-item">
@@ -20,14 +21,17 @@
   </div>
 </header>
 
+<%# ユーザー情報 %>
 <div class="profile">
+  <%# ユーザーアイコン %>
   <div class="profile-icon">
     <%= image_tag 'user.png', class:"profile-icon-image" %>
   </div>
+  <%# ユーザー名 %>
   <div class="profile-name">
      <span><%= @user.nickname %></span>
   </div>
-  
+  <%# フォローボタン %>
   <div class="follow-btn">
     <div id="follow-btn_<%= @user.id %>">
       <% if user_signed_in? %>
@@ -35,18 +39,21 @@
       <% end %>
     </div>
   </div>
-
+  <%# 投稿数・フォロー数・フォロワー数 %>
   <div class="profile-item">
+    <%# 投稿数 %>
     <div class="tweets-content">
       <span class="tweets-title"><%= "投稿数" %></span>
       <span class="tweets-number"><%= @tweets.length %></span>
     </div>
+    <%# フォロー数 %>
     <div class="tweets-content">
       <%= link_to "フォロー", following_user_path(@user.id), class: "frollow-title" %>
       <div id="follow-number_<%= @user.id %>">
         <span class="follow-number"><%= @user.followings.count %></span>
       </div>
     </div>
+    <%# フォロワー数 %>
     <div class="tweets-content">
       <%= link_to "フォロワー", followers_user_path(@user.id), class: "frollow-title" %>
       <div id="follower-number_<%= @user.id %>">
@@ -56,6 +63,7 @@
   </div>
 </div>
 
+<%# 投稿情報 %>
 <div class="profile-tweets">
   <% @tweets.each do |tweet| %>
     <%# 各投稿全体 %>

@@ -1,12 +1,16 @@
 <% unless current_user == user %>
+  <%# フォロー解除 %>
   <% if current_user.following?(user) %>
     <%= form_for(current_user.relationships.find_by(follow_id: user.id), html: { method: :delete }, remote: true) do |f| %>
       <%= hidden_field_tag :follow_id, user.id %>
+      <%# フォローボタン %>
       <%= f.submit 'フォロー中', class: 'btn btn-danger' %>
     <% end %>
+  <%# フォロー追加 %>
   <% else %>
     <%= form_for(current_user.relationships.build, remote: true) do |f| %>
       <%= hidden_field_tag :follow_id, user.id %>
+      <%# フォローボタン %>
       <%= f.submit 'フォロー', class: 'btn btn-primary' %>
     <% end %>
   <% end %>

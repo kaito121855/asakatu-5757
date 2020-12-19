@@ -1,9 +1,17 @@
+<%# 達成の削除 %>
 <% if current_user.already_achieved?(tweet) %>
   <%= link_to tweet_achievements_path(tweet), method: :delete, remote: true do %>
-    <span class="achieved"><i class="far fa-check-circle"> 達成</i></span>
+    <%# 達成ボタン %>
+    <span class="achieved">
+      <i class="far fa-check-circle"> 達成</i>
+    </span>
   <% end %>
+<%# 達成の追加 %>
 <% else %>
   <%= link_to tweet_achievements_path(tweet), method: :post, remote: true do %>
-    <span class="not-achieved"><i class="far fa-check-circle"> 未達成</i></span>
+    <%# 達成ボタン %>
+    <span class="not-achieved">
+      <i class="far fa-check-circle"> 未達成</i>
+    </span>
   <% end %>
 <% end %>
