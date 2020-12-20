@@ -67,6 +67,6 @@
 <div class="profile-tweets">
   <% @tweets.each do |tweet| %>
     <%# 各投稿全体 %>
-    <div class="tweet"><%= render partial: 'shared/tweet1', locals: { tweet: tweet }  %>
+    <%= render partial: 'shared/tweet1', locals: { tweet: tweet }  %>
   <% end %>
 </div>
