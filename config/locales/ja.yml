@@ -1,5 +1,13 @@
 ja:
- activerecord:
-   attributes:
-     user:
-       nickname: ニックネーム
+  activerecord:
+    attributes:
+      user:
+        nickname: ニックネーム
+      tweet:
+        task: タスク名
+        category_id: ジャンル
+        start_hour_id: 開始時間（時）
+        start_minute_id: 開始時間（分）
+        end_hour_id: 終了時間（時）
+        end_minute_id: 終了時間（分）
+        detalis: 詳細
