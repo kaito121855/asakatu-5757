@@ -1,3 +1,4 @@
+/* ユーザー情報全体 */
 .profile {
   width: 650px;
   height: 350px;
@@ -8,11 +9,15 @@
   flex-direction: column;
 }
 
+
+/* ユーザーアイコン全体 */
 .profile-icon {
   width: 200px;
   height: 200px;
 }
 
+
+/* ユーザーアイコン */
 .profile-icon-image {
   width: 200px;
   height: 200px;
@@ -20,6 +25,8 @@
   border-radius: 100px;
 }
 
+
+/* ユーザー名全体 */
 .profile-name {
   width: 100px;
   height: 50px;
@@ -29,10 +36,14 @@
   align-items: center;
 }
 
+
+/* ユーザー名 */
 .profile-name > span {
   font-size: 25px;
 }
 
+
+/* フォローボタン全体 */
 .follow-btn {
   width: 100px;
   height: 30px;
@@ -42,6 +53,8 @@
   align-items: center;
 }
 
+
+/* フォローボタン */
 .btn {
   width: 130px;
   padding: 5px;
@@ -50,16 +63,22 @@
   cursor: pointer;
 }
 
+
+/* フォローボタン（フォロー中） */
 .btn-danger {
   background-color: #6495ed;
   color: white;
 }
 
+
+/* フォローボタン（フォロー） */
 .btn-primary {
   background-color: white;
   color: #6495ed;
 }
 
+
+/* 投稿数・フォロー数・フォロワー数全体 */
 .profile-item {
   width: 400px;
   height: 50px;
@@ -71,12 +90,16 @@
   border: 2px solid #cccccc;
 }
 
+
+/* 投稿数・フォロー数・フォロワー数全体 */
 .tweets-content {
   width: 100px;
   display: flex;
   flex-direction: column;
 }
 
+
+/* 投稿数のタイトル */
 .follow-title {
   color: black;
   border-bottom: 1px solid white;
