@@ -77,9 +77,17 @@
   flex-direction: column;
 }
 
-.frollow-title {
+.follow-title {
   color: black;
+  border-bottom: 1px solid white;
   text-decoration: none;
+  transition-duration: 0.5s;
+}
+
+.follow-title:hover {
+  color: #a4c6ff;
+  border-bottom: 1px solid #a4c6ff;
+  transition-duration: 0.5s;
 }
 
 

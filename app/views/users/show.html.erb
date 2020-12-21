@@ -48,14 +48,14 @@
     </div>
     <%# フォロー数 %>
     <div class="tweets-content">
-      <%= link_to "フォロー", following_user_path(@user.id), class: "frollow-title" %>
+      <%= link_to "フォロー", following_user_path(@user.id), class: "follow-title" %>
       <div id="follow-number_<%= @user.id %>">
         <span class="follow-number"><%= @user.followings.count %></span>
       </div>
     </div>
     <%# フォロワー数 %>
     <div class="tweets-content">
-      <%= link_to "フォロワー", followers_user_path(@user.id), class: "frollow-title" %>
+      <%= link_to "フォロワー", followers_user_path(@user.id), class: "follow-title" %>
       <div id="follower-number_<%= @user.id %>">
         <span class="follower-number"><%= @user.followers.count %></span>
       </div>
