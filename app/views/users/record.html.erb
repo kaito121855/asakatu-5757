@@ -16,7 +16,7 @@
 
 <div class="records">
 
-  <%# タスク数・達成数・達成時間計 %>
+  <%# タスク数・達成数・達成時間計・達成数のグラフ %>
   <div class="record-contents">
 
     <%# タスク数 %>
@@ -52,8 +52,8 @@
   </div>
   
   <%# 達成数のグラフ %>
-  <div class="record-achivement-graph">
-    <div class="record-achivement-graph-title">1週間の達成数</div>
+  <div class="record-achievement-graph">
+    <div class="record-achievement-graph-title">1週間の達成数</div>
     <%= column_chart @week_achievement, width: "70vw", max: 10, discrete: true  %>
   </div>
 

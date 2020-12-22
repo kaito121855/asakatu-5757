@@ -9,7 +9,8 @@
   overflow: scroll;
 }
 
-/* タスク数・達成数・達成時間計 */
+
+/* タスク数・達成数・達成時間計・達成数のグラフ全体 */
 .record-contents {
   width: 70vw;
   height: 150px;
@@ -19,6 +20,8 @@
   align-items: center;
 }
 
+
+/* タスク数・達成数・達成時間計全体 */
 .record-content {
   width: 20vw;
   height: 100px;
@@ -31,6 +34,8 @@
   border-radius: 10px;
 }
 
+
+/* タスク数・達成数・達成時間計のタイトル */
 .record-content-title {
   width: 20VW;
   height: 40px;
@@ -40,6 +45,9 @@
   border-bottom: 2px solid #cccccc;
 }
 
+
+
+/* タスク数・達成数・達成時間計の数字 */
 .record-content-num {
   width: 20VW;
   height: 60px;
@@ -48,12 +56,17 @@
   line-height: 60px;
 }
 
+
+
+/* 達成時間計の「h」 */
 .record-content-num > span {
   font-size: 15px;
   color: #cccccc;
 }
 
-.record-achivement-graph {
+
+/* 達成数のグラフ全体 */
+.record-achievement-graph {
   margin: 0 auto;
   padding: 20px;
   margin-top: 110px;
@@ -61,7 +74,9 @@
   border-radius: 10px;
 }
 
-.record-achivement-graph-title {
+
+/* タスク数・達成数・達成時間計のタイトル */
+.record-achievement-graph-title {
   width: 20vw;
   margin: 0 auto;
   margin-bottom: 10px;

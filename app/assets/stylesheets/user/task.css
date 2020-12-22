@@ -1,3 +1,4 @@
+/* 朝活タスク全体 */
 .morning-task {
   width: 700px;
   height: 703px;
@@ -8,6 +9,7 @@
   overflow: scroll;
 }
 
+/* 今日の日付 */
 .today {
   margin: 0 auto;
   margin-bottom: 20px;
@@ -15,6 +17,8 @@
   font-size: 25px;
 }
 
+
+/* 今日のタスク一覧全体 */
 .tasks {
   width: 550px;
   margin: 0 auto;
@@ -25,12 +29,16 @@
   border-radius: 10px;
 }
 
+
+/* 今日の各タスク全体 */
 .today-tasks {
   width: 90%;
   height: 220px;
   padding: 0 10px;
 }
 
+
+/* 今日の各タスクのタイトル全体 */
 .today-task {
   width: 90%;
   margin: 0 auto;
@@ -39,11 +47,15 @@
   border-bottom: 2px solid #cccccc;
 }
 
+
+/* 今日の各タスクのタイトル */
 .today-task-title {
   width: 400px;
   font-size: 20px;
 }
 
+
+/* 今日の各タスクの時間 */
 .today-task-time {
   width: 90%;
   margin: 0 auto;
@@ -52,6 +64,8 @@
   margin-left: 45px;
 }
 
+
+/* 今日の各タスクの詳細 */
 .today-details {
   width: 87%;
   height: 25%;
@@ -63,19 +77,8 @@
   overflow: scroll;
 }
 
-.not-achieved {
-  background-color: white;
-  border: 2px solid #6495ed;
-  color: #6495ed;
-  display: block;
-  text-align: center;
-  width: 20%;
-  margin: 0 auto;
-  margin-top: 10px;
-  margin-left: 225px;
-  border-radius: 10px;
-}
 
+/* 達成ボタン（達成） */
 .achieved {
   background-color: #6495ed;
   border: 2px solid #6495ed;
@@ -89,6 +92,23 @@
   border-radius: 10px;
 }
 
+
+/* 達成ボタン（未達成） */
+.not-achieved {
+  background-color: white;
+  border: 2px solid #6495ed;
+  color: #6495ed;
+  display: block;
+  text-align: center;
+  width: 20%;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-left: 225px;
+  border-radius: 10px;
+}
+
+
+/* 今日の各タスクのサイドバー */
 .today-more {
   margin-top: 10px;
   margin-right: 10px;
@@ -96,6 +116,8 @@
   text-align: center;
 }
 
+
+/* 今日の各タスクのサイドバーリスト */
 .today-more .tweet-side-lists {
   display: none;
   text-align: center;

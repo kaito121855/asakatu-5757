@@ -14,13 +14,13 @@
 </header>
 
 <%# フォロワー一覧 %>
-<% @users.each do |user| %>
-  <div class="follow-content">
-    <div class="user-content">
+<div class="follow-content">
+  <% @users.each do |user| %>
+    <div class="follow-user-content">
       <%# ユーザーアイコン %>
       <%= image_tag 'user.png', class:"user-image" %>
       <%# ユーザー名 %>
       <%= link_to user.nickname, user_path(user.id), method: :get, class: "user-nickname" %>
     </div>
-  </div>
-<% end %>
+  <% end %>
+</div>

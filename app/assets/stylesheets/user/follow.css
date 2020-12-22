@@ -1,3 +1,4 @@
+/* フォロー・フォロワー画面全体 */
 .follow-content {
   width: 400px;
   height: 600px;
@@ -6,4 +7,13 @@
   padding: 10px;
   border: 2px solid #f2f2f2;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.52);
+  overflow: scroll;
+}
+
+
+/* 各フォロー・フォロワーユーザー情報 */
+.follow-user-content {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
 }

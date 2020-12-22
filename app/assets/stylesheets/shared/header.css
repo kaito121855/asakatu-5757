@@ -128,7 +128,7 @@ header {
 }
 
 
-
+/* ユーザー編集 */
 .user-edit {
   padding: 5px 0;
   color: black;
@@ -142,6 +142,8 @@ header {
   transition-duration: 0.3s;
 }
 
+
+/* ログアウト */
 .user-logout {
   padding: 5px 0;
   margin-left: 20px;
