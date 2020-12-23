@@ -1,6 +1,6 @@
-## 🌐 App Name（アプリ名）
+## 🌐 ASAKATU
 
-* ASAKATU
+![ASAKATU](https://raw.github.com/wiki/kaito5757/../../../../asakatu-5757.wiki/images/ASAKATU.gif)
 
 ## 🌐 App Overview（アプリの概要）
 
