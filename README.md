@@ -1,6 +1,6 @@
 ## 🌐 ASAKATU
 
-![ASAKATU](https://raw.github.com/wiki/kaito5757/../../../../asakatu-5757.wiki/images/ASAKATU.gif)
+![ASAKATU](https://user-images.githubusercontent.com/70756110/102959281-6293f380-4522-11eb-8aa6-ecce9e124324.gif)
 
 ## 🌐 App Overview（アプリの概要）
 
