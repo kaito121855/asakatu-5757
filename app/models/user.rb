@@ -38,4 +38,11 @@ class User < ApplicationRecord
     self.achievements.exists?(tweet_id: tweet.id)
   end
 
+  def self.guest
+    find_or_create_by!(email: 'guest@guest.com') do |user|
+      user.password = SecureRandom.urlsafe_base64
+      user.nickname = 'ゲスト'
+    end
+  end
+
 end
