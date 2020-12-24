@@ -17,7 +17,7 @@
 
 #### ユーザー管理機能
 * ログイン機能（devise）
-![e96860246289890b08bcfc2ccbfed492](https://user-images.githubusercontent.com/70756110/103066195-b32b4f80-45fb-11eb-937d-782c62270d20.gif)
+![c0c499547a7975f3957d702f2716db19](https://user-images.githubusercontent.com/70756110/103066378-1917d700-45fc-11eb-89d1-4f82a5fdcfba.gif)
 
 * マイページ
 ![acde8c890935adcb591f158457b7e4f7](https://user-images.githubusercontent.com/70756110/102969445-11432e80-4539-11eb-8985-717a46d1a9f2.gif)
