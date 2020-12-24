@@ -235,8 +235,8 @@
 /* ログイン・新規登録ボタン */
 .top6  > .top-user-btn {
   background-color: white;
-  color: skyblue;
-  border: 2px solid skyblue;
+  color: #a4c6ff;
+  border: 2px solid #a4c6ff;
   font-size: 20px;
   width: 20vw;
   height: 8vw;
@@ -246,7 +246,7 @@
 }
 
 .top6  > .top-user-btn:hover {
-  background-color: skyblue;
+  background-color: #a4c6ff;
   color: white;
   transition-duration: 0.3s;
 }

@@ -8,6 +8,11 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
 
+  # ゲストログインに関するルーティング
+  devise_scope :user do
+    post '/users/guest_sign_in', to: 'users/sessions#new_guest'
+  end
+
   # ユーザー機能に関するルーティング
   resources :users, only: :show do
     member do

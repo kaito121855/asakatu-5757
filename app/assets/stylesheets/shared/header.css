@@ -81,33 +81,57 @@ header {
   text-align: end;
 }
 
+.header-right-home {
+  width: 100%;
+  margin-right: 2vw;
+  text-align: end;
+}
+
 
 /* ログイン */
 .user-login {
-  padding: 5px 0;
-  color: black;
+  padding: 10px 1px;
+  color: #a4c6ff;
+  border: 1px solid #a4c6ff;
   text-decoration: none;
   transition-duration: 0.3s;
 }
 
 .user-login:hover {
-  color: #a4c6ff;
-  border-bottom: 1px solid #a4c6ff;
+  background-color: #a4c6ff;
+  color: white;
   transition-duration: 0.3s;
 }
 
+
+/* ゲストログイン */
+.user-guest-login {
+  padding: 10px 1px;
+  color: #a4c6ff;
+  border: 1px solid #a4c6ff;
+  text-decoration: none;
+  transition-duration: 0.3s;
+}
+
+.user-guest-login:hover {
+  background-color: #a4c6ff;
+  color: white;
+  transition-duration: 0.3s;
+}
+
+
 /* 新規登録 */
 .user-create {
-  margin-left: 20px;
-  padding: 5px 0;
-  color: black;
+  padding: 10px 1px;
+  color: #a4c6ff;
+  border: 1px solid #a4c6ff;
   text-decoration: none;
   transition-duration: 0.3s;
 }
 
 .user-create:hover {
-  color: #a4c6ff;
-  border-bottom: 1px solid #a4c6ff;
+  background-color: #a4c6ff;
+  color: white;
   transition-duration: 0.3s;
 }
 
