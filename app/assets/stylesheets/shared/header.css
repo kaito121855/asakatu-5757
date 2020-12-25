@@ -138,16 +138,17 @@ header {
 
 /* タスク作成 */
 .task-create {
-  padding: 5px 0;
-  color: black;
+  padding: 10px;
+  color: #a4c6ff;
+  border: 1px solid #a4c6ff;
   font-size: 17px;
   text-decoration: none;
   transition-duration: 0.3s;
 }
 
 .task-create:hover {
-  color: #a4c6ff;
-  border-bottom: 1px solid #a4c6ff;
+  background-color: #a4c6ff;
+  color: white;
   transition-duration: 0.3s;
 }
 
