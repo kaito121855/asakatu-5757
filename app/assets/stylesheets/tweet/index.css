@@ -64,9 +64,15 @@
   min-height: 350px;
   margin: 50px auto;
   padding: 15px;
-  border-top: solid 5px #5d627b;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.52);
+  border: solid 2px #cccccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.52);
   background-color: white;
+  transition-duration: 0.5s;
+}
+
+.tweet:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.52);
+  transition-duration: 0.5s;
 }
 
 
