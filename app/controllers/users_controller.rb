@@ -52,7 +52,7 @@ class UsersController < ApplicationController
     month_day = "#{month}月#{day}日"
     achievements = []
     @achievements.each do |achievement|
-      if month_day == achievement.updated_at.strftime("%m月%-d日")
+      if month_day == achievement.updated_at.strftime("%-m月%-d日")
         achievements << achievement
       end
     end

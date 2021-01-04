@@ -21,7 +21,7 @@
   </div>
   <%# 今日のタスク一覧 %>
   <% @tweets.each do |tweet| %>
-    <% if @today == tweet.updated_at.strftime("%m月%-d日") %>
+    <% if @today == tweet.updated_at.strftime("%-m月%-d日") %>
       <div class="tasks">
         <div class="today-tasks">
           <div class="today-task">
