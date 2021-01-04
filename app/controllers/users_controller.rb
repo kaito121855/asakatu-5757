@@ -66,7 +66,7 @@ class UsersController < ApplicationController
     minute_array = []
     @achievements.each do |achievement|
       hour_sum = achievement.tweet.end_hour.name.to_i - achievement.tweet.start_hour.name.to_i
-      minute_sum = achievement.tweet.end_minute.name.to_i + achievement.tweet.start_minute.name.to_i
+      minute_sum = achievement.tweet.end_minute.name.to_i - achievement.tweet.start_minute.name.to_i
       hour_array << hour_sum
       minute_array << minute_sum
     end
