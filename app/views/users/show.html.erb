@@ -12,11 +12,17 @@
   </div>
   <%# ユーザー編集・ログアウト %>
   <div class="header-item">
-    <div class="header-right">
-      <% if user_signed_in? && current_user.id == @user.id %>
-        <%= link_to 'ユーザー編集', edit_user_registration_path(@user.id), method: :get, class: "user-edit" %>
-        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "user-logout" %>
-      <% end %>
+    <div class="hamburger-menu">
+      <input type="checkbox" id="menu-btn-check">
+      <label for="menu-btn-check" class="menu-btn"><span></span></label>
+      <div class="menu-content">
+        <ul>
+          <% if user_signed_in? && current_user.id == @user.id %>
+            <li><%= link_to 'ユーザー編集', edit_user_registration_path(@user.id), method: :get, class: "header-right-nav-list" %></li>
+            <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header-right-nav-list" %></li>
+          <% end %>
+        </ul>
+      </div>   
     </div>
   </div>
 </header>
