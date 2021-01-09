@@ -9,7 +9,7 @@ header {
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.52);
   display: flex;
   justify-content: space-between;
-  z-index: 3;
+  z-index: 90;
 }
 
 
@@ -74,67 +74,11 @@ header {
 }
 
 
-/* ログイン・新規作成・タスク作成・ユーザー編集・ログアウト */
 .header-right {
   width: 100%;
   margin-right: 32px;
   text-align: end;
 }
-
-.header-right-home {
-  width: 100%;
-  margin-right: 2vw;
-  text-align: end;
-}
-
-
-/* ログイン */
-.user-login {
-  padding: 10px 1px;
-  color: #a4c6ff;
-  border: 1px solid #a4c6ff;
-  text-decoration: none;
-  transition-duration: 0.3s;
-}
-
-.user-login:hover {
-  background-color: #a4c6ff;
-  color: white;
-  transition-duration: 0.3s;
-}
-
-
-/* ゲストログイン */
-.user-guest-login {
-  padding: 10px 1px;
-  color: #a4c6ff;
-  border: 1px solid #a4c6ff;
-  text-decoration: none;
-  transition-duration: 0.3s;
-}
-
-.user-guest-login:hover {
-  background-color: #a4c6ff;
-  color: white;
-  transition-duration: 0.3s;
-}
-
-
-/* 新規登録 */
-.user-create {
-  padding: 10px 1px;
-  color: #a4c6ff;
-  border: 1px solid #a4c6ff;
-  text-decoration: none;
-  transition-duration: 0.3s;
-}
-
-.user-create:hover {
-  background-color: #a4c6ff;
-  color: white;
-  transition-duration: 0.3s;
-}
-
 
 /* タスク作成 */
 .task-create {
@@ -152,35 +96,110 @@ header {
   transition-duration: 0.3s;
 }
 
-
-/* ユーザー編集 */
-.user-edit {
-  padding: 10px;
-  color: #a4c6ff;
-  border: 1px solid #a4c6ff;
-  text-decoration: none;
-  transition-duration: 0.3s;
+/* メニューボタン */
+.menu-btn {
+  position: fixed;
+  top: 20px;
+  right: 2vw;
+  display: flex;
+  height: 40px;
+  width: 40px;
+  justify-content: center;
+  align-items: center;
+  z-index: 90;
+  border: 2px solid #a4c6ff;
 }
 
-.user-edit:hover {
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
   background-color: #a4c6ff;
-  color: white;
+  position: absolute;
+  transition-duration: 0.3s;
+}
+
+.menu-btn span:before {
+  bottom: 8px;
+}
+
+.menu-btn span:after {
+  top: 8px;
+}
+
+#menu-btn-check:checked ~ .menu-btn span {
+  background-color: rgba(255, 255, 255, 0);
+}
+#menu-btn-check:checked ~ .menu-btn span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+#menu-btn-check:checked ~ .menu-btn span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+#menu-btn-check {
+  display: none;
+}
+
+/* メニュー一覧（クリック前） */
+.menu-content {
+  width: 150px;
+  height: 170px;
+  position: fixed;
+  top: -300px;
+  right: 0;
+  padding: 10px 10px;
+  background-color: white;
   transition-duration: 0.3s;
 }
 
 
-/* ログアウト */
-.user-logout {
-  margin-left: 20px;
-  padding: 10px;
-  color: #a4c6ff;
-  border: 1px solid #a4c6ff;
+/* メニュー一覧（クリック後） */
+#menu-btn-check:checked ~ .menu-content {
+  top: 90px;
+  transition-duration: 0.3s;
+}
+
+
+/* 各メニュー（ホバー前） */
+.menu-content ul li {
+  border-bottom: solid 1px black;
+  list-style: none;
+  transition-duration: 0.3s;
+}
+
+
+/* 各メニュー（ホバー後） */
+.menu-content ul li:hover {
+  border-bottom: solid 1px #a4c6ff;
+  list-style: none;
+  transition-duration: 0.3s;
+}
+
+
+/* 各メニュー（ホバー前） */
+.menu-content ul li .header-right-nav-list {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+  box-sizing: border-box;
+  color: black;
   text-decoration: none;
+  padding: 9px 15px 10px 0;
+  position: relative;
   transition-duration: 0.3s;
 }
 
-.user-logout:hover {
-  background-color: #a4c6ff;
-  color: white;
+
+/* 各メニュー（ホバー後） */
+.menu-content ul li .header-right-nav-list:hover {
+  color:#a4c6ff;
   transition-duration: 0.3s;
 }

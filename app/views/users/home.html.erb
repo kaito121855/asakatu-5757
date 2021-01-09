@@ -9,12 +9,18 @@
       ASAKATU
     </div>
   </div>
-  <%# ログイン・新規登録 %>
+  <%# ログイン・ゲストログイン・新規登録 %>
   <div class="header-item">
-    <div class="header-right-home">
-      <%= link_to "ログイン", new_user_session_path, class: "user-login" %>
-      <%= link_to "ゲストログイン", users_guest_sign_in_path, method: :post, class: "user-guest-login" %>
-      <%= link_to "新規登録", new_user_registration_path, class: "user-create" %>
+    <div class="hamburger-menu">
+      <input type="checkbox" id="menu-btn-check">
+      <label for="menu-btn-check" class="menu-btn"><span></span></label>
+      <div class="menu-content">
+        <ul>
+          <li><%= link_to "ログイン", new_user_session_path, class: "header-right-nav-list" %></li>
+          <li><%= link_to "ゲストログイン", users_guest_sign_in_path, method: :post, class: "header-right-nav-list" %></li>
+          <li><%= link_to "新規登録", new_user_registration_path, class: "header-right-nav-list" %></li>
+        </ul>
+      </div>   
     </div>
   </div>
 </header>
