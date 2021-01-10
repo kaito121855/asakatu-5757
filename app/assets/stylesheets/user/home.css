@@ -1,8 +1,9 @@
 /* 全体 */
 .top {
   width: 100vw;
-  height: 338vw;
+  height: 100vh;
   margin-top: 80px;
+  overflow: scroll;
 }
 
 
@@ -225,8 +226,7 @@
 .top6 {
   width: 85vw;
   height: 8vw;
-  margin: 0 auto;
-  margin-top: 10vw;
+  margin: 10vw auto;
   text-align: center;
   line-height: 8vw;
 }
