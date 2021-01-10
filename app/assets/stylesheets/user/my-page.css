@@ -1,9 +1,18 @@
+/* マイページ全体 */
+.my-page {
+  width: 100vw;
+  height: calc(100vh - 120px);
+  margin-top: 80px;
+  padding-bottom: 40px;
+  overflow: scroll;
+}
+
+
 /* ユーザー情報全体 */
 .profile {
   width: 650px;
   height: 350px;
-  margin: 0 auto;
-  margin-top: 140px;
+  margin: 60px auto 0;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -116,8 +125,8 @@
 
 /* 投稿全体 */
 .profile-tweets {
-  width: 100%;
+  width: 100vw;
   height: 755px;
-  margin-top: 80px;
+  margin: 80px 0 140px;
   z-index: 1;
 }
