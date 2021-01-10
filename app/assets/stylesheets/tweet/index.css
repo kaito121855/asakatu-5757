@@ -9,13 +9,10 @@
 
 .category-tweets {
   width: 100vw;
-  height: 755px;
-  margin-top: 80px;
-  padding-top: 40px;
+  height: 700px;
+  margin-top: 135px;
   overflow: scroll;
-  z-index: 1;
 }
-
 
 /* ジャンル */
 .category {
@@ -26,12 +23,13 @@
   width: 100vw;
   height: 40px;
   line-height: 20px;
-  padding: 20px 0;
+  padding-bottom: 20px;
   background-color: white;
   text-align: center;
   display: flex;
   justify-content: space-around;
   z-index: 2;
+  border-bottom: 2px solid #C2D4F2;
 }
 
 .category-item {
