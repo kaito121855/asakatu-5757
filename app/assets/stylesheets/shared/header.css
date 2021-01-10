@@ -4,12 +4,11 @@ header {
   top: 0;
   left: 50%;
   transform: translate(-50%, 0);
-  width: 100%;
+  width: 100vw;
   height: 80px;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.52);
+  border-bottom: 2px solid #C2D4F2;
   display: flex;
   justify-content: space-between;
-  z-index: 90;
 }
 
 
@@ -74,13 +73,13 @@ header {
 }
 
 
+/* タスク作成 */
 .header-right {
   width: 100%;
   margin-right: 32px;
   text-align: end;
 }
 
-/* タスク作成 */
 .task-create {
   padding: 10px;
   color: #a4c6ff;
@@ -96,6 +95,13 @@ header {
   transition-duration: 0.3s;
 }
 
+.hamburger-menu {
+  position: fixed;
+  z-index: 91;
+  background-color: brown;
+  width: 100px;
+}
+
 /* メニューボタン */
 .menu-btn {
   position: fixed;
@@ -106,7 +112,6 @@ header {
   width: 40px;
   justify-content: center;
   align-items: center;
-  z-index: 90;
   border: 2px solid #a4c6ff;
 }
 
@@ -149,20 +154,21 @@ header {
 
 /* メニュー一覧（クリック前） */
 .menu-content {
-  width: 150px;
-  height: 170px;
+  width: 15vw;
+  height: 100vh;
   position: fixed;
-  top: -300px;
-  right: 0;
+  top: 82px;
+  right: -20%;
   padding: 10px 10px;
   background-color: white;
+  border-left: 2px solid #C2D4F2;
   transition-duration: 0.3s;
 }
 
 
 /* メニュー一覧（クリック後） */
 #menu-btn-check:checked ~ .menu-content {
-  top: 90px;
+  right: 0;
   transition-duration: 0.3s;
 }
 
@@ -192,7 +198,8 @@ header {
   box-sizing: border-box;
   color: black;
   text-decoration: none;
-  padding: 9px 15px 10px 0;
+  margin-top: 20px;
+  padding: 10px 0;
   position: relative;
   transition-duration: 0.3s;
 }
