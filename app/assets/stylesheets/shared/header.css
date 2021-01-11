@@ -53,7 +53,7 @@ header {
   color: #a4c6ff;
   font-size: 20px;
   text-decoration: none;
-  border: 1px solid #a4c6ff;
+  border: 2px solid #a4c6ff;
   border-radius: 30px;
   transition-duration: 0.3s;
 }
@@ -61,6 +61,7 @@ header {
 .header-back-btn:hover {
   color: white;
   background-color: #a4c6ff;
+  border: 2px solid #a4c6ff;
   transition-duration: 0.3s;
 }
 
@@ -83,7 +84,7 @@ header {
 .task-create {
   padding: 10px;
   color: #a4c6ff;
-  border: 1px solid #a4c6ff;
+  border: 2px solid #a4c6ff;
   font-size: 17px;
   text-decoration: none;
   transition-duration: 0.3s;
