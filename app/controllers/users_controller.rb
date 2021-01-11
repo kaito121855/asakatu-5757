@@ -19,7 +19,8 @@ class UsersController < ApplicationController
   end
 
   def record
-    @week_achievement = { **week_achievement_num(6), **week_achievement_num(5), **week_achievement_num(4), **week_achievement_num(3), **week_achievement_num(2),  **week_achievement_num(1),  **week_achievement_num(0) }
+    @week_achievement = { **week_achievement_num(6), **week_achievement_num(5), **week_achievement_num(4),
+**week_achievement_num(3), **week_achievement_num(2), **week_achievement_num(1), **week_achievement_num(0) }
   end
 
   def following
@@ -42,7 +43,7 @@ class UsersController < ApplicationController
 
   def set_achievements
     @achievements = Achievement.where(user_id: params[:id])
-    end
+  end
 
   def week_achievement_num(num)
     today_info = Time.current
@@ -52,13 +53,11 @@ class UsersController < ApplicationController
     month_day = "#{month}月#{day}日"
     achievements = []
     @achievements.each do |achievement|
-      if month_day == achievement.updated_at.strftime("%-m月%-d日")
-        achievements << achievement
-      end
+      achievements << achievement if month_day == achievement.updated_at.strftime('%-m月%-d日')
     end
     achievement_count = achievements.count
     @hash = { "#{month_day}": achievement_count }
-    return @hash
+    @hash
   end
 
   def time_sum
@@ -78,9 +77,6 @@ class UsersController < ApplicationController
   end
 
   def move_to_home
-    if user_signed_in?
-      redirect_to tweets_path
-    end
+    redirect_to tweets_path if user_signed_in?
   end
-
 end

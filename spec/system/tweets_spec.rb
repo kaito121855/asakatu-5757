@@ -5,7 +5,7 @@ RSpec.describe 'タスク投稿', type: :system do
     @user = FactoryBot.create(:user)
     @tweet = FactoryBot.create(:tweet)
   end
-  context 'ツイート投稿ができるとき'do
+  context 'ツイート投稿ができるとき' do
     it 'ログインしたユーザーは新規投稿できる' do
       # ログインする
       sign_in(@user)
@@ -20,9 +20,9 @@ RSpec.describe 'タスク投稿', type: :system do
       select '00', from: 'tweet[start_minute_id]'
       select '6', from: 'tweet[end_hour_id]'
       select '30', from: 'tweet[end_minute_id]'
-      fill_in '詳細',    with: @tweet.detalis
+      fill_in '詳細', with: @tweet.detalis
       # 送信するとTweetモデルのカウントが1上がることを確認する
-      expect{ find('input[name="commit"]').click }.to change { Tweet.count }.by(1)
+      expect { find('input[name="commit"]').click }.to change { Tweet.count }.by(1)
       # トップページに遷移することを確認する
       expect(current_path).to eq tweets_path
       # トップページには先ほど投稿した内容のツイートが存在することを確認する（タスク名）
@@ -39,7 +39,7 @@ RSpec.describe 'タスク投稿', type: :system do
       expect(page).to have_content(@tweet.detalis)
     end
   end
-  context 'タスク投稿ができないとき'do
+  context 'タスク投稿ができないとき' do
     it 'ログインしていないとトップページに遷移できない' do
       # 新規投稿ページへのリンクがない
       expect(page).to have_no_content('タスク投稿')
@@ -67,9 +67,9 @@ RSpec.describe 'タスク編集', type: :system do
       select '00', from: 'tweet[start_minute_id]'
       select '6', from: 'tweet[end_hour_id]'
       select '30', from: 'tweet[end_minute_id]'
-      fill_in '詳細',    with: @tweet.detalis
+      fill_in '詳細', with: @tweet.detalis
       # 送信するとTweetモデルのカウントが1上がることを確認する
-      expect{ find('input[name="commit"]').click }.to change { Tweet.count }.by(1)
+      expect { find('input[name="commit"]').click }.to change { Tweet.count }.by(1)
       # トップページに遷移することを確認する
       expect(current_path).to eq tweets_path
       # 編集ページへ遷移する
@@ -83,9 +83,9 @@ RSpec.describe 'タスク編集', type: :system do
       select '30', from: 'tweet[end_minute_id]'
       fill_in '詳細', with: "#{@tweet.detalis}+編集した詳細"
       # 編集してもTweetモデルのカウントは変わらないことを確認する
-      expect{
+      expect  do
         find('input[name="commit"]').click
-      }.to change { Tweet.count }.by(0)
+      end.to change { Tweet.count }.by(0)
       # トップページに遷移したことを確認する
       expect(current_path).to eq tweets_path
       # トップページには先ほど投稿した内容のツイートが存在することを確認する（タスク名）
@@ -138,9 +138,9 @@ RSpec.describe 'タスク削除', type: :system do
       select '00', from: 'tweet[start_minute_id]'
       select '6', from: 'tweet[end_hour_id]'
       select '30', from: 'tweet[end_minute_id]'
-      fill_in '詳細',    with: @tweet.detalis
+      fill_in '詳細', with: @tweet.detalis
       # 送信するとTweetモデルのカウントが1上がることを確認する
-      expect{ find('input[name="commit"]').click }.to change { Tweet.count }.by(1)
+      expect { find('input[name="commit"]').click }.to change { Tweet.count }.by(1)
       # トップページに遷移することを確認する
       expect(current_path).to eq tweets_path
       # # 投稿を削除するとレコードの数が1減ることを確認する
@@ -195,9 +195,9 @@ RSpec.describe 'タスク詳細', type: :system do
       select '00', from: 'tweet[start_minute_id]'
       select '6', from: 'tweet[end_hour_id]'
       select '30', from: 'tweet[end_minute_id]'
-      fill_in '詳細',    with: @tweet.detalis
+      fill_in '詳細', with: @tweet.detalis
       # 送信するとTweetモデルのカウントが1上がることを確認する
-      expect{ find('input[name="commit"]').click }.to change { Tweet.count }.by(1)
+      expect { find('input[name="commit"]').click }.to change { Tweet.count }.by(1)
       # トップページに遷移することを確認する
       expect(current_path).to eq tweets_path
       # 詳細ページに遷移する

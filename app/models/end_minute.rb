@@ -11,10 +11,10 @@ class EndMinute < ActiveHash::Base
     { id: 9, name: 35 },
     { id: 11, name: 40 },
     { id: 12, name: 45 },
-    { id: 13, name: 55 }
+    { id: 13, name: 50 },
+    { id: 14, name: 55 }
   ]
 
-    include ActiveHash::Associations
-    has_many :tweets
-
-  end
+  include ActiveHash::Associations
+  has_many :tweets
+end
