@@ -1,45 +1,47 @@
-<div class='form-devise form-session'>
-  <%= form_with model: @user, url: user_session_path, local: true do |f| %>
+<div class='devise'>
+  <div class='form-devise form-session'>
+    <%= form_with model: @user, url: user_session_path, local: true do |f| %>
 
-    <%# タイトル %>
-    <h1 class="login-title">
-      ログイン
-    </h1>
+      <%# タイトル %>
+      <h1 class="login-title">
+        ログイン
+      </h1>
 
-    <%# エラーメッセージ %>
-    <div class="session-errors">
-      <%= flash[:notice] %>
-      <%= flash[:alert] %>
-    </div>
-
-    <%# メールアドレス %>
-    <div class="field-devise">
-      <%# ラベル %>
-      <div class="field-devise-label">
-        <%= f.label :email, "メールアドレス", class:"devise-label" %>
+      <%# エラーメッセージ %>
+      <div class="session-errors">
+        <%= flash[:notice] %>
+        <%= flash[:alert] %>
       </div>
-      <%# フォーム %>
-      <div class="field-devise-form-box">
-        <%= f.email_field :email, autofocus: true, class:"devise-form-box" %>
-      </div>
-    </div>
 
-    <%# パスワード %>
-    <div class="field-devise">
-      <%# ラベル %>
-      <div class="field-devise-label">
-        <%= f.label :password, "パスワード", class:"devise-label" %>
+      <%# メールアドレス %>
+      <div class="field-devise">
+        <%# ラベル %>
+        <div class="field-devise-label">
+          <%= f.label :email, "メールアドレス", class:"devise-label" %>
+        </div>
+        <%# フォーム %>
+        <div class="field-devise-form-box">
+          <%= f.email_field :email, autofocus: true, class:"devise-form-box" %>
+        </div>
       </div>
-      <%# フォーム %>
-      <div class="field-devise-form-box">
-        <%= f.password_field :password, autocomplete: "off", class:"devise-form-box" %>
+
+      <%# パスワード %>
+      <div class="field-devise">
+        <%# ラベル %>
+        <div class="field-devise-label">
+          <%= f.label :password, "パスワード", class:"devise-label" %>
+        </div>
+        <%# フォーム %>
+        <div class="field-devise-form-box">
+          <%= f.password_field :password, autocomplete: "off", class:"devise-form-box" %>
+        </div>
       </div>
-    </div>
 
-    <%# 送信ボタン %>
-    <div class="field-devise-form-btn">
-      <%= f.submit "ログイン", class:"form-btn session-btn" %>
-    </div>
+      <%# 送信ボタン %>
+      <div class="field-devise-form-btn">
+        <%= f.submit "ログイン", class:"form-btn session-btn" %>
+      </div>
 
-  <% end %>
+    <% end %>
+  </div>
 </div>
