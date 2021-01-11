@@ -7,12 +7,15 @@
   z-index: 1;
 }
 
+
+/* ジャンル検索画面全体 */
 .category-tweets {
   width: 100vw;
   height: 700px;
   margin-top: 135px;
   overflow: scroll;
 }
+
 
 /* ジャンル */
 .category {
@@ -32,21 +35,28 @@
   border-bottom: 2px solid #C2D4F2;
 }
 
+
+/* 各ジャンルボタン（ホバー前） */
 .category-item {
   width: 12vw;
   padding: 10px;
   color: #a4c6ff;
   text-decoration: none;
-  border: 1px solid #a4c6ff;
+  border: 2px solid #a4c6ff;
   transition-duration: 0.3s;
 }
 
+
+/* 各ジャンルボタン（ホバー後） */
 .category-item:hover {
   color: white;
   background-color: #a4c6ff;
+  border: 2px solid #a4c6ff;
   transition-duration: 0.3s;
 }
 
+
+/* 現在いる各ジャンルボタン*/
 .category-item-current {
   width: 12vw;
   padding: 10px;
@@ -56,7 +66,8 @@
   border: 1px solid #a4c6ff;
 }
 
-/* 各投稿全体 */
+
+/* 各投稿全体（ホバー前） */
 .tweet {
   width: 650px;
   min-height: 350px;
@@ -68,6 +79,8 @@
   transition-duration: 0.5s;
 }
 
+
+/* 各投稿全体（ホバー後） */
 .tweet:hover {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.52);
   transition-duration: 0.5s;
