@@ -1,8 +1,18 @@
 body {
+  background-color: whitesmoke;
   overflow: hidden;
 }
 
-/* フォーム全体 */
+
+/* ログイン画面・新規登録画面全体 */
+.devise {
+  width: 100vw;
+  height: 100vh;
+  background-color: whitesmoke;
+}
+
+
+/* フォーム全体（ログイン画面・新規登録画面） */
 .form-devise {
   position: absolute;
   bottom: 50%;
@@ -14,29 +24,44 @@ body {
   box-shadow: 0px 0px 30px rgba(0,0,0,.2);
 }
 
+
+/* フォーム全体（新規登録画面） */
 .form-new-registration {
   width: 500px;
   height: 670px;
 }
 
-.form-edit-registration {
-  width: 500px;
-  height: 770px;
-  margin: 0 auto;
-  margin-top: 90px;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 6px;
-  box-shadow: 0px 0px 30px rgba(0,0,0,.2);
-}
 
+/* フォーム全体（ログイン画面） */
 .form-session {
   width: 500px;
   height: 450px;
 }
 
 
-/* タイトル */
+/* ユーザー編集画面全体 */
+.form-edit-registrations {
+  width: 100vw;
+  height: calc(100vh - 160px);
+  margin-top: 80px;
+  padding: 40px 0;
+  overflow: scroll;
+}
+
+
+/* フォーム全体（ユーザー編集画面） */
+.form-edit-registration {
+  width: 500px;
+  height: 755px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0px 0px 30px rgba(0,0,0,.2);
+}
+
+
+/* タイトル（ログイン画面・新規登録画面・ユーザー編集画面） */
 h1 {
   text-align: center;
   color: black;
@@ -44,10 +69,14 @@ h1 {
   font-weight: 700;
 }
 
+
+/* タイトル（新規登録画面・ユーザー編集画面） */
 .registration-title {
   margin: 15px 0 45px 0;
 }
 
+
+/* タイトル（ログイン画面） */
 .login-title {
   margin: 15px 0 10px 0;
 }
@@ -108,13 +137,15 @@ h1 {
 }
 
 
-/* 送信ボタン */
+/* 送信ボタン全体 */
 .field-devise-form-btn {
   width: 500px;
   height: 90px;
   padding-top: 10px;
 }
 
+
+/* 送信ボタン（ログイン画面・新規登録画面・ユーザー編集画面） */
 .form-btn {
   display: block;
   width: 40%;
@@ -127,6 +158,8 @@ h1 {
   border-radius: 6px;
 }
 
+
+/* 送信ボタン（ホバー後） */
 .form-btn:hover {
   position: relative;
   top: 4px;
@@ -135,11 +168,15 @@ h1 {
   font-weight: bold;
 }
 
+
+/* 送信ボタン（新規登録画面・ユーザー編集画面） */
 .registration-btn {
   letter-spacing: 2em;
   text-indent: 2em;
 }
 
+
+/* 送信ボタン（ログイン画面） */
 .session-btn {
   letter-spacing: 1em;
   text-indent: 1em;
