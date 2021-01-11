@@ -1,13 +1,15 @@
-/* フォーム全体 */
+/* タスク作成・編集画面全体 */
 .form-tasks {
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 80px);
   margin-top: 80px;
   overflow: scroll;
 }
 
+
+/* フォーム全体（タスク作成・編集画面） */
 .form-task {
-  margin: 60px auto 140px;
+  margin: 60px auto;
   padding: 20px;
   background-color: #fff;
   border-radius: 6px;
