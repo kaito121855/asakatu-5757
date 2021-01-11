@@ -108,7 +108,7 @@
 }
 
 
-/* 投稿数のタイトル */
+/* 投稿数のタイトル（ホバー前） */
 .follow-title {
   color: black;
   border-bottom: 1px solid white;
@@ -116,6 +116,8 @@
   transition-duration: 0.5s;
 }
 
+
+/* 投稿数のタイトル（ホバー後） */
 .follow-title:hover {
   color: #a4c6ff;
   border-bottom: 1px solid #a4c6ff;

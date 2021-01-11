@@ -12,18 +12,18 @@ class Tweet < ApplicationRecord
   belongs_to :end_minute
 
   validates :task, presence: true
-  validates :category_id, numericality: { other_than: 1, message: "は「---」以外のものを選択してください"}
-  with_options numericality: { other_than: 1, message: "は「時」以外のものを選択してください"}  do
+  validates :category_id, numericality: { other_than: 1, message: 'は「---」以外のものを選択してください' }
+  with_options numericality: { other_than: 1, message: 'は「時」以外のものを選択してください' } do
     validates :start_hour_id
     validates :end_hour_id
   end
 
-  with_options numericality: { other_than: 1, message: "は「分」以外のものを選択してください"}  do
+  with_options numericality: { other_than: 1, message: 'は「分」以外のものを選択してください' } do
     validates :start_minute_id
     validates :end_minute_id
   end
 
   def already_achieved?(tweet)
-    self.achievements.exists?(tweet_id: tweet.id)
+    achievements.exists?(tweet_id: tweet.id)
   end
 end

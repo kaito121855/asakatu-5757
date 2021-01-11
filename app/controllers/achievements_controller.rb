@@ -7,7 +7,7 @@ class AchievementsController < ApplicationController
   end
 
   def destroy
-    @achievement =current_user.achievements.find_by(tweet_id: @tweet.id)
+    @achievement = current_user.achievements.find_by(tweet_id: @tweet.id)
     @achievement.destroy
   end
 
@@ -16,5 +16,4 @@ class AchievementsController < ApplicationController
   def set_tweet
     @tweet = Tweet.find(params[:tweet_id])
   end
-
 end

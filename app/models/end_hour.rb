@@ -27,7 +27,6 @@ class EndHour < ActiveHash::Base
     { id: 25, name: 24 }
   ]
 
-    include ActiveHash::Associations
-    has_many :tweets
-
-  end
+  include ActiveHash::Associations
+  has_many :tweets
+end

@@ -31,21 +31,18 @@ class TweetsController < ApplicationController
   end
 
   def update
-    if @tweet.update(tweet_params)
-      redirect_to tweets_path
-    end
+    redirect_to tweets_path if @tweet.update(tweet_params)
   end
 
   def destroy
-    if @tweet.destroy
-      redirect_to tweets_path
-    end
+    redirect_to tweets_path if @tweet.destroy
   end
 
   private
 
   def tweet_params
-    params.require(:tweet).permit(:task, :category_id, :detalis, :start_hour_id, :start_minute_id, :end_hour_id, :end_minute_id, :detalis).merge(user_id: current_user.id)
+    params.require(:tweet).permit(:task, :category_id, :detalis, :start_hour_id, :start_minute_id, :end_hour_id, :end_minute_id,
+                                  :detalis).merge(user_id: current_user.id)
   end
 
   def set_tweet
@@ -53,8 +50,6 @@ class TweetsController < ApplicationController
   end
 
   def move_to_index
-    unless user_signed_in?
-      redirect_to action: :index
-    end
+    redirect_to action: :index unless user_signed_in?
   end
 end

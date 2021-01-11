@@ -16,26 +16,24 @@ class User < ApplicationRecord
   has_many :achievements, dependent: :destroy
 
   def follow(other_user)
-    unless self == other_user
-      self.relationships.find_or_create_by(follow_id: other_user.id)
-    end
+    relationships.find_or_create_by(follow_id: other_user.id) unless self == other_user
   end
 
   def unfollow(other_user)
-    relationship = self.relationships.find_by(follow_id: other_user.id)
+    relationship = relationships.find_by(follow_id: other_user.id)
     relationship.destroy if relationship
   end
 
   def following?(other_user)
-    self.followings.include?(other_user)
+    followings.include?(other_user)
   end
 
   def already_favorited?(tweet)
-    self.favorites.exists?(tweet_id: tweet.id)
+    favorites.exists?(tweet_id: tweet.id)
   end
 
   def already_achieved?(tweet)
-    self.achievements.exists?(tweet_id: tweet.id)
+    achievements.exists?(tweet_id: tweet.id)
   end
 
   def self.guest
@@ -44,5 +42,4 @@ class User < ApplicationRecord
       user.nickname = 'ゲスト'
     end
   end
-
 end

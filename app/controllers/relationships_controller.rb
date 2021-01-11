@@ -4,7 +4,6 @@ class RelationshipsController < ApplicationController
   def create
     following = current_user.follow(@user)
     following.save
-
   end
 
   def destroy

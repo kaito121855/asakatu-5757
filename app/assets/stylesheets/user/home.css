@@ -1,7 +1,7 @@
 /* 全体 */
 .top {
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 80px);
   margin-top: 80px;
   overflow: scroll;
 }
@@ -232,7 +232,7 @@
 }
 
 
-/* ログイン・新規登録ボタン */
+/* ログイン・新規登録ボタン（ホバー前） */
 .top6  > .top-user-btn {
   background-color: white;
   color: #a4c6ff;
@@ -245,16 +245,22 @@
   padding: 2vw 5vw;
 }
 
+
+/* ログイン・新規登録ボタン（ホバー後） */
 .top6  > .top-user-btn:hover {
   background-color: #a4c6ff;
   color: white;
   transition-duration: 0.3s;
 }
 
+
+/* ログインボタン */
 .top6  > .top-user-login {
   margin-right: 8vw;
 }
 
+
+/* 新規登録ボタン */
 .top6  > .top-user-create {
   margin-left: 8vw;
 }

@@ -1,5 +1,4 @@
 class CategoriesController < ApplicationController
-
   def index
     @tweets = Tweet.includes(:user).order('tweets.created_at DESC')
   end
@@ -23,5 +22,4 @@ class CategoriesController < ApplicationController
   def housework
     @tweets = Tweet.where(category_id: 6).order('tweets.created_at DESC')
   end
-
 end
