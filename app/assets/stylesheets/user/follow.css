@@ -1,10 +1,20 @@
 /* フォロー・フォロワー画面全体 */
+.follows {
+  width: 100vw;
+  height: calc(100vh - 80px);
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* フォロー・フォロワー一覧全体 */
 .follow-content {
   width: 400px;
   height: 600px;
-  margin: 0 auto;
-  margin-top: 190px;
+  margin: 80px auto;
   padding: 10px;
+  background-color: white;
   border: 2px solid #f2f2f2;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.52);
   overflow: scroll;
@@ -16,4 +26,5 @@
   margin-bottom: 10px;
   display: flex;
   align-items: center;
+  background-color: yellow;
 }
