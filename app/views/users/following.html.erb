@@ -14,13 +14,15 @@
 </header>
 
 <%# フォロー一覧 %>
-<div class="follow-content">
-  <% @users.each do |user| %>
-    <div class="follow-user-content">
-      <%# ユーザーアイコン %>
-      <%= image_tag 'user.png', class:"user-image" %>
-      <%# ユーザー名 %>
-      <%= link_to user.nickname, user_path(user.id), method: :get, class: "user-nickname" %>
-    </div>
-  <% end %>
+<div class="follows">
+  <div class="follow-content">
+    <% @users.each do |user| %>
+      <div class="follow-user-content">
+        <%# ユーザーアイコン %>
+        <%= image_tag 'user.png', class:"user-image" %>
+        <%# ユーザー名 %>
+        <%= link_to user.nickname, user_path(user.id), method: :get, class: "user-nickname" %>
+      </div>
+    <% end %>
+  </div>
 </div>
