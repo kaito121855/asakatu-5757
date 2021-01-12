@@ -1,0 +1,18 @@
+<%# ヘッダー %>
+<%= render "shared/header2" %>
+
+<%# ジャンル一覧 %>
+<div class="category">
+  <%= link_to '全ジャンル', categories_path, class:"category-item-current" %>
+  <%= link_to 'トレーニング', training_categories_path, class:"category-item" %>
+  <%= link_to 'ウォーキング', walking_categories_path, class:"category-item" %>
+  <%= link_to '勉強', study_categories_path, class:"category-item" %>
+  <%= link_to '健康・美容', health_categories_path, class:"category-item" %>
+  <%= link_to '家事・仕事', housework_categories_path, class:"category-item" %>
+</div>
+
+<%# 各投稿全体 %>
+<%= render partial: 'shared/tweet2', locals: { tweets: @tweets }  %>
+
+<%# フッダー %>
+<%= render "shared/footer" %>
