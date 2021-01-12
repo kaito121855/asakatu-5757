@@ -26,4 +26,12 @@ class Tweet < ApplicationRecord
   def already_achieved?(tweet)
     achievements.exists?(tweet_id: tweet.id)
   end
+
+  def self.search(search)
+    if search != ""
+      Tweet.where('task LIKE(?)', "%#{search}%")
+    else
+      Tweet.includes(:user).order('tweets.created_at DESC')
+    end
+  end
 end
