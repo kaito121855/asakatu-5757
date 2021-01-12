@@ -1,14 +1,7 @@
 <header>
-  <%# ユーザー情報 %>
-  <div class="header-item">
-  </div>
-  <%# ヘッダータイトル %>
-  <div class="header-item">
-    <div class="header-title-item">
-      ジャンル検索
-    </div>
-  </div>
-  <%# タスク作成 %>
-  <div class="header-item">
-  </div>
+  <%# フォーム検索機能 %>
+  <%= form_with(url: search_categories_path, local: true, method: :get, class: "search-form") do |form| %>
+    <%= form.text_field :keyword, placeholder: "タスクを検索する", class: "search-input" %>
+    <%= form.submit "検索", class: "search-btn" %>
+  <% end %>
 </header>
