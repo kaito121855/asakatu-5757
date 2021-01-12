@@ -58,11 +58,11 @@ http://ec2-18-178-189-147.ap-northeast-1.compute.amazonaws.com/
 ![70f7b16a234064a8ac192377e1e4b4ca](https://user-images.githubusercontent.com/70756110/102970999-e5757800-453b-11eb-8b1b-4ee90976a191.gif)
 
 #### タスク検索機能（ログインユーザーのみ）
-* フォーム検索機能 
+* フォーム検索機能  
 　タスク名を基準にキーワードを検索することでキーワードに当てはまるタスクだけ閲覧することができます。また気になるユーザーがいればフォロー機能を用いてフォローすることができます。 
 [![Image from Gyazo](https://i.gyazo.com/d70860472e5d215d1cd396a2e029cf20.gif)](https://gyazo.com/d70860472e5d215d1cd396a2e029cf20)
 
-* カテゴリー別検索機能 
+* カテゴリー別検索機能  
 　カテゴリーごとに検索することができます。
 [![Image from Gyazo](https://i.gyazo.com/0c09a11b0143fd2eee9252a35a2ce03b.gif)](https://gyazo.com/0c09a11b0143fd2eee9252a35a2ce03b)
 
