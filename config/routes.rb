@@ -32,8 +32,8 @@ Rails.application.routes.draw do
 
   # カテゴリー検索機能に関するルーティング
   resources :categories, only: [:index] do
-    member do
-      get :training, :walking, :study, :health, :housework
+    collection do
+      get :training, :walking, :study, :health, :housework, :search
     end
   end
 

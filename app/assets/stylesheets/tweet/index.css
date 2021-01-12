@@ -8,7 +8,7 @@
 }
 
 
-/* ジャンル検索画面全体 */
+/* 検索画面全体 */
 .category-tweets {
   width: 100vw;
   height: 700px;
@@ -17,7 +17,42 @@
 }
 
 
-/* ジャンル */
+/* フォーム検索全体 */
+.search-form {
+  width: 100vw;
+  height: 75px;
+  line-height: 75px;
+  text-align: center;
+}
+
+
+/* フォーム検索入力欄 */
+.search-input {
+  width: 50vw;
+  height: 37.5px;
+  border: 2px solid #cccccc;
+}
+
+
+/* フォーム検索送信ボタン（ホバー前） */
+.search-btn {
+  width: 7vw;
+  height: 40px;
+  margin-left: 10px;
+  border: 2px solid #cccccc;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+
+/* フォーム検索送信ボタン（ホバー後） */
+.search-btn:hover {
+  background-color: #cccccc;
+  transition-duration: 0.3s;
+}
+
+
+/* ジャンル検索全体 */
 .category {
   position: absolute;
   top: 75px;

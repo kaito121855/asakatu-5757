@@ -22,4 +22,8 @@ class CategoriesController < ApplicationController
   def housework
     @tweets = Tweet.where(category_id: 6).order('tweets.created_at DESC')
   end
+
+  def search
+    @tweets = Tweet.search(params[:keyword])
+  end
 end
