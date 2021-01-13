@@ -12,6 +12,18 @@
         ユーザー情報の変更
       </h1>
 
+      <%# アイコン %>
+      <div class="field-devise">
+        <%# ラベル %>
+        <div class="field-devise-label">
+          <%= f.label :image, " アイコン", class:"devise-label" %>
+        </div>
+        <%# フォーム %>
+        <div class="field-devise-form-box">
+          <%= f.file_field :image, class:"devise-form-box" %>
+        </div>
+      </div>
+
       <%# ニックネーム %>
       <div class="field-devise">
         <%# ラベル %>
