@@ -11,7 +11,11 @@
           <div class="user-content">
             <%# ユーザー画像 %>
             <div class="tweet-user-image">
-              <%= link_to image_tag('user.png', class: "user-image"), user_path(tweet.user_id) %>
+              <% if tweet.user.image.attached? %>
+                <%= link_to image_tag(tweet.user.image, class: "user-image"), user_path(tweet.user_id) %>
+              <% else %>
+                <%= link_to image_tag('user.png', class: "user-image"), user_path(tweet.user_id) %>
+              <% end %>
             </div>
             <%# ニックネーム %>
             <%= link_to tweet.user.nickname, user_path(tweet.user_id), method: :get, class: "user-nickname" %>
