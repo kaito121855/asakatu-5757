@@ -19,7 +19,11 @@
     <% @users.each do |user| %>
       <div class="follow-user-content">
         <%# ユーザーアイコン %>
-        <%= image_tag 'user.png', class:"user-image" %>
+        <% if user.image.attached? %>
+          <%= link_to image_tag(user.image, class: "user-image"), user_path(user.id) %>
+        <% else %>
+          <%= link_to image_tag('user.png', class: "user-image"), user_path(user.id) %>
+        <% end %>
         <%# ユーザー名 %>
         <%= link_to user.nickname, user_path(user.id), method: :get, class: "user-nickname" %>
       </div>
