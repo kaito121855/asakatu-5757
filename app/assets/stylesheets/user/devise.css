@@ -52,7 +52,7 @@ body {
 /* フォーム全体（ユーザー編集画面） */
 .form-edit-registration {
   width: 500px;
-  height: 755px;
+  height: 1120px;
   margin: 0 auto;
   padding: 20px;
   background-color: #fff;
@@ -82,7 +82,42 @@ h1 {
 }
 
 
-/* 入力欄全体 */
+/* ユーザーアイコン全体 */
+.field-devise-image {
+  height: 300px;
+  width: 500px;
+  margin-bottom: 40px;
+}
+
+
+/* ユーザーアイコン */
+#image-list {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border: 2px solid #f2f2f2;
+  border-radius: 100px;
+}
+
+
+/* ユーザーアイコン(選択前) */
+.profile-icon-image-list {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+}
+
+
+/* ユーザーアイコン(選択後) */
+#image-list > div > img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+}
+
+
+/* 各入力欄全体 */
 .field-devise {
   height: 105px;
   width: 500px;
