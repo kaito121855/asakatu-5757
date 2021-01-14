@@ -34,7 +34,11 @@
   <div class="profile">
     <%# ユーザーアイコン %>
     <div class="profile-icon">
-      <%= image_tag 'user.png', class:"profile-icon-image" %>
+      <% if @user.image.attached? %>
+        <%= image_tag @user.image, class:"profile-icon-image" %>
+      <% else %>
+        <%= image_tag 'user.png', class:"profile-icon-image" %>
+      <% end %>
     </div>
     <%# ユーザー名 %>
     <div class="profile-name">

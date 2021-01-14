@@ -12,6 +12,21 @@
         ユーザー情報の変更
       </h1>
 
+      <%# アイコン %>
+      <div class="field-devise-image">
+        <%# 画像選択 %>
+        <div class="field-devise-form-box">
+          <div id="image-list">
+            <% if @user.image.attached? %>
+              <%= image_tag @user.image, class:"profile-icon-image-list" %>
+            <% else %>
+              <%= image_tag 'user.png', class:"profile-icon-image-list" %>
+            <% end %>
+          </div>
+          <%= f.file_field :image, class:"devise-form-box", id:"user-image" %>
+        </div>
+      </div>
+
       <%# ニックネーム %>
       <div class="field-devise">
         <%# ラベル %>

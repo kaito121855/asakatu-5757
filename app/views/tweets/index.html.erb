@@ -4,7 +4,11 @@
   <div class="header-item">
     <% if user_signed_in? %>
       <div class="header-user-image">
-        <%= link_to image_tag('user.png', class: "user-image"), user_path(current_user.id) %>
+        <% if current_user.image.attached? %>
+          <%= link_to image_tag(current_user.image, class: "user-image"), user_path(current_user.id) %>
+        <% else %>
+          <%= link_to image_tag('user.png', class: "user-image"), user_path(current_user.id) %>
+        <% end %>
       </div>
       <%= link_to current_user.nickname, user_path(current_user.id), method: :get, class: "header-user-nickname" %>
     <% end %>

@@ -14,6 +14,7 @@ class User < ApplicationRecord
   has_many :followers, through: :reverse_of_relationships, source: :user
   has_many :favorites, dependent: :destroy
   has_many :achievements, dependent: :destroy
+  has_one_attached :image
 
   def follow(other_user)
     relationships.find_or_create_by(follow_id: other_user.id) unless self == other_user

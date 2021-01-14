@@ -65,8 +65,11 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'pry-rails'
 gem 'active_hash'
 gem 'devise'
-gem "chartkick"
+gem 'chartkick'
 gem 'rails-i18n'
+gem 'mini_magick'
+gem 'image_processing', '~> 1.2'
+gem 'aws-sdk-s3', require: false
 
 group :production do
   gem 'unicorn', '5.4.1'

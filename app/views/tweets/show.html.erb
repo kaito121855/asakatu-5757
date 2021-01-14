@@ -32,7 +32,11 @@
         <div class="comment-content">
           <%# ユーザー画像 %>
           <div class="comment-user-image">
-            <%= link_to image_tag('user.png', class: "user-image"), user_path(comment.user_id) %>
+            <% if comment.user.image.attached? %>
+              <%= link_to image_tag(comment.user.image, class: "user-image"), user_path(comment.user.id) %>
+            <% else %>
+              <%= link_to image_tag('user.png', class: "user-image"), user_path(comment.user.id) %>
+            <% end %>
           </div>
           <%# 各コメント %>
           <div class="comment-user-content">
