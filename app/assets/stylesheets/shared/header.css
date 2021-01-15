@@ -9,6 +9,7 @@ header {
   border-bottom: 2px solid #C2D4F2;
   display: flex;
   justify-content: space-between;
+  background-color: white;
 }
 
 
