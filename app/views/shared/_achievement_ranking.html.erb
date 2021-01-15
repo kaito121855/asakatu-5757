@@ -1,0 +1,24 @@
+<div class="achievement-rank">
+  <div class="achievement-rank-title">
+    <i class="fas fa-crown"></i>
+    タスク達成ランキング
+  </div>
+  <% achievement_ranking.each.with_index(1) do |user, i| %>
+    <div class="achievement-rank-content">
+      <div class="achievement-rank-content-num">
+        <%= i %>
+      </div>
+      <div class="achievement-ranking-content-user">
+        <% if user.image.attached? %>
+          <%= link_to image_tag(user.image, class: "rank-user-image"), user_path(user.id) %>
+        <% else %>
+          <%= link_to image_tag('user.png', class: "rank-user-image"), user_path(user.id) %>
+        <% end %>
+        <%= link_to user.nickname, user_path(user.id), method: :get, class: "rank-user-nickname" %>
+      </div>
+      <div class="achievement-ranking-content-count">
+        <%= user.achievements.count %>
+      </div>
+    </div>
+  <% end %>
+</div>
