@@ -2,6 +2,7 @@
 .comments {
   width: 640px;
   margin: 0 auto;
+  margin-bottom: 40px;
   padding: 20px;
   background-color: white;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.52);
