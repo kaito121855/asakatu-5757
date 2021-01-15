@@ -65,21 +65,22 @@
     </div>
     <%# サイドメニュー情報 %>
     <div class="more">
-      <% if user_signed_in? && current_user.id == tweet.user_id %>
-        <%# サイドバー %>
-        <div class="side-list">
-          <%= '…' %>
-        </div>
-        <%# サイドバーリスト %>
-        <ul class="tweet-side-lists">
-          <li>
-            <%= link_to '編集', edit_tweet_path(tweet.id), method: :get, class:"tweet-side-list" %>
-          </li>
-          <li>
-            <%= link_to '削除', tweet_path(tweet.id), method: :delete, class:"tweet-side-list" %>
-          </li>
-        </ul>
-      <% end %>
+      <%# サイドバー %>
+      <div class="side-list">
+        <%= '…' %>
+      </div>
+      <%# サイドバーリスト %>
+      <ul class="tweet-side-lists">
+        <li>
+          <%= link_to '詳細', tweet_path(tweet.id), method: :get, class:"tweet-side-list" %>
+        </li>
+        <li>
+          <%= link_to '編集', edit_tweet_path(tweet.id), method: :get, class:"tweet-side-list" %>
+        </li>
+        <li>
+          <%= link_to '削除', tweet_path(tweet.id), method: :delete, class:"tweet-side-list" %>
+        </li>
+      </ul>
     </div>
   </div>
 

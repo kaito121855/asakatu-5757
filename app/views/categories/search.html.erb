@@ -12,7 +12,17 @@
 </div>
 
 <%# 各投稿全体 %>
-<%= render partial: 'shared/tweet2', locals: { tweets: @tweets }  %>
+<div class="content">
+  <div class="category-achievement-ranks">
+    <%= render partial: 'shared/achievement_ranking', locals: { achievement_ranking: @achievement_ranking }  %>
+  </div>
+
+  <div class="category-tweets">
+    <% @tweets.each do |tweet| %>
+      <%= render partial: 'shared/tweet1', locals: { tweet: tweet }  %>
+    <% end %>
+  </div>
+</div>
 
 <%# フッダー %>
 <%= render "shared/footer" %>

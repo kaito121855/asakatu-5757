@@ -7,6 +7,7 @@ class TweetsController < ApplicationController
     user = User.find(current_user.id)
     follow_users = user.followings
     @follow_tweets = @tweets.where(user_id: follow_users).or(@tweets.where(user_id: current_user)).order('created_at DESC')
+    @achievement_ranking = User.find(Achievement.group(:user_id).order('count(user_id) DESC').limit(5).pluck(:user_id))
   end
 
   def new

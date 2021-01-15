@@ -29,11 +29,16 @@
   </div>
 </header>
 
-<div class="tweets">
-  <% @follow_tweets.each do |tweet| %>
-    <%# 各投稿全体 %>
-    <%= render partial: 'shared/tweet1', locals: { tweet: tweet }  %>
-  <% end %>
+<div class="content">
+  <div class="achievement-ranks">
+    <%= render partial: 'shared/achievement_ranking', locals: { achievement_ranking: @achievement_ranking }  %>
+  </div>
+
+  <div class="tweets">
+    <% @follow_tweets.each do |tweet| %>
+      <%= render partial: 'shared/tweet1', locals: { tweet: tweet }  %>
+    <% end %>
+  </div>
 </div>
 
 <footer>
