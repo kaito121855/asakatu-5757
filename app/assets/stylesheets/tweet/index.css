@@ -1,8 +1,136 @@
-/* 投稿全体 */
+/* タスク達成ランキング・投稿全体 */
+.content {
+  display: flex;
+}
+
+/* タスク達成ランキング全体 */
+.achievement-ranks {
+  width: 40vw;
+  height: 755px;
+  margin-top: 82px;
+}
+
+
+/* タスク達成ランキング全体（検索画面） */
+.category-achievement-ranks {
+  width: 40vw;
+  height: 755px;
+  margin-top: 135px;
+}
+
+
+/* タスク達成ランキング */
+.achievement-rank {
+  float: right;
+  width: 50%;
+  height: 450px;
+  margin-top: 30px;
+  background-color: white;
+  border: solid 2px #cccccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.52);
+}
+
+
+/* タスク達成ランキング(タイトル) */
+.achievement-rank-title {
+  line-height: 60px;
+  border-bottom: solid 2px #cccccc;
+  text-align: center;
+}
+
+/* タスク達成ランキング(タイトルマーク) */
+.fa-crown {
+  color: #ffd700;
+}
+
+/* タスク達成ランキング(順位・ユーザー情報・達成数) */
+.achievement-rank-content {
+  width: 100%;
+  margin: 1vw 0;
+  display: flex;
+  align-items: center;
+}
+
+
+/* タスク達成ランキング(順位) */
+.achievement-rank-content-num {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  margin: 0 4%;
+  border: 2px solid #a4c6ff;
+  border-radius: 30px;
+  background-color: #a4c6ff;
+  color: white;
+  text-align: center;
+}
+
+
+/* タスク達成ランキング(ユーザー情報) */
+.achievement-ranking-content-user {
+  width: 60%;
+  display: flex;
+  align-items: center;
+}
+
+
+/* タスク達成ランキング(ユーザー情報/アイコン) */
+.rank-user-image {
+  width: 40px;
+  height: 40px;
+  margin-top: 7px;
+  margin-right: 1vw;
+  border: 2px solid #f2f2f2;
+  border-radius: 30px;
+  transition: 0.5s;
+}
+
+.rank-user-image:hover {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #a4c6ff;
+  border-radius: 30px;
+  transition: 0.5s;
+}
+
+
+/* タスク達成ランキング(ユーザー情報/ユーザー名) */
+.rank-user-nickname {
+  color: black;
+  text-decoration: none;
+  transition-duration: 0.5s;
+}
+
+.rank-user-nickname:hover {
+  color: #a4c6ff;
+  border-bottom: 1px solid #a4c6ff;
+  transition-duration: 0.5s;
+}
+
+
+/* タスク達成ランキング(達成数) */
+.achievement-ranking-content-count {
+  width: 30px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+/* 投稿全体(各詳細画面以外) */
 .tweets {
+  width: 60vw;
+  height: 755px;
+  margin-top: 82px;
+  overflow: scroll;
+  z-index: 1;
+}
+
+
+/* 投稿全体(各詳細画面) */
+.show-tweets {
   width: 100vw;
   height: 755px;
-  margin-top: 80px;
+  margin-top: 82px;
   overflow: scroll;
   z-index: 1;
 }
@@ -10,7 +138,7 @@
 
 /* 検索画面全体 */
 .category-tweets {
-  width: 100vw;
+  width: 60vw;
   height: 700px;
   margin-top: 135px;
   overflow: scroll;
@@ -102,12 +230,13 @@
 }
 
 
-/* 各投稿全体（ホバー前） */
+/* 各投稿全体（各詳細画面以外） */
 .tweet {
-  width: 650px;
-  min-height: 350px;
-  margin: 50px auto;
+  width: 66%;
+  margin: 30px 0;
+  margin-left: 50px;
   padding: 15px;
+  padding-bottom: 30px;
   border: solid 2px #cccccc;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.52);
   background-color: white;
@@ -122,21 +251,49 @@
 }
 
 
+/* 各投稿全体（各詳細画面） */
+.show-tweet {
+  width: 650px;
+  margin: 50px auto;
+  padding: 15px;
+  padding-bottom: 30px;
+  border: solid 2px #cccccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.52);
+  background-color: white;
+  transition-duration: 0.5s;
+}
+
+
+/* 各投稿全体（ホバー後） */
+.show-tweet:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.52);
+  transition-duration: 0.5s;
+}
+
+
 /* ユーザー情報及びタスク情報全体 */
 .tweet-content {
   display: flex;
 }
 
 
-/* ユーザー情報全体 */
+/* ユーザー情報全体（各詳細画面以外） */
 .user-content {
+  width: 35vw;
+  height: 45px;
+  display: flex;
+}
+
+
+/* ユーザー情報全体（各詳細画面以外） */
+.show-user-content {
   width: 590px;
   height: 45px;
   display: flex;
 }
 
 
-/* ユーザー情報（アイコン） */
+/* ユーザー情報/アイコン */
 .user-image {
   width: 40px;
   height: 40px;
@@ -154,7 +311,7 @@
 }
 
 
-/* ユーザー情報（ニックネーム） */
+/* ユーザー情報/ニックネーム */
 .user-nickname {
   margin: 10px ;
   line-height: 22.5px;
@@ -169,20 +326,44 @@
   transition-duration: 0.5s;
 }
 
-/* ユーザー情報（ジャンル) */
+
+/* ユーザー情報/ジャンル（各詳細画面以外） */
 .category-content {
+  width: 15vw;
+  height: 30px;
+  margin-top: 20px;
+  margin-left: 6vw;
+  line-height: 30px;
+  text-align: center;
+  border-bottom: 2px solid #cccccc;
+}
+
+
+/* ユーザー情報/ジャンル（各詳細画面） */
+.show-category-content {
   width: 200px;
   height: 30px;
   margin-top: 20px;
   margin-left: 115px;
   line-height: 30px;
   text-align: center;
-  border-bottom: 2px solid #cccccc ;
+  border-bottom: 2px solid #cccccc;
 }
 
 
-/* タスク情報全体 */
+/* タスク情報全体（各詳細画面以外） */
 .task-content {
+  width: 30vw;
+  padding: 20px;
+  margin-top: 25px;
+  margin-left: 3.5vw;
+  border: 2px solid #cccccc;
+  display: flex;
+}
+
+
+/* タスク情報全体（各詳細画面）  */
+.show-task-content {
   width: 500px;
   height: 100px;
   padding: 20px;
@@ -193,12 +374,23 @@
 }
 
 
-/* タスク情報（画像） */
+/* タスク情報/画像（各詳細画面以外） */
 .task-image {
-  margin-right: 20px;
+  margin-right: 2vw;
 }
 
 .task-content-image {
+  width: 7vw;
+  height: 6vw;
+}
+
+
+/* タスク情報/画像（各詳細画面） */
+.show-task-image {
+  margin-right: 20px;
+}
+
+.show-task-content-image {
   width: 100px;
   height: 100px;
 }
@@ -207,14 +399,24 @@
 /* タスク情報（タスク名・タスク時間） */
 .task-item {
   width: 350px;
-  height: 130px;
+  height: 100px;
+  padding-bottom: 10px;
   display: flex;
   flex-direction: column;
 }
 
 
-/* タスク情報（タスク名） */
+/* タスク情報/タスク名（各詳細画面以外） */
 .task-title {
+  border-bottom: 2px solid #cccccc;
+  width: 17vw;
+  line-height: 45px;
+  font-size: 18px;
+}
+
+
+/* タスク情報/タスク名（各詳細画面） */
+.show-task-title {
   border-bottom: 2px solid #cccccc;
   width: 350px;
   line-height: 45px;
@@ -243,6 +445,7 @@
 
 /* サイドメニュー */
 .more {
+  display: block;
   cursor: pointer;
   height: 130px;
   width: 60px;
@@ -288,21 +491,43 @@
 }
 
 
-/* 詳細情報 */
+/* 詳細情報（各詳細画面以外） */
 .datalis {
-  width: 525px;
-  height: 50px;
+  width: 31vw;
   padding: 10px;
-  margin: 15px 0 15px 50px;
+  margin-top: 15px;
+  margin-left: 3.5vw;
   background-color: lightcyan;
   border-radius: 10px;
   overflow: scroll;
 }
 
 
-/* いいね情報・達成情報 */
+/* 詳細情報（各詳細画面） */
+.show-datalis {
+  width: 525px;
+  padding: 10px;
+  margin-top: 15px;
+  margin-left: 50px;
+  background-color: lightcyan;
+  border-radius: 10px;
+  overflow: scroll;
+}
+
+
+/* いいね情報・達成情報（各詳細画面以外） */
 .sub-content {
+  width: 30vw;
+  margin-top: 15px;
+  margin-left: 3.5vw;
+  display: flex;
+}
+
+
+/* いいね情報・達成情報（各詳細画面） */
+.show-sub-content {
   width: 545px;
+  margin-top: 15px;
   margin-left: 50px;
   display: flex;
 }
@@ -331,5 +556,188 @@
   height: 45px;
   float: right;
   color: #b3b3b3;
-  text-align: center;
+  text-align: end;
+}
+
+
+@media only screen and (max-width: 980px) {
+  /* タスク達成ランキング全体 */
+  .achievement-ranks {
+    width: 30vw;
+    height: 755px;
+    margin-top: 82px;
+  }
+
+  /* タスク達成ランキング全体（検索画面） */
+  .category-achievement-ranks {
+    width: 30vw;
+    height: 755px;
+    margin-top: 135px;
+  }
+
+
+  /* タスク達成ランキング */
+  .achievement-rank {
+    float: right;
+    width: 90%;
+    height: 400px;
+    margin-top: 30px;
+    background-color: white;
+    border: solid 2px #cccccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.52);
+  }
+
+
+  /* 投稿全体(各詳細画面以外) */
+  .tweets {
+    width: 70vw;
+    height: 755px;
+    margin-top: 82px;
+    overflow: scroll;
+    z-index: 1;
+  }
+
+
+  /* 検索画面全体 */
+  .category-tweets {
+    width: 70vw;
+    height: 700px;
+    margin-top: 135px;
+    overflow: scroll;
+  }
+
+
+  /* 各投稿全体（各詳細画面以外） */
+  .tweet {
+    width: 85%;
+    margin: 30px 0;
+    margin-left: 3.5vw;
+    padding: 15px;
+    padding-bottom: 30px;
+    border: solid 2px #cccccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.52);
+    background-color: white;
+    transition-duration: 0.5s;
+  }
+
+
+  /* ユーザー情報全体 */
+  .user-content {
+    width: 53vw;
+    height: 45px;
+    display: flex;
+  }
+  
+
+  /* ユーザー情報/ジャンル */
+  .category-content {
+    width: 180px;
+    height: 30px;
+    margin-top: 20px;
+    margin-left: 8vw;
+    line-height: 30px;
+    text-align: center;
+    border-bottom: 2px solid #cccccc;
+  }
+
+
+  /* タスク情報全体 */
+  .task-content {
+    width: 44vw;
+    height: 100px;
+    padding: 0 10px;
+    margin-top: 20px;
+    margin-left: 6.4vw;
+    border: 2px solid #cccccc;
+    display: flex;
+  }
+
+  /* タスク情報/画像（各詳細画面以外） */
+  .task-image {
+    margin: 0 1vw;
+    margin-top: 1vw;
+  }
+
+  .task-content-image {
+    width: 80px;
+    height: 80px;
+  }
+
+
+  /* タスク情報（タスク名・タスク時間） */
+  .task-item {
+    width: 260px;
+    height: 80px;
+    margin-top: 0.5vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  /* タスク情報/タスク名（各詳細画面以外） */
+  .task-title {
+    border-bottom: 2px solid #cccccc;
+    width: 240px;
+    height: 40px;
+    margin-top: 5px;
+    font-size: 16px;
+  }
+
+
+  /* タスク情報（タスク時間） */
+  .task-time {
+    width: 240px;
+    margin-top: 5px;
+    display: flex;
+    font-size: 14px;
+  }
+
+
+  /* タスク情報（タスク時間） */
+  .task-time {
+    display: flex;
+    height: 30px;
+  }
+
+  .time-image {
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+    margin-right: 10px;
+  }
+  
+  .task-item-time {
+    line-height: 30px;
+  }
+
+
+  /* 詳細情報 */
+  .datalis {
+    width: 45vw;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 6.2vw;
+    background-color: lightcyan;
+    border-radius: 10px;
+    overflow: scroll;
+  }
+
+
+  /* いいね情報・達成情報（各詳細画面以外） */
+  .sub-content {
+    width: 45vw;
+    margin-top: 10px;
+    margin-left: 6.2vw;
+    display: flex;
+  }
+
+
+  /* 投稿時間情報 */
+  .day {
+    width: 150px;
+    height: 25px;
+    float: right;
+    color: #b3b3b3;
+    text-align: end;
+  }
 }
