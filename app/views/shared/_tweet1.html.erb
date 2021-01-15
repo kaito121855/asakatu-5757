@@ -87,9 +87,11 @@
   </div>
 
   <%# 詳細情報 %>
-  <div class="datalis">
-    <span class="detalis-item"><%= tweet.detalis %></span>
-  </div>
+  <% if tweet.detalis != "" %>
+    <div class="datalis">
+      <span class="detalis-item"><%= tweet.detalis %></span>
+    </div>
+  <% end %>
 
   <%# いいね情報・達成情報 %>
   <div class="sub-content">
@@ -107,7 +109,7 @@
 
   <%# 投稿時間情報 %>
   <div class="day">
-    <span><%= tweet.updated_at.strftime("%m月%-d日 %H:%M") %></span>
+    <span><%= tweet.updated_at.strftime("%-m月%-d日 %-H:%-M") %></span>
   </div>
 
 </div>
