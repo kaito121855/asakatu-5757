@@ -1,4 +1,6 @@
 class CategoriesController < ApplicationController
+  before_action :set_achievement_ranking
+  
   def index
     @tweets = Tweet.includes(:user).order('tweets.created_at DESC')
   end
@@ -25,5 +27,11 @@ class CategoriesController < ApplicationController
 
   def search
     @tweets = Tweet.search(params[:keyword])
+  end
+
+  private
+
+  def set_achievement_ranking
+    @achievement_ranking = User.find(Achievement.group(:user_id).order('count(user_id) DESC').limit(5).pluck(:user_id))
   end
 end
