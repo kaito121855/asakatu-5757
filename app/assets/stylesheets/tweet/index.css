@@ -540,6 +540,23 @@
 
 .favorite-num{
   margin-left: 5px;
+  color: black;
+  font-weight: normal;
+}
+
+
+/* コメント情報 */
+.fa-comment {
+  color: aqua;
+  margin-left: 20px;
+  display: block;
+  padding-top: 4px;
+}
+
+.comment-num {
+  margin-left: 5px;
+  color: black;
+  font-weight: normal;
 }
 
 
