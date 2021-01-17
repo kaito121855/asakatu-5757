@@ -357,6 +357,8 @@
   padding: 20px;
   margin-top: 25px;
   margin-left: 3.5vw;
+  color: black;
+  text-decoration: none;
   border: 2px solid #cccccc;
   display: flex;
 }
@@ -369,6 +371,8 @@
   padding: 20px;
   margin-top: 25px;
   margin-left: 50px;
+  color: black;
+  text-decoration: none;
   border: 2px solid #cccccc;
   display: flex;
 }
