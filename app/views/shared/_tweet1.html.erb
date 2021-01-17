@@ -22,7 +22,7 @@
         </div>
       </div>
       <%# タスク情報 %>
-      <div class="task-content">
+      <%= link_to tweet_path(tweet.id), method: :get, class:"task-content" do %>
         <%# タスク画像 %>
         <div class="task-image">
           <% if tweet.category_id == 2 %>
@@ -61,28 +61,25 @@
             </div>
           </div>
         </div>
-      </div>
+      <% end %>
     </div>
     <%# サイドメニュー情報 %>
     <div class="more">
-      <%# サイドバー %>
-      <div class="side-list">
-        <%= '…' %>
-      </div>
-      <%# サイドバーリスト %>
-      <ul class="tweet-side-lists">
-        <li>
-          <%= link_to '詳細', tweet_path(tweet.id), method: :get, class:"tweet-side-list" %>
-        </li>
-        <% if user_signed_in? && current_user.id == tweet.user_id %>
+      <% if user_signed_in? && current_user.id == tweet.user_id %>
+        <%# サイドバー %>
+        <div class="side-list">
+          <%= '…' %>
+        </div>
+        <%# サイドバーリスト %>
+        <ul class="tweet-side-lists">
           <li>
             <%= link_to '編集', edit_tweet_path(tweet.id), method: :get, class:"tweet-side-list" %>
           </li>
           <li>
             <%= link_to '削除', tweet_path(tweet.id), method: :delete, class:"tweet-side-list" %>
           </li>
-        <% end %>
-      </ul>
+        </ul>
+      <% end %>
     </div>
   </div>
 
