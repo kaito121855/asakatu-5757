@@ -96,6 +96,22 @@
     <div id="tweet_<%= tweet.id %>">
       <%= render partial: 'favorites/favorite', locals: { tweet: tweet}  %>
     </div>
+    <%# コメント情報 %>
+    <% if tweet.comments.count >= 1 %>
+      <i class="fas fa-comment">
+        <%# コメント数 %>
+        <span class="comment-num">
+          <%= tweet.comments.count %>
+        </span>
+      </i>
+    <% else %>
+      <i class="far fa-comment">
+        <%# コメント数 %>
+        <span class="comment-num">
+          <%= tweet.comments.count %>
+        </span>
+      </i>
+    <% end %>
     <%# 達成情報 %>
     <div class="achievement">
       <% if tweet.user.already_achieved?(tweet) %>

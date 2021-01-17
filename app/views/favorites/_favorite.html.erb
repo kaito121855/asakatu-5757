@@ -2,13 +2,9 @@
 <% if user_signed_in? && current_user.already_favorited?(tweet) %>
   <%= link_to tweet_favorites_path(tweet), method: :delete, remote: true do %>
     <i class="fas fa-heart">
-      <%# いいねボタン %>
-       いいね
       <%# いいね数 %>
       <span class="favorite-num">
-        <% if tweet.favorites.count >= 1 %>
-          <%= tweet.favorites.count %>
-        <% end %>
+        <%= tweet.favorites.count %>
       </span>
     </i>
   <% end %>
@@ -16,13 +12,9 @@
 <% else %>
   <%= link_to tweet_favorites_path(tweet), method: :post, remote: true do %>
     <i class="far fa-heart">
-      <%# いいねボタン %>
-       いいね
       <%# いいね数 %>
       <span class="favorite-num">
-        <% if tweet.favorites.count >= 1 %>
-          <%= tweet.favorites.count %>
-        <% end %>
+        <%= tweet.favorites.count %>
       </span>
     </i>
   <% end %>

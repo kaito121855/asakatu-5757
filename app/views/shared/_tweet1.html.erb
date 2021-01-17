@@ -93,12 +93,28 @@
     </div>
   <% end %>
 
-  <%# いいね情報・達成情報 %>
+  <%# いいね情報・コメント情報・達成情報 %>
   <div class="sub-content">
     <%# いいね情報 %>
     <div id="tweet_<%= tweet.id %>">
       <%= render partial: 'favorites/favorite', locals: { tweet: tweet}  %>
     </div>
+    <%# コメント情報 %>
+    <% if tweet.comments.count >= 1 %>
+      <i class="fas fa-comment">
+        <%# コメント数 %>
+        <span class="comment-num">
+          <%= tweet.comments.count %>
+        </span>
+      </i>
+    <% else %>
+      <i class="far fa-comment">
+        <%# コメント数 %>
+        <span class="comment-num">
+          <%= tweet.comments.count %>
+        </span>
+      </i>
+    <% end %>
     <%# 達成情報 %>
     <div class="achievement">
       <% if tweet.user.already_achieved?(tweet) %>
