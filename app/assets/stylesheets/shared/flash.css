@@ -1,0 +1,26 @@
+/* 通知全体 */
+.flash {
+  z-index: 99;
+}
+
+
+/* 通知全体（トップ画面） */
+.no-flash {
+  display: none;
+}
+
+
+/* 通知 */
+.notice {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 300px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: #99FF99;
+  color: white;
+  z-index: 99;
+}
