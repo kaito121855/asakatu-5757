@@ -60,6 +60,10 @@ http://ec2-18-178-189-147.ap-northeast-1.compute.amazonaws.com/
 
 [![Image from Gyazo](https://i.gyazo.com/855c624e541a52c2dcf51d4e447df537.gif)](https://gyazo.com/855c624e541a52c2dcf51d4e447df537)
 
+#### ランキング機能
+* 達成数ランキング  
+[![Image from Gyazo](https://i.gyazo.com/111f531bf9ca851cd40c3562f0b194a6.gif)](https://gyazo.com/111f531bf9ca851cd40c3562f0b194a6)
+
 #### タスク検索機能
 * タスク名検索機能  
 * カテゴリー別検索機能
