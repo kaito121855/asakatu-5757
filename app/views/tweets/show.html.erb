@@ -15,6 +15,10 @@
   </div>
 </header>
 
+<div class="flash">
+  <%= render partial: 'shared/flash' %>
+</div>
+
 <div class="show-tweets">
   <%# 各投稿全体 %>
   <%= render partial: 'shared/tweet2', locals: { tweet: @tweet }  %>
