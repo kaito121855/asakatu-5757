@@ -2,11 +2,12 @@ class CommentsController < ApplicationController
   def create
     comment = Comment.new(comment_params)
     if comment.save
-      redirect_to tweet_path(comment.tweet.id)
+      redirect_to tweet_path(comment.tweet.id), notice:"コメントしました"
     else
       @tweet = Tweet.find(params[:tweet_id])
       @comment = Comment.new
       @comments = @tweet.comments.includes(:user)
+      flash.now[:notice] = "コメントに失敗しました"
       render template: 'tweets/show'
     end
   end

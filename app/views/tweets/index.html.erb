@@ -29,6 +29,10 @@
   </div>
 </header>
 
+<div class="flash">
+  <%= render partial: 'shared/flash' %>
+</div>
+
 <div class="content">
   <div class="achievement-ranks">
     <%= render partial: 'shared/achievement_ranking', locals: { achievement_ranking: @achievement_ranking }  %>
