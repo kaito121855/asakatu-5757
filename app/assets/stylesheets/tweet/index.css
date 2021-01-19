@@ -1,21 +1,26 @@
 /* タスク達成ランキング・投稿全体 */
 .content {
   display: flex;
+  z-index: 1px;
 }
 
 /* タスク達成ランキング全体 */
 .achievement-ranks {
+  position: absolute;
+  top: 82px;
+  left: 0;
   width: 40vw;
   height: 755px;
-  margin-top: 82px;
 }
 
 
 /* タスク達成ランキング全体（検索画面） */
 .category-achievement-ranks {
+  position: absolute;
+  top: 135px;
+  left: 0;
   width: 40vw;
   height: 755px;
-  margin-top: 135px;
 }
 
 
@@ -118,9 +123,11 @@
 
 /* 投稿全体(各詳細画面以外) */
 .tweets {
+  position: absolute;
+  top: 82px;
+  right: 0;
   width: 60vw;
   height: 755px;
-  margin-top: 82px;
   overflow: scroll;
   z-index: 1;
 }
@@ -128,9 +135,10 @@
 
 /* 投稿全体(各詳細画面) */
 .show-tweets {
+  position: absolute;
+  top: 82px;
   width: 100vw;
   height: 755px;
-  margin-top: 82px;
   overflow: scroll;
   z-index: 1;
 }
@@ -138,9 +146,11 @@
 
 /* 検索画面全体 */
 .category-tweets {
+  position: absolute;
+  top: 135px;
+  right: 0;
   width: 60vw;
   height: 700px;
-  margin-top: 135px;
   overflow: scroll;
 }
 
@@ -584,16 +594,20 @@
 @media only screen and (max-width: 980px) {
   /* タスク達成ランキング全体 */
   .achievement-ranks {
+    position: absolute;
+    top: 82px;
+    left: 0;
     width: 30vw;
     height: 755px;
-    margin-top: 82px;
   }
 
   /* タスク達成ランキング全体（検索画面） */
   .category-achievement-ranks {
+    position: absolute;
+    top: 135px;
+    left: 0;
     width: 30vw;
     height: 755px;
-    margin-top: 135px;
   }
 
 
@@ -611,9 +625,11 @@
 
   /* 投稿全体(各詳細画面以外) */
   .tweets {
+    position: absolute;
+    top: 82px;
+    right: 0;
     width: 70vw;
     height: 755px;
-    margin-top: 82px;
     overflow: scroll;
     z-index: 1;
   }
@@ -621,9 +637,11 @@
 
   /* 検索画面全体 */
   .category-tweets {
+    position: absolute;
+    top: 135px;
+    right: 0;
     width: 70vw;
     height: 700px;
-    margin-top: 135px;
     overflow: scroll;
   }
 
