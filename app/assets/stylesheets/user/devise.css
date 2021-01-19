@@ -1,5 +1,4 @@
 body {
-  background-color: whitesmoke;
   overflow: hidden;
 }
 
@@ -8,7 +7,6 @@ body {
 .devise {
   width: 100vw;
   height: 100vh;
-  background-color: whitesmoke;
 }
 
 
