@@ -42,7 +42,7 @@ RSpec.describe Tweet, type: :model do
         @tweet.valid?
         expect(@tweet.errors.full_messages).to include('終了時間（時）は「時」以外のものを選択してください')
       end
-      it '開始時間（時）が「時」だと保存できない' do
+      it '開始時間（分）が「分」だと保存できない' do
         @tweet.end_minute_id = ''
         @tweet.valid?
         expect(@tweet.errors.full_messages).to include('終了時間（分）は「分」以外のものを選択してください')
