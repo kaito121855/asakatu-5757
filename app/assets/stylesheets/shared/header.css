@@ -6,7 +6,7 @@ header {
   transform: translate(-50%, 0);
   width: 100vw;
   height: 80px;
-  border-bottom: 2px solid #C2D4F2;
+  border-bottom: 2px solid #B8DCD3;
   display: flex;
   justify-content: space-between;
   z-index: 1;
@@ -37,8 +37,8 @@ header {
 }
 
 .header-user-nickname:hover {
-  color: #a4c6ff;
-  border-bottom: 1px solid #a4c6ff;
+  color: #B8DCD3;
+  border-bottom: 1px solid #B8DCD3;
   transition-duration: 0.3s;
 }
 
@@ -51,18 +51,18 @@ header {
   margin-left: 32px;
   padding-left: 13px;
   padding-bottom: 13px;
-  color: #a4c6ff;
+  color: #B8DCD3;
   font-size: 20px;
   text-decoration: none;
-  border: 2px solid #a4c6ff;
+  border: 2px solid #B8DCD3;
   border-radius: 30px;
   transition-duration: 0.3s;
 }
 
 .header-back-btn:hover {
   color: white;
-  background-color: #a4c6ff;
-  border: 2px solid #a4c6ff;
+  background-color: #B8DCD3;
+  border: 2px solid #B8DCD3;
   transition-duration: 0.3s;
 }
 
@@ -70,7 +70,7 @@ header {
 /* ヘッダータイトル */
 .header-title-item {
   margin: 0 auto;
-  font-size: 20px;
+  font-size: 23px;
   font-weight: 700;
 }
 
@@ -84,15 +84,15 @@ header {
 
 .task-create {
   padding: 10px;
-  color: #a4c6ff;
-  border: 2px solid #a4c6ff;
+  color: #B8DCD3;
+  border: 2px solid #B8DCD3;
   font-size: 17px;
   text-decoration: none;
   transition-duration: 0.3s;
 }
 
 .task-create:hover {
-  background-color: #a4c6ff;
+  background-color: #B8DCD3;
   color: white;
   transition-duration: 0.3s;
 }
@@ -100,7 +100,6 @@ header {
 .hamburger-menu {
   position: fixed;
   z-index: 91;
-  background-color: brown;
   width: 100px;
 }
 
@@ -110,22 +109,26 @@ header {
   top: 20px;
   right: 2vw;
   display: flex;
-  height: 40px;
-  width: 40px;
+  height: 45px;
+  width: 45px;
   justify-content: center;
   align-items: center;
-  border: 2px solid #a4c6ff;
+  background-color: #B8DCD3;
+  border: 2px solid white;
+  border-radius: 30px;
+  z-index: 91;
 }
+
 
 .menu-btn span,
 .menu-btn span:before,
 .menu-btn span:after {
   content: '';
   display: block;
-  height: 3px;
-  width: 25px;
+  height: 2px;
+  width: 20px;
   border-radius: 3px;
-  background-color: #a4c6ff;
+  background-color: white;
   position: absolute;
   transition-duration: 0.3s;
 }
@@ -154,16 +157,16 @@ header {
   display: none;
 }
 
+
 /* メニュー一覧（クリック前） */
 .menu-content {
-  width: 15vw;
+  width: 250px;
   height: 100vh;
   position: fixed;
-  top: 82px;
-  right: -20%;
-  padding: 10px 10px;
-  background-color: white;
-  border-left: 2px solid #C2D4F2;
+  top: 0;
+  right: -250px;
+  padding-top: 80px;
+  background-color: #B8DCD3;
   transition-duration: 0.3s;
 }
 
@@ -177,17 +180,36 @@ header {
 
 /* 各メニュー（ホバー前） */
 .menu-content ul li {
-  border-bottom: solid 1px black;
-  list-style: none;
-  transition-duration: 0.3s;
+  width: 130px;
+  height: 50px;
+  line-height: 1px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  position: relative;
+  border: 2px solid #B8DCD3;
+  transition: all .3s;
 }
 
+.menu-content ul li::before {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  z-index: 2;
+  content: '';
+  transition: all .3s;
+}
+
+.menu-content ul li:before {
+  border-bottom: 2px solid white;
+  transform: scale(0, 1);
+}
 
 /* 各メニュー（ホバー後） */
-.menu-content ul li:hover {
-  border-bottom: solid 1px #a4c6ff;
-  list-style: none;
-  transition-duration: 0.3s;
+.menu-content ul li:hover::before,
+.menu-content ul li:hover::after {
+  transform: scale(1);
 }
 
 
@@ -195,20 +217,22 @@ header {
 .menu-content ul li .header-right-nav-list {
   display: block;
   width: 100%;
+  height: 100%;
   text-align: center;
   font-size: 15px;
   box-sizing: border-box;
-  color: black;
+  color: white;
   text-decoration: none;
   margin-top: 20px;
   padding: 10px 0;
   position: relative;
   transition-duration: 0.3s;
+  cursor: pointer;
+  z-index: 3;
 }
 
 
 /* 各メニュー（ホバー後） */
 .menu-content ul li .header-right-nav-list:hover {
-  color:#a4c6ff;
   transition-duration: 0.3s;
 }
