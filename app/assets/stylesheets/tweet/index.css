@@ -200,12 +200,11 @@
   height: 40px;
   line-height: 20px;
   padding-bottom: 20px;
-  background-color: white;
+  background-color: #B8DCD3;
   text-align: center;
   display: flex;
   justify-content: space-around;
   z-index: 2;
-  border-bottom: 2px solid #C2D4F2;
 }
 
 
@@ -214,8 +213,9 @@
   width: 12vw;
   padding: 10px;
   color: #B8DCD3;
+  background-color: white;
   text-decoration: none;
-  border: 2px solid #B8DCD3;
+  border: 2px solid white;
   transition-duration: 0.3s;
 }
 
@@ -224,7 +224,7 @@
 .category-item:hover {
   color: white;
   background-color: #B8DCD3;
-  border: 2px solid #B8DCD3;
+  border: 2px solid white;
   transition-duration: 0.3s;
 }
 
@@ -236,7 +236,7 @@
   color: white;
   background-color: #B8DCD3;
   text-decoration: none;
-  border: 1px solid #B8DCD3;
+  border: 2px solid white;
 }
 
 
