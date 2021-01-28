@@ -92,17 +92,20 @@ header {
 }
 
 .task-create {
+  position: fixed;
+  top: 15px;
+  right: 2vw;
   padding: 10px;
-  color: #B8DCD3;
-  border: 2px solid #B8DCD3;
+  color: white;
+  background-color: #B8DCD3;
+  border: 2px solid white;
   font-size: 17px;
   text-decoration: none;
   transition-duration: 0.3s;
 }
 
 .task-create:hover {
-  background-color: #B8DCD3;
-  color: white;
+  top: 18px;
   transition-duration: 0.3s;
 }
 
