@@ -3,7 +3,7 @@
 
 http://ec2-18-178-189-147.ap-northeast-1.compute.amazonaws.com/  
 
-[![Image from Gyazo](https://i.gyazo.com/c3e282a3c16a339bdd71aebcccc1db27.gif)](https://gyazo.com/c3e282a3c16a339bdd71aebcccc1db27)
+[![Image from Gyazo](https://i.gyazo.com/b9f8e486cc1db993d059b3c15a0dae6f.gif)](https://gyazo.com/b9f8e486cc1db993d059b3c15a0dae6f)
 
 
 ## アプリ概要  
@@ -49,34 +49,34 @@ http://ec2-18-178-189-147.ap-northeast-1.compute.amazonaws.com/
 #### ユーザー管理機能（devise,S3） 
 * ログイン・ログアウト機能 
 * フォロー機能
-[![Image from Gyazo](https://i.gyazo.com/8ec60c7d74654c878250dead8d4f6893.gif)](https://gyazo.com/8ec60c7d74654c878250dead8d4f6893)
+[![Image from Gyazo](https://i.gyazo.com/41d5a8bdabf1e7050b0bc09c945a8030.gif)](https://gyazo.com/41d5a8bdabf1e7050b0bc09c945a8030)
 
-[![Image from Gyazo](https://i.gyazo.com/a020663f3bf5d9e36410b3a59dc052fc.gif)](https://gyazo.com/a020663f3bf5d9e36410b3a59dc052fc)
+[![Image from Gyazo](https://i.gyazo.com/329b1179f54685c7def6404b2d685108.gif)](https://gyazo.com/329b1179f54685c7def6404b2d685108)
 
 #### タスク投稿機能
 * タスク投稿・詳細・編集・削除機能
 * いいね機能（非同期）  
-[![Image from Gyazo](https://i.gyazo.com/644b861422a6591b202cd8b4673ca142.gif)](https://gyazo.com/644b861422a6591b202cd8b4673ca142)
+[![Image from Gyazo](https://i.gyazo.com/5c91c169b6726b307606b9ccdd5de17a.gif)](https://gyazo.com/5c91c169b6726b307606b9ccdd5de17a)
 
-[![Image from Gyazo](https://i.gyazo.com/855c624e541a52c2dcf51d4e447df537.gif)](https://gyazo.com/855c624e541a52c2dcf51d4e447df537)
+[![Image from Gyazo](https://i.gyazo.com/083b2ca30e27136997e57868437a8fa8.gif)](https://gyazo.com/083b2ca30e27136997e57868437a8fa8)
 
 #### ランキング機能
 * 達成数ランキング  
-[![Image from Gyazo](https://i.gyazo.com/111f531bf9ca851cd40c3562f0b194a6.gif)](https://gyazo.com/111f531bf9ca851cd40c3562f0b194a6)
+[![Image from Gyazo](https://i.gyazo.com/3669831cc5cbb9b336f0e1fd0cd86c8f.gif)](https://gyazo.com/3669831cc5cbb9b336f0e1fd0cd86c8f)
 
 #### タスク検索機能
 * タスク名検索機能  
 * カテゴリー別検索機能
-[![Image from Gyazo](https://i.gyazo.com/25aea92803093b75338070be3c8bd641.gif)](https://gyazo.com/25aea92803093b75338070be3c8bd641)
+[![Image from Gyazo](https://i.gyazo.com/ba6f3d0140073097b131d17690b07e53.gif)](https://gyazo.com/ba6f3d0140073097b131d17690b07e53)
 
 #### タスク管理機能
 * 今日のタスク一覧の表示  
 * 達成機能
-[![Image from Gyazo](https://i.gyazo.com/085dd703ba58a5bbb34ccc1da4da00af.gif)](https://gyazo.com/085dd703ba58a5bbb34ccc1da4da00af)
+[![Image from Gyazo](https://i.gyazo.com/7a199c2183a23ca357d1c7ce80734ca6.gif)](https://gyazo.com/7a199c2183a23ca357d1c7ce80734ca6)
 
 #### タスク記録機能
 * タスク数・達成数・達成時間計・1週間の達成数（chartkick）の表示
-[![Image from Gyazo](https://i.gyazo.com/103710cac15df9bc75343311e0360fba.gif)](https://gyazo.com/103710cac15df9bc75343311e0360fba)
+[![Image from Gyazo](https://i.gyazo.com/1c1b8a74ab91d67352bb3c381191b5d1.gif)](https://gyazo.com/1c1b8a74ab91d67352bb3c381191b5d1)
 
 
 ## ER図

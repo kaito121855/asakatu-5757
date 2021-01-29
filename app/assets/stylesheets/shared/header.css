@@ -6,7 +6,7 @@ header {
   transform: translate(-50%, 0);
   width: 100vw;
   height: 80px;
-  border-bottom: 2px solid #C2D4F2;
+  background-color: #B8DCD3;
   display: flex;
   justify-content: space-between;
   z-index: 1;
@@ -21,57 +21,66 @@ header {
   align-items: center;
 }
 
+.header-user {
+  width: 70%;
+  margin: 20px auto;
+  padding-top: 5px;
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 /* ユーザー情報（アイコン） */
 .header-user-image {
-  margin-left: 32px;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #f2f2f2;
+  border-radius: 30px;
+  transition: 0.5s;
 }
 
 
 /* ユーザー情報（ニックネーム） */
 .header-user-nickname {
   margin-left: 10px;
-  color: black;
+  color: white;
   text-decoration: none;
   transition-duration: 0.3s;
 }
 
-.header-user-nickname:hover {
-  color: #a4c6ff;
-  border-bottom: 1px solid #a4c6ff;
-  transition-duration: 0.3s;
-}
 
 
 /* 戻るボタン */
 .header-back-btn {
-  width: 25px;
-  height: 25px;
-  padding: 10px;
-  margin-left: 32px;
-  padding-left: 13px;
-  padding-bottom: 13px;
-  color: #a4c6ff;
+  position: fixed;
+  top: 20px;
+  left: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  color: white;
   font-size: 20px;
   text-decoration: none;
-  border: 2px solid #a4c6ff;
+  border: 2px solid white;
   border-radius: 30px;
   transition-duration: 0.3s;
 }
 
 .header-back-btn:hover {
-  color: white;
-  background-color: #a4c6ff;
-  border: 2px solid #a4c6ff;
-  transition-duration: 0.3s;
+  top: 23px;
 }
 
 
 /* ヘッダータイトル */
 .header-title-item {
   margin: 0 auto;
-  font-size: 20px;
+  font-size: 23px;
   font-weight: 700;
+  color: white;
 }
 
 
@@ -83,24 +92,26 @@ header {
 }
 
 .task-create {
+  position: fixed;
+  top: 15px;
+  right: 2vw;
   padding: 10px;
-  color: #a4c6ff;
-  border: 2px solid #a4c6ff;
+  color: white;
+  background-color: #B8DCD3;
+  border: 2px solid white;
   font-size: 17px;
   text-decoration: none;
   transition-duration: 0.3s;
 }
 
 .task-create:hover {
-  background-color: #a4c6ff;
-  color: white;
+  top: 18px;
   transition-duration: 0.3s;
 }
 
 .hamburger-menu {
   position: fixed;
   z-index: 91;
-  background-color: brown;
   width: 100px;
 }
 
@@ -110,22 +121,68 @@ header {
   top: 20px;
   right: 2vw;
   display: flex;
-  height: 40px;
-  width: 40px;
+  height: 45px;
+  width: 45px;
   justify-content: center;
   align-items: center;
-  border: 2px solid #a4c6ff;
+  background-color: #B8DCD3;
+  border: 2px solid white;
+  border-radius: 30px;
+  z-index: 91;
+  transition-duration: 0.3s;
+  cursor: pointer;
 }
+
+.mypage-menu-btn {
+  position: fixed;
+  top: 20px;
+  left: 2vw;
+  display: flex;
+  height: 45px;
+  width: 45px;
+  justify-content: center;
+  align-items: center;
+  background-color: #B8DCD3;
+  border: 2px solid white;
+  border-radius: 30px;
+  z-index: 91;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+  
+.menu-btn:hover {
+  top: 23px;
+  transition-duration: 0.3s;
+}
+
+.mypage-menu-btn:hover {
+  top: 23px;
+  transition-duration: 0.3s;
+}
+
 
 .menu-btn span,
 .menu-btn span:before,
 .menu-btn span:after {
   content: '';
   display: block;
-  height: 3px;
-  width: 25px;
+  height: 2px;
+  width: 20px;
   border-radius: 3px;
-  background-color: #a4c6ff;
+  background-color: white;
+  position: absolute;
+  transition-duration: 0.3s;
+}
+
+.mypage-menu-btn span,
+.mypage-menu-btn span:before,
+.mypage-menu-btn span:after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 20px;
+  border-radius: 3px;
+  background-color: white;
   position: absolute;
   transition-duration: 0.3s;
 }
@@ -134,18 +191,42 @@ header {
   bottom: 8px;
 }
 
+.mypage-menu-btn span:before {
+  bottom: 8px;
+}
+
 .menu-btn span:after {
+  top: 8px;
+}
+
+.mypage-menu-btn span:after {
   top: 8px;
 }
 
 #menu-btn-check:checked ~ .menu-btn span {
   background-color: rgba(255, 255, 255, 0);
 }
+
+#menu-btn-check:checked ~ .mypage-menu-btn span {
+  background-color: rgba(255, 255, 255, 0);
+}
+
 #menu-btn-check:checked ~ .menu-btn span::before {
   bottom: 0;
   transform: rotate(45deg);
 }
+
+#menu-btn-check:checked ~ .mypage-menu-btn span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
 #menu-btn-check:checked ~ .menu-btn span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+#menu-btn-check:checked ~ .mypage-menu-btn span::after {
   top: 0;
   transform: rotate(-45deg);
 }
@@ -154,16 +235,27 @@ header {
   display: none;
 }
 
+
 /* メニュー一覧（クリック前） */
 .menu-content {
-  width: 15vw;
+  width: 250px;
   height: 100vh;
   position: fixed;
-  top: 82px;
-  right: -20%;
-  padding: 10px 10px;
-  background-color: white;
-  border-left: 2px solid #C2D4F2;
+  top: 0;
+  right: -250px;
+  padding-top: 80px;
+  background-color: #B8DCD3;
+  transition-duration: 0.3s;
+}
+
+.mypage-menu-content {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  padding-top: 80px;
+  background-color: #B8DCD3;
   transition-duration: 0.3s;
 }
 
@@ -174,20 +266,77 @@ header {
   transition-duration: 0.3s;
 }
 
-
-/* 各メニュー（ホバー前） */
-.menu-content ul li {
-  border-bottom: solid 1px black;
-  list-style: none;
+#menu-btn-check:checked ~ .mypage-menu-content {
+  left: 0;
   transition-duration: 0.3s;
 }
 
 
+/* 各メニュー（ホバー前） */
+.menu-content ul li {
+  width: 130px;
+  height: 50px;
+  line-height: 1px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  position: relative;
+  border: 2px solid #B8DCD3;
+  transition: all .3s;
+}
+
+.mypage-menu-content ul li {
+  width: 130px;
+  height: 50px;
+  line-height: 1px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  position: relative;
+  border: 2px solid #B8DCD3;
+  transition: all .3s;
+}
+
+.menu-content ul li::before {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  z-index: 2;
+  content: '';
+  transition: all .3s;
+}
+
+.mypage-menu-content ul li::before {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  z-index: 2;
+  content: '';
+  transition: all .3s;
+}
+
+.menu-content ul li:before {
+  border-bottom: 2px solid white;
+  transform: scale(0, 1);
+}
+
+.mypage-menu-content ul li:before {
+  border-bottom: 2px solid white;
+  transform: scale(0, 1);
+}
+
+
 /* 各メニュー（ホバー後） */
-.menu-content ul li:hover {
-  border-bottom: solid 1px #a4c6ff;
-  list-style: none;
-  transition-duration: 0.3s;
+.menu-content ul li:hover::before,
+.menu-content ul li:hover::after {
+  transform: scale(1);
+}
+
+.mypage-menu-content ul li:hover::before,
+.mypage-menu-content ul li:hover::after {
+  transform: scale(1);
 }
 
 
@@ -195,20 +344,43 @@ header {
 .menu-content ul li .header-right-nav-list {
   display: block;
   width: 100%;
+  height: 100%;
   text-align: center;
   font-size: 15px;
   box-sizing: border-box;
-  color: black;
+  color: white;
   text-decoration: none;
   margin-top: 20px;
   padding: 10px 0;
   position: relative;
   transition-duration: 0.3s;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.mypage-menu-content ul li .header-right-nav-list {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 15px;
+  box-sizing: border-box;
+  color: white;
+  text-decoration: none;
+  margin-top: 20px;
+  padding: 10px 0;
+  position: relative;
+  transition-duration: 0.3s;
+  cursor: pointer;
+  z-index: 3;
 }
 
 
 /* 各メニュー（ホバー後） */
 .menu-content ul li .header-right-nav-list:hover {
-  color:#a4c6ff;
+  transition-duration: 0.3s;
+}
+
+.mypage-menu-content ul li .header-right-nav-list:hover {
   transition-duration: 0.3s;
 }

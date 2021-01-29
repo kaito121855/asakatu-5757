@@ -29,67 +29,61 @@
   <%= render partial: 'shared/flash' %>
 </div>
 
-<div class="top">
+<div class="home">
   <%# サービス紹介 %>
-  <div class="top1">
-    <p>ユーザー同士が朝に行うタスクを宣言し合い、</p>
-    <p>お互いのタスクを達成できるようにするためのサービス</p>
-    <div class="top1-images">
-      <%= image_tag("top1.jpg", class:"top1-image") %>
+  <div class="top">
+    <div class="top-title">
+      <p>朝活に特化したタスク管理もできるSNSアプリ</p>
+      <h1>ASAKATU</h1>
     </div>
   </div>
-  <%# タイトル %>
-  <div class="top2">
-    <h2>主な機能</h2>
-  </div>
-  <%# 機能説明（タスク投稿機能） %>
-  <div class="top3">
-    <h1>タスク投稿機能</h1>
-    <div class="top3-explanation">
-      <p>タスクを作成することで、投稿をすることができます。</p>
-      <div class="top3-function">
-        <%= image_tag("top3-1.png", class:"top3-image") %>
-        <div>＞</div>
-        <%= image_tag("top3-2.png", class:"top3-image") %>
-      </div>
+  <%# 機能一覧 %>
+  <div class="center">
+    <h2>ASAKATUにできること</h2>
+    <div class="asakatu-functions">
+      <%# 投稿機能 %>
+      <div class="asakatu-function">
+        <div class="asakatu-function-1-image"></div>
+        <div class="asakatu-function-title">
+          投稿機能
+        </div>
+        <div class="asakatu-function-explanation">
+          タスクを作成することで、投稿をすることができます。
+        </div>
+      </div> 
+      <%# 管理機能 %>
+      <div class="asakatu-function">
+        <div class="asakatu-function-2-image"></div>
+        <div class="asakatu-function-title">
+          管理機能
+        </div>
+        <div class="asakatu-function-explanation">
+          その日作成したタスクの一覧を確認することができます。
+        </div>
+      </div> 
+      <%# 記録機能 %>
+      <div class="asakatu-function">
+        <div class="asakatu-function-3-image"></div>
+        <div class="asakatu-function-title">
+          記録機能
+        </div>
+        <div class="asakatu-function-explanation">
+          タスク達成数・達成時間などを確認することができます。
+        </div>
+      </div> 
+
     </div>
-  </div>
-  <%# 機能説明（タスク管理機能） %>
-  <div class="top4">
-    <h1>タスク管理機能</h1>
-    <div class="top4-explanation">
-      <p>その日作成したタスクの一覧を確認することができます。</p>
-      <div class="top4-function">
-        <%= image_tag("top4-1.png", class:"top4-image") %>
-      </div>
-    </div>
-  </div>
-  <%# 機能説明（タスク記録機能） %>
-  <div class="top5">
-    <h1>タスク記録機能</h1>
-    <div class="top5-explanation">
-      <p>タスク達成数・達成した時間などを確認することができます。</p>
-      <div class="top5-function">
-        <%= image_tag("top5-1.png", class:"top5-image") %>
-      </div>
-    </div>
-  </div>
-  <%# ログイン・新規登録ボタン %>
-  <div class="top6">
-    <%= link_to "ログイン", new_user_session_path, class: "top-user-btn top-user-login" %>
-    <%= link_to "ゲストログイン", users_guest_sign_in_path, method: :post, class: "top-user-btn" %>
-    <%= link_to "新規登録", new_user_registration_path, class: "top-user-btn top-user-create" %>
   </div>
 
   <%# フッダー %>
-  <div class="top7">
-    <div class="top7-content">
+  <div class="bottom">
+    <div class="bottom-content">
       <p>利用規約</p>
       <p>プライバシーポリシー</p>
       <p>ヘルプ</p>
       <p>お問い合わせ</p>
     </div>
-    <div class="top7-content">
+    <div class="bottom-content">
       <h1>ASAKATU</h1>
     </div>
   </div>

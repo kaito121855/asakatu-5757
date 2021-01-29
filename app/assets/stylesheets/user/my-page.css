@@ -121,8 +121,8 @@
 
 /* 投稿数のタイトル（ホバー後） */
 .follow-title:hover {
-  color: #a4c6ff;
-  border-bottom: 1px solid #a4c6ff;
+  color: #B8DCD3;
+  border-bottom: 1px solid #B8DCD3;
   transition-duration: 0.5s;
 }
 

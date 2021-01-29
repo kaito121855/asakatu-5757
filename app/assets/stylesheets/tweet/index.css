@@ -63,9 +63,9 @@
   height: 30px;
   line-height: 30px;
   margin: 0 4%;
-  border: 2px solid #a4c6ff;
+  border: 2px solid #B8DCD3;
   border-radius: 30px;
-  background-color: #a4c6ff;
+  background-color: #B8DCD3;
   color: white;
   text-align: center;
 }
@@ -93,7 +93,7 @@
 .rank-user-image:hover {
   width: 40px;
   height: 40px;
-  border: 2px solid #a4c6ff;
+  border: 2px solid #B8DCD3;
   border-radius: 30px;
   transition: 0.5s;
 }
@@ -107,8 +107,8 @@
 }
 
 .rank-user-nickname:hover {
-  color: #a4c6ff;
-  border-bottom: 1px solid #a4c6ff;
+  color: #B8DCD3;
+  border-bottom: 1px solid #B8DCD3;
   transition-duration: 0.5s;
 }
 
@@ -200,12 +200,11 @@
   height: 40px;
   line-height: 20px;
   padding-bottom: 20px;
-  background-color: white;
+  background-color: #B8DCD3;
   text-align: center;
   display: flex;
   justify-content: space-around;
   z-index: 2;
-  border-bottom: 2px solid #C2D4F2;
 }
 
 
@@ -213,9 +212,10 @@
 .category-item {
   width: 12vw;
   padding: 10px;
-  color: #a4c6ff;
+  color: #B8DCD3;
+  background-color: white;
   text-decoration: none;
-  border: 2px solid #a4c6ff;
+  border: 2px solid white;
   transition-duration: 0.3s;
 }
 
@@ -223,8 +223,8 @@
 /* 各ジャンルボタン（ホバー後） */
 .category-item:hover {
   color: white;
-  background-color: #a4c6ff;
-  border: 2px solid #a4c6ff;
+  background-color: #B8DCD3;
+  border: 2px solid white;
   transition-duration: 0.3s;
 }
 
@@ -234,9 +234,9 @@
   width: 12vw;
   padding: 10px;
   color: white;
-  background-color: #a4c6ff;
+  background-color: #B8DCD3;
   text-decoration: none;
-  border: 1px solid #a4c6ff;
+  border: 2px solid white;
 }
 
 
@@ -315,7 +315,7 @@
 .user-image:hover {
   width: 40px;
   height: 40px;
-  border: 2px solid #a4c6ff;
+  border: 2px solid #B8DCD3;
   border-radius: 30px;
   transition: 0.5s;
 }
@@ -331,8 +331,8 @@
 }
 
 .user-nickname:hover {
-  color: #a4c6ff;
-  border-bottom: 1px solid #a4c6ff;
+  color: #B8DCD3;
+  border-bottom: 1px solid #B8DCD3;
   transition-duration: 0.5s;
 }
 
@@ -499,8 +499,8 @@
 }
 
 .tweet-side-list:hover {
-  color: #a4c6ff;
-  border-bottom: 1px solid #a4c6ff;
+  color: #B8DCD3;
+  border-bottom: 1px solid #B8DCD3;
   transition-duration: 0.5s;
 }
 

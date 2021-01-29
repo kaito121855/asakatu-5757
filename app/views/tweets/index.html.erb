@@ -2,21 +2,34 @@
 <header>
   <%# ユーザー情報 %>
   <div class="header-item">
-    <% if user_signed_in? %>
-      <div class="header-user-image">
-        <% if current_user.image.attached? %>
-          <%= link_to image_tag(current_user.image, class: "user-image"), user_path(current_user.id) %>
-        <% else %>
-          <%= link_to image_tag('user.png', class: "user-image"), user_path(current_user.id) %>
-        <% end %>
-      </div>
-      <%= link_to current_user.nickname, user_path(current_user.id), method: :get, class: "header-user-nickname" %>
-    <% end %>
+    <div class="hamburger-menu">
+      <input type="checkbox" id="menu-btn-check">
+      <label for="menu-btn-check" class="mypage-menu-btn"><span></span></label>
+      <div class="mypage-menu-content">
+        <div class="header-user">
+          <div class="header-user-images">
+            <% if current_user.image.attached? %>
+              <%= image_tag current_user.image, class: "header-user-image" %>
+            <% else %>
+              <%= image_tag 'user.png', class: "header-user-image" %>
+            <% end %>
+          </div>
+          <div class="header-user-nickname">
+            <%= current_user.nickname %>
+          </div>
+        </div>
+        <ul>
+          <li><%= link_to "マイページ", user_path(current_user.id), method: :get, class: "header-right-nav-list" %></li>
+          <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header-right-nav-list" %></li>
+        </ul>
+      </div>   
+    </div>
   </div>
+
   <%# ヘッダータイトル %>
   <div class="header-item">
     <div class="header-title-item">
-      ASAKATU
+      ホーム
     </div>
   </div>
   <%# タスク作成 %>
